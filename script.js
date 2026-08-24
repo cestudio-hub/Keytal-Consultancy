@@ -180,3 +180,79 @@ revealElements.forEach(element => {
     observer.observe(element);
 
 });
+
+/* =========================================
+   AWARD IMAGE LIGHTBOX
+========================================= */
+
+const awardLinks = document.querySelectorAll(".award-lightbox");
+
+const lightbox = document.getElementById("awardLightbox");
+
+const lightboxImage = document.getElementById("lightboxImage");
+
+const lightboxClose = document.getElementById("lightboxClose");
+
+
+/* Open Lightbox */
+
+awardLinks.forEach(link => {
+
+    link.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        lightboxImage.src = this.href;
+
+        lightboxImage.alt =
+            this.querySelector("img").alt;
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+/* Close Button */
+
+lightboxClose.addEventListener("click", closeAwardLightbox);
+
+
+/* Click Outside Image */
+
+lightbox.addEventListener("click", function(event) {
+
+    if (event.target === lightbox) {
+
+        closeAwardLightbox();
+
+    }
+
+});
+
+
+/* ESC Key */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeAwardLightbox();
+
+    }
+
+});
+
+
+/* Close Function */
+
+function closeAwardLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
