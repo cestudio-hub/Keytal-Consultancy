@@ -1,0 +1,182 @@
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+menuBtn.addEventListener("click", () => {
+
+    nav.classList.toggle("open");
+
+});
+
+
+/* Close mobile menu after clicking a link */
+
+document.querySelectorAll(".nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("open");
+
+    });
+
+});
+
+
+/* =========================================
+   HEADER SCROLL EFFECT
+========================================= */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 40) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav > a");
+
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* =========================================
+   HERO FORM
+========================================= */
+
+const heroForm = document.getElementById("heroForm");
+
+heroForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const button = heroForm.querySelector("button");
+
+    const originalText = button.innerHTML;
+
+    button.innerHTML = "Thank You ✓";
+
+    button.style.background = "#2d8a55";
+
+    setTimeout(() => {
+
+        button.innerHTML = originalText;
+        button.style.background = "";
+
+        heroForm.reset();
+
+    }, 2500);
+
+});
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+
+contactForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    formMessage.innerHTML =
+        "Thank you! Your enquiry has been submitted successfully.";
+
+    contactForm.reset();
+
+});
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(
+    ".service-card, .why-card, .process-item, .trust-item"
+);
+
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.1
+    }
+);
+
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(20px)";
+    element.style.transition =
+        "opacity 0.6s ease, transform 0.6s ease";
+
+    observer.observe(element);
+
+});
