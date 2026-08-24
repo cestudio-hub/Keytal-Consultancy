@@ -73,7 +73,7 @@ select {
     margin: auto;
 } */
 .container {
-    width: min(1500px, calc(100% - 10px));
+    width: min(1500px, calc(93% - 10px));
     margin: auto;
 }
 
