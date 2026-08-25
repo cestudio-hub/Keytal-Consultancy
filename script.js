@@ -5,11 +5,13 @@
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && nav) {
 
-    nav.classList.toggle("open");
+    menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
 
-});
+}
 
 
 /* Close mobile menu after clicking a link */
@@ -18,7 +20,9 @@ document.querySelectorAll(".nav a").forEach(link => {
 
     link.addEventListener("click", () => {
 
-        nav.classList.remove("open");
+        if (nav) {
+            nav.classList.remove("open");
+        }
 
     });
 
@@ -31,19 +35,19 @@ document.querySelectorAll(".nav a").forEach(link => {
 
 const header = document.getElementById("header");
 
-window.addEventListener("scroll", () => {
+if (header) {
 
-    if (window.scrollY > 40) {
+    window.addEventListener("scroll", () => {
 
-        header.classList.add("scrolled");
+        if (window.scrollY > 40) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
 
-    } else {
+    });
 
-        header.classList.remove("scrolled");
-
-    }
-
-});
+}
 
 
 /* =========================================
@@ -52,7 +56,6 @@ window.addEventListener("scroll", () => {
 
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav > a");
-
 
 window.addEventListener("scroll", () => {
 
@@ -67,22 +70,17 @@ window.addEventListener("scroll", () => {
             window.scrollY >= sectionTop &&
             window.scrollY < sectionTop + sectionHeight
         ) {
-
             current = section.getAttribute("id");
-
         }
 
     });
-
 
     navLinks.forEach(link => {
 
         link.classList.remove("active");
 
         if (link.getAttribute("href") === "#" + current) {
-
             link.classList.add("active");
-
         }
 
     });
@@ -96,28 +94,29 @@ window.addEventListener("scroll", () => {
 
 const heroForm = document.getElementById("heroForm");
 
-heroForm.addEventListener("submit", function(event) {
+if (heroForm) {
 
-    event.preventDefault();
+    heroForm.addEventListener("submit", function () {
 
-    const button = heroForm.querySelector("button");
+        const button = heroForm.querySelector("button");
 
-    const originalText = button.innerHTML;
+        if (button) {
 
-    button.innerHTML = "Thank You ✓";
+            button.innerHTML = "Sending...";
+            button.style.background = "#2d8a55";
+            button.disabled = true;
 
-    button.style.background = "#2d8a55";
+        }
 
-    setTimeout(() => {
+        /*
+        DO NOT USE event.preventDefault() HERE.
 
-        button.innerHTML = originalText;
-        button.style.background = "";
+        The form must submit normally to FormSubmit.
+        */
 
-        heroForm.reset();
+    });
 
-    }, 2500);
-
-});
+}
 
 
 /* =========================================
@@ -127,17 +126,20 @@ heroForm.addEventListener("submit", function(event) {
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
+if (contactForm) {
 
-contactForm.addEventListener("submit", function(event) {
+    contactForm.addEventListener("submit", function () {
 
-    event.preventDefault();
+        if (formMessage) {
 
-    formMessage.innerHTML =
-        "Thank you! Your enquiry has been submitted successfully.";
+            formMessage.innerHTML =
+                "Thank you! Your enquiry is being submitted.";
 
-    contactForm.reset();
+        }
 
-});
+    });
+
+}
 
 
 /* =========================================
@@ -148,49 +150,51 @@ const revealElements = document.querySelectorAll(
     ".service-card, .why-card, .process-item, .trust-item"
 );
 
+if (revealElements.length > 0) {
 
-const observer = new IntersectionObserver(
-    entries => {
+    const observer = new IntersectionObserver(
+        entries => {
 
-        entries.forEach(entry => {
+            entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+                if (entry.isIntersecting) {
 
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
 
-            }
+                    observer.unobserve(entry.target);
 
-        });
+                }
 
-    },
-    {
-        threshold: 0.1
-    }
-);
+            });
 
+        },
+        {
+            threshold: 0.1
+        }
+    );
 
-revealElements.forEach(element => {
+    revealElements.forEach(element => {
 
-    element.style.opacity = "0";
-    element.style.transform = "translateY(20px)";
-    element.style.transition =
-        "opacity 0.6s ease, transform 0.6s ease";
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+        element.style.transition =
+            "opacity 0.6s ease, transform 0.6s ease";
 
-    observer.observe(element);
+        observer.observe(element);
 
-});
+    });
+
+}
+
 
 /* =========================================
    AWARD IMAGE LIGHTBOX
 ========================================= */
 
 const awardLinks = document.querySelectorAll(".award-lightbox");
-
 const lightbox = document.getElementById("awardLightbox");
-
 const lightboxImage = document.getElementById("lightboxImage");
-
 const lightboxClose = document.getElementById("lightboxClose");
 
 
@@ -198,17 +202,21 @@ const lightboxClose = document.getElementById("lightboxClose");
 
 awardLinks.forEach(link => {
 
-    link.addEventListener("click", function(event) {
+    link.addEventListener("click", function (event) {
 
         event.preventDefault();
 
+        if (!lightbox || !lightboxImage) return;
+
         lightboxImage.src = this.href;
 
-        lightboxImage.alt =
-            this.querySelector("img").alt;
+        const image = this.querySelector("img");
+
+        if (image) {
+            lightboxImage.alt = image.alt;
+        }
 
         lightbox.classList.add("active");
-
         document.body.style.overflow = "hidden";
 
     });
@@ -218,30 +226,37 @@ awardLinks.forEach(link => {
 
 /* Close Button */
 
-lightboxClose.addEventListener("click", closeAwardLightbox);
+if (lightboxClose) {
+
+    lightboxClose.addEventListener(
+        "click",
+        closeAwardLightbox
+    );
+
+}
 
 
 /* Click Outside Image */
 
-lightbox.addEventListener("click", function(event) {
+if (lightbox) {
 
-    if (event.target === lightbox) {
+    lightbox.addEventListener("click", function (event) {
 
-        closeAwardLightbox();
+        if (event.target === lightbox) {
+            closeAwardLightbox();
+        }
 
-    }
+    });
 
-});
+}
 
 
 /* ESC Key */
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     if (event.key === "Escape") {
-
         closeAwardLightbox();
-
     }
 
 });
@@ -251,8 +266,9 @@ document.addEventListener("keydown", function(event) {
 
 function closeAwardLightbox() {
 
-    lightbox.classList.remove("active");
+    if (!lightbox) return;
 
+    lightbox.classList.remove("active");
     document.body.style.overflow = "";
 
 }
