@@ -158,7 +158,7 @@
 
             <!-- Enquiry form -->
 
-            <div class="hero-form">
+            <!-- <div class="hero-form">
 
                 <div class="form-heading">
                     <span>LET'S CONNECT</span>
@@ -213,7 +213,94 @@
 
                 </form>
 
-            </div>
+            </div> -->
+
+            <div class="hero-form">
+
+    <div class="form-heading">
+        <span>LET'S CONNECT</span>
+        <h3>Get in Touch</h3>
+    </div>
+
+<form
+    id="heroForm"
+    action="https://formsubmit.co/cestudiosseo@gmail.com"
+    method="POST"
+>
+
+    <input type="hidden" name="_subject" value="New Website Enquiry">
+
+    <input type="hidden" name="_captcha" value="false">
+
+        <!-- Optional: redirect after submission -->
+        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+         <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+
+        <div class="input-group">
+            <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <input
+                type="tel"
+                name="contact_number"
+                placeholder="Contact Number"
+            >
+        </div>
+
+        <div class="input-group">
+            <select name="business_experience" required>
+                <option value="" disabled selected>Business Experience</option>
+                <option value="0-1 Years">0–1 Years</option>
+                <option value="1-3 Years">1–3 Years</option>
+                <option value="3-5 Years">3–5 Years</option>
+                <option value="5-10 Years">5–10 Years</option>
+                <option value="10+ Years">10+ Years</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <select name="investment_capacity" required>
+                <option value="" disabled selected>Investment Capacity</option>
+                <option value="25-35 Lakhs">25 Lakhs - 35 Lakhs</option>
+                <option value="36-50 Lakhs">36 Lakhs - 50 Lakhs</option>
+                <option value="51+ Lakhs">51+ Lakhs</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input
+                type="text"
+                name="city"
+                placeholder="City"
+            >
+        </div>
+
+        <button type="submit" class="form-btn">
+            Get a Free Consultation →
+        </button>
+
+        <small class="privacy-text">
+            Your information is safe and will never be shared.
+        </small>
+
+    </form>
+
+</div>
 
         </div>
 
@@ -578,8 +665,8 @@
                 <span>KEYTAL CONSULTANCY</span>
 
                 <h3>Chandrashekar Tripathi</h3>
-<!-- 
-                <p>
+
+                <!-- <p>
                     Business Consultant & Strategic Advisor
                 </p> -->
 
@@ -1022,148 +1109,68 @@
         </div>
 
 
-        <div class="contact-form-box">
+    <div class="contact-form-box">
 
-            <h3>Send Us an Enquiry</h3>
-        
-            <p>
-                Fill in the details and we'll get back to you.
-            </p>
-        
-            <form id="contactForm">
-        
-                <!-- Name + Email -->
-                <div class="form-row">
-        
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        required
-                    >
-        
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        required
-                    >
-        
-                </div>
-        
-        
-                <!-- Contact Number -->
-                <div class="input-group">
-        
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Contact No"
-                        required
-                    >
-        
-                </div>
-        
-        
-                <!-- Business Experience -->
-                <div class="input-group">
-        
-                    <select
-                        name="business_experience"
-                        required
-                    >
-        
-                        <option value="" disabled selected>
-                            Business Experience
-                        </option>
-        
-                        <option value="0-1 Years">
-                            0–1 Years
-                        </option>
-        
-                        <option value="1-3 Years">
-                            1–3 Years
-                        </option>
-        
-                        <option value="3-5 Years">
-                            3–5 Years
-                        </option>
-        
-                        <option value="5-10 Years">
-                            5–10 Years
-                        </option>
-        
-                        <option value="10+ Years">
-                            10+ Years
-                        </option>
-        
-                    </select>
-        
-                </div>
-        
-        
-                <!-- Investment Capacity -->
-                <div class="input-group">
-        
-                    <select
-                        name="investment_capacity"
-                        required
-                    >
-        
-                        <option value="" disabled selected>
-                            Investment Capacity
-                        </option>
-        
-                        <option value="25-35 Lakhs">
-                            25 Lakhs - 35 Lakhs
-                        </option>
-        
-                        <option value="36-50 Lakhs">
-                            36 Lakhs - 50 Lakhs
-                        </option>
-        
-                        <option value="51+ Lakhs">
-                            51+ Lakhs
-                        </option>
-        
-                    </select>
-        
-                </div>        
-        
-                <div class="input-group">
-                        <input type="tel" placeholder="City">
-                    </div>
+    <h3>Send Us an Enquiry</h3>
 
-                <!-- Requirement -->
-                <div class="input-group">
-        
-                    <textarea
-                        name="requirement"
-                        placeholder="Tell us about your business requirements"
-                        rows="4"
-                    ></textarea>
-        
-                </div>
-        
-        
-                <!-- Submit -->
-                <button
-                    type="submit"
-                    class="form-btn"
-                >
-                    Submit Enquiry →
-                </button>
-        
-        
-                <div id="formMessage"></div>
-        
-            </form>
-        
+    <p>Fill in the details and we'll get back to you. </p>
+
+    <form id="contactForm">
+
+        <div class="form-row">
+
+            <input type="text" name="name" placeholder="Your Name" required >
+
+            <input type="email" name="email" placeholder="Email Address" required >
+
         </div>
 
-                
+        <div class="input-group">
+
+            <input type="tel" name="phone" placeholder="Contact No" required >
+
+        </div>
+
+        <div class="input-group">
+
+            <select name="business_experience" required> 
+                <option value="" disabled selected>
+                    Business Experience
+                </option>
+                <option value="0-1 Years">0–1 Years</option>
+                <option value="1-3 Years">1–3 Years</option>
+                <option value="3-5 Years">3–5 Years</option>
+                <option value="5-10 Years">5–10 Years</option>
+                <option value="10+ Years">10+ Years</option>
+            </select>
+
+        </div>
+
+        <div class="input-group">
+            <select name="investment_capacity" required>
+                <option value="" disabled selected> Investment Capacity </option>
+                <option value="25-35 Lakhs"> 25 Lakhs - 35 Lakhs </option>
+                <option value="36-50 Lakhs"> 36 Lakhs - 50 Lakhs </option>
+                <option value="51+ Lakhs"> 51+ Lakhs </option>
+            </select>
+
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="city" placeholder="City" required>
+        </div>
+
+        <div class="input-group">
+            <textarea name="requirement" placeholder="Tell us about your business requirements" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="form-btn"> Submit Enquiry → </button>
+        <div id="formMessage"></div>
+
+    </form>
 
     </div>
+</div>
 
 </section>
 
@@ -1182,56 +1189,40 @@
 </a>
 
        
-            <p>
-                Smart advice. Stronger business.
-                Practical consulting for sustainable growth.
-            </p>
+            <p> Smart advice. Stronger business. Practical consulting for sustainable growth. </p>
 
         </div>
 
 
         <div class="footer-column">
-
             <h4>Quick Links</h4>
-
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
             <a href="#services">Services</a>
             <a href="#profile">Profile</a>
             <a href="#process">Our Process</a>
-
         </div>
 
 
         <div class="footer-column">
-
             <h4>Our Services</h4>
-
             <a href="#services">Business Management</a>
             <a href="#services">Business Growth</a>
             <a href="#services">Franchise Management</a>
             <a href="#services">Marketing Management</a>
-
         </div>
 
 
         <div class="footer-column">
-
             <h4>Contact</h4>
-
 <p>
     <a href="tel:+919594949999">+91 95949 49999</a>
 </p>
             <p>cst@keytal.org</p>
 
         </div>
-
     </div>
-
-
 </footer>
-
-
 <script src="script.js"></script>
 
 </body>
