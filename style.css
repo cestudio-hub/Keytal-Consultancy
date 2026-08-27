@@ -774,7 +774,7 @@ select {
 
     .input-group select {
         padding: 11px 12px;
-        font-size: 11px;
+        font-size: 13px;
     }
 
 }
@@ -1926,9 +1926,9 @@ select {
 }
 
 
-.contact-form-box select {
+/* .contact-form-box select {
     margin-bottom: 12px;
-}
+} */
 
 
 .contact-form-box textarea {
