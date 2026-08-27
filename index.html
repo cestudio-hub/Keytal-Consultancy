@@ -228,50 +228,42 @@
     method="POST"
 >
 
-    <input type="hidden" name="_subject" value="New Website Enquiry">
+    <!-- <input type="hidden" name="_subject" value="New Website Enquiry"> -->
+    <input type="hidden" name="_subject" value="New Business Enquiry - Keytal Consultancy">
 
     <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_template" value="blank">
 
         <!-- Optional: redirect after submission -->
         <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
          <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
 
         <div class="input-group">
-            <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                required >
+            <input type="text" name="Name" placeholder=" Your Name" required >
         </div>
 
         <div class="input-group">
-            <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required >
+            <input type="email" name="Email" placeholder="Email Address" required >
         </div>
 
         <div class="input-group">
-            <input
-                type="tel"
-                name="contact_number"
-                placeholder="Contact Number" >
+            <input type="tel" name="Contact_number" placeholder="Contact Number" >
         </div>
 
         <div class="input-group">
-            <select name="business_experience" required>
+            <select name="Business_experience" required>
                 <option value="" disabled selected>Business Experience</option>
-                <option value="0-1 Years">0–1 Years</option>
-                <option value="1-3 Years">1–3 Years</option>
-                <option value="3-5 Years">3–5 Years</option>
-                <option value="5-10 Years">5–10 Years</option>
+                <option value="0-1 Years">0-1 Years</option>
+                <option value="1-3 Years">1-3 Years</option>
+                <option value="3-5 Years">3-5 Years</option>
+                <option value="5-10 Years">5-10 Years</option>
                 <option value="10+ Years">10+ Years</option>
             </select>
         </div>
 
         <div class="input-group">
-            <select name="investment_capacity" required>
+            <select name="Investment_capacity" required>
                 <option value="" disabled selected>Investment Capacity</option>
                 <option value="25-35 Lakhs">25 Lakhs - 35 Lakhs</option>
                 <option value="36-50 Lakhs">36 Lakhs - 50 Lakhs</option>
@@ -280,15 +272,10 @@
         </div>
 
         <div class="input-group">
-            <input
-                type="text"
-                name="city"
-                placeholder="City" >
+            <input type="text" name="City" placeholder="City" >
         </div>
 
-        <button type="submit" class="form-btn">
-            Get a Free Consultation →
-        </button>
+        <button type="submit" class="form-btn"> Get a Free Consultation → </button>
 
         <small class="privacy-text">
             Your information is safe and will never be shared.
@@ -539,6 +526,7 @@
 
                 <h3>Franchise Management</h3>
                 
+
                 <p>
                     We help businesses develop structured franchise models, improve systems
                     and create a foundation for sustainable expansion.
@@ -556,6 +544,7 @@
                 </a>
 
             </article>
+
 
             <!-- SERVICE 04 -->
 
@@ -593,6 +582,8 @@
     </div>
 
 </section>
+
+
 
 <!-- ================= PROFILE ================= -->
 
@@ -669,6 +660,9 @@
     </div>
 
 </section>
+
+
+
 
 <!-- =========================================
      AWARDS & RECOGNITION
@@ -800,6 +794,7 @@
                 alt="Award">
                 
         </div>
+
 
         <!-- =========================================
              CTA
@@ -1168,37 +1163,28 @@
     <form 
         id="contactForm"
         action="https://formsubmit.co/cestudiosseo@gmail.com"
-        method="POST" >
+        method="POST"
+    >
 
         <!-- FormSubmit Settings -->
-        <input type="hidden" name="_subject" value="New Business Enquiry">
+        <input type="hidden" name="_subject" value="New Business Enquiry - Keytal Consultancy">
         <input type="hidden" name="_next" value="https://keytal-consultancy.vercel.app/thankyou.html">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+        <!-- <input type="hidden" name="_template" value="table"> -->
 
         <div class="form-row">
 
             <input 
-                type="text" 
-                name="name" 
-                placeholder="Your Name" 
-                required >
+                type="text" name="name" placeholder="Your Name" required >
 
             <input 
-                type="email" 
-                name="email" 
-                placeholder="Email Address" 
-                required >
+                type="email" name="email" placeholder="Email Address" required >
 
         </div>
 
         <div class="input-group">
 
-            <input 
-                type="tel" 
-                name="phone" 
-                placeholder="Contact No" 
-                required >
+            <input type="tel" name="phone" placeholder="Contact No" required >
 
         </div>
 
@@ -1223,44 +1209,20 @@
         <div class="input-group">
 
             <select name="investment_capacity" required>
-
-                <option value="" disabled selected>
-                    Investment Capacity
-                </option>
-
-                <option value="25-35 Lakhs">
-                    25 Lakhs - 35 Lakhs
-                </option>
-
-                <option value="36-50 Lakhs">
-                    36 Lakhs - 50 Lakhs
-                </option>
-
-                <option value="51+ Lakhs">
-                    51+ Lakhs
-                </option>
-
+                <option value="" disabled selected> Investment Capacity </option>
+                <option value="25-35 Lakhs"> 25 Lakhs - 35 Lakhs </option>
+                <option value="36-50 Lakhs"> 36 Lakhs - 50 Lakhs </option>
+                <option value="51+ Lakhs"> 51+ Lakhs </option>
             </select>
 
         </div>
 
         <div class="input-group">
-
-            <input 
-                type="text" 
-                name="city" 
-                placeholder="City" 
-                required >
-
+            <input type="text" name="city" placeholder="City" required >
         </div>
 
         <div class="input-group">
-
-            <textarea 
-                name="requirement" 
-                placeholder="Tell us about your business requirements" 
-                rows="4" ></textarea>
-
+            <textarea name="requirement" placeholder="Tell us about your business requirements" rows="4" ></textarea>
         </div>
 
         <button type="submit" class="form-btn">
@@ -1290,8 +1252,6 @@
             <a href="#home" class="logo">
     <img src="images/Logo Footer.webp" alt="Keytal Consultancy Logo">
 </a>
-
-       
             <p> Smart advice. Stronger business. Practical consulting for sustainable growth. </p>
 
         </div>
