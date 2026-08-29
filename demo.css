@@ -3304,40 +3304,68 @@ SMALL MOBILE
 }
 
 
-/* =========================================================
-   19. MOVING TICKER
-========================================================= */
+/* =========================================
+   TICKER
+========================================= */
 
 .ticker {
+    width: 100%;
     overflow: hidden;
-    background: var(--purple);
-    color: #ffffff;
-    white-space: nowrap;
+    background: #54219A;
 }
 
 .ticker-track {
     display: flex;
     width: max-content;
     align-items: center;
-    animation:
-        ticker 28s linear infinite;
+
+    animation: ticker 25s linear infinite;
+
+    will-change: transform;
+}
+
+.ticker-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .ticker-track span {
-    padding: 18px 26px;
-    font: 800 11px "Manrope";
-    letter-spacing: 1px;
+    padding: 18px 12px;
+
+    font: 800 11px "Manrope", sans-serif;
+
+    letter-spacing: 0.8px;
+color: white;
+    white-space: nowrap;
 }
 
 .ticker-track b {
-    color: var(--gold-light);
+    flex-shrink: 0;
+
+    color: #D9AD2F;
+
+    font-size: 12px;
+
+    margin: 0 4px;
 }
 
 
+/* =========================================
+   SEAMLESS LOOP
+========================================= */
+
 @keyframes ticker {
-    to {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
         transform: translateX(-50%);
     }
+
 }
 
 
