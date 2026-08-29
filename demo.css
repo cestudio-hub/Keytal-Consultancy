@@ -142,7 +142,7 @@ h1 em {
 }
 
 .eyebrow.light {
-    color: var(--gold-light);
+    color: white;
 }
 
 
@@ -2591,7 +2591,7 @@ margin: 0 0 15px;
 
 font-family: "Manrope", sans-serif;
 
-font-size: 21px;
+font-size: 24px;
 
 line-height: 1.2;
 
@@ -2617,7 +2617,7 @@ FEATURE DESCRIPTION
 max-width: 230px;
 color: #77717c;
 
-font-size: 11px;
+font-size: 12px;
 
 line-height: 1.8;
 
@@ -3447,7 +3447,7 @@ SMALL MOBILE
 }
 
 .light-heading h2 em {
-    color: var(--gold-light);
+    color: white;
 }
 
 .light-heading p {
@@ -3485,9 +3485,9 @@ SMALL MOBILE
     height: 36px;
     display: grid;
     place-items: center;
-    background: var(--gold);
-    color: #111111;
-    font: 800 9px "Manrope";
+    /* background: var(--gold); */
+    color: white;
+    font: 800 15px "Manrope";
 }
 
 .partner-card h3 {
@@ -3498,7 +3498,7 @@ SMALL MOBILE
 .partner-card p {
     font-size: 14px;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgb(255 255 255 / 88%);
 }
 
 
@@ -3681,7 +3681,7 @@ SMALL MOBILE
 }
 
 .contact-copy h2 em {
-    color: var(--gold-light);
+    color: white;
 }
 
 .contact-copy > p {
@@ -3718,20 +3718,13 @@ SMALL MOBILE
 }
 
 .contact-points b {
-    width: 29px;
+   width: 29px;
     height: 29px;
-
     display: grid;
-
     place-items: center;
-
-    background: var(--gold);
-
-    color: #21152b;
-
-    font:
-        800 8px
-        "Manrope";
+    /* background: var(--gold); */
+    color: #ffffff;
+    font: 802 18px "Manrope";
 }
 
 
@@ -3804,11 +3797,11 @@ SMALL MOBILE
 }
 
 .field label {
-    font-size: 9px;
+    font-size: 10px;
 
     font-weight: 800;
 
-    color: #5f5965;
+    color: #000000;
 }
 
 
