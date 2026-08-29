@@ -4362,3 +4362,996 @@ SMALL MOBILE
         padding: 24px 18px;
     }
 }
+/* =========================================================
+   CAREER OPPORTUNITIES - JOB CARDS
+========================================================= */
+
+.career-jobs-section {
+    padding: 115px 0;
+    background: #f7f7f9;
+}
+
+.career-jobs-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.career-jobs-heading {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.career-jobs-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #54219a;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.career-jobs-eyebrow span {
+    width: 30px;
+    height: 2px;
+    background: #54219a;
+}
+
+.career-jobs-heading h2 {
+    margin: 0;
+
+    color: #11132f;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 700;
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+}
+
+.career-jobs-heading h2 em {
+    display: block;
+
+    color: #54219a;
+
+    font-style: normal;
+}
+
+.career-jobs-heading p {
+    max-width: 650px;
+
+    margin: 22px 0 0;
+
+    color: #686879;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.career-jobs-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.career-job-card {
+    background: #ffffff;
+
+    border: 1px solid #e6e6eb;
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.career-job-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #d8c9ec;
+
+    box-shadow: 0 20px 50px rgba(25, 17, 45, .10);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.career-job-image {
+    position: relative;
+
+    height: 260px;
+
+    overflow: hidden;
+}
+
+.career-job-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.career-job-card:hover .career-job-image img {
+    transform: scale(1.07);
+}
+
+
+/* IMAGE OVERLAY */
+
+.career-job-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(17,19,47,.78),
+            rgba(17,19,47,.05) 65%
+        );
+}
+
+
+/* NUMBER */
+
+.career-job-number {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,.95);
+
+    color: #54219a;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+/* CATEGORY */
+
+.career-job-category {
+    position: absolute;
+
+    left: 20px;
+    bottom: 18px;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.career-job-content {
+    padding: 26px 25px 28px;
+}
+
+.career-job-content h3 {
+    margin: 0 0 10px;
+
+    color: #11132f;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.career-job-content p {
+    min-height: 72px;
+
+    margin: 0;
+
+    color: #747486;
+
+    font-size: 13.5px;
+    line-height: 1.7;
+}
+
+
+/* LINK */
+
+.career-job-content a {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    color: #54219a;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.career-job-content a span {
+    font-size: 18px;
+
+    transition: transform .3s ease;
+}
+
+.career-job-content a:hover span {
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .career-jobs-section {
+        padding: 90px 0;
+    }
+
+    .career-jobs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .career-jobs-section {
+        padding: 70px 0;
+    }
+
+    .career-jobs-heading {
+        margin-bottom: 40px;
+    }
+
+    .career-jobs-heading h2 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .career-jobs-heading p {
+        font-size: 14px;
+    }
+
+    .career-jobs-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .career-job-image {
+        height: 240px;
+    }
+
+    .career-job-content {
+        padding: 23px;
+    }
+
+    .career-job-content p {
+        min-height: auto;
+    }
+
+}
+
+/* =========================================================
+   MARKET OPPORTUNITIES — PREMIUM REDESIGN
+========================================================= */
+
+.market-section {
+    position: relative;
+    padding: 115px 0;
+    background: #101426;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* subtle background grid */
+.market-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.7),
+        transparent 90%
+    );
+
+    pointer-events: none;
+}
+
+/* soft glow */
+.market-section::after {
+    content: "";
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -260px;
+    top: -260px;
+
+    background: rgba(84,33,154,.16);
+
+    border-radius: 50%;
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+
+.market-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.market-top {
+    display: grid;
+
+    grid-template-columns: 1.35fr .65fr;
+
+    gap: 80px;
+
+    align-items: end;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+
+/* LABEL */
+
+.market-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: #bca8df;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.market-label span {
+    display: inline-block;
+
+    width: 28px;
+    height: 2px;
+
+    background: #bca8df;
+}
+
+
+/* HEADING */
+
+.market-heading h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(46px, 5vw, 68px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2.8px;
+
+    font-weight: 700;
+
+    color: #fff;
+}
+
+.market-heading h2 strong {
+    color: #bca8df;
+    font-weight: 700;
+}
+
+
+/* INTRO */
+
+.market-intro {
+    padding-bottom: 5px;
+}
+
+.market-intro p {
+    margin: 0;
+
+    max-width: 380px;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+    color: rgba(255,255,255,.58);
+}
+
+
+/* =========================================================
+   MARKET STATS
+========================================================= */
+
+.market-stats {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1fr
+        1fr
+        1fr;
+
+    margin-top: 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+
+/* STAT CARD */
+
+.market-stat {
+    position: relative;
+
+    min-height: 315px;
+
+    padding: 32px 28px;
+
+    border-right: 1px solid rgba(255,255,255,.12);
+
+    transition:
+        background .35s ease,
+        transform .35s ease;
+}
+
+.market-stat:last-child {
+    border-right: 0;
+}
+
+
+/* FIRST / FEATURED STAT */
+
+.market-stat-main {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(84,33,154,.30),
+            rgba(84,33,154,.08)
+        );
+}
+
+
+/* TOP LINE */
+
+.stat-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 55px;
+}
+
+.stat-top span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #c5b3df;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.stat-top span::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #bca8df;
+}
+
+.stat-top small {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    color: rgb(255 255 255);
+}
+
+
+/* VALUE */
+
+.stat-value {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+    min-height: 70px;
+
+    margin-bottom: 18px;
+}
+
+.stat-value strong {
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(43px, 4vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    color: #fff;
+}
+
+.stat-value span {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #bca8df;
+}
+
+
+/* TITLE */
+
+.market-stat h3 {
+    margin: 0 0 12px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+    font-weight: 650;
+
+    color: #fff;
+}
+
+.market-stat h3 span {
+    color: #bca8df;
+}
+
+
+/* DESCRIPTION */
+
+.market-stat p {
+    max-width: 230px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.48);
+}
+
+
+/* HOVER */
+
+.market-stat:hover {
+    background: rgba(255,255,255,.035);
+
+    transform: translateY(-4px);
+}
+
+.market-stat-main:hover {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(84,33,154,.38),
+            rgba(84,33,154,.12)
+        );
+}
+
+
+/* =========================================================
+   BOTTOM INDUSTRIES
+========================================================= */
+
+.market-bottom {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding-top: 42px;
+}
+
+
+/* LEFT */
+
+.market-bottom-title > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #bca8df;
+}
+
+.market-bottom-title h3 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    letter-spacing: -.5px;
+
+    color: #fff;
+}
+
+.market-bottom-title h3 em {
+    color: #bca8df;
+
+    font-style: normal;
+}
+
+
+/* INDUSTRIES */
+
+.market-industries {
+    display: flex;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: rgba(255,255,255,.62);
+}
+
+.market-industries i {
+    font-style: normal;
+
+    color: rgba(255,255,255,.22);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .market-section {
+        padding: 90px 0;
+    }
+
+
+    .market-top {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding-bottom: 45px;
+    }
+
+
+    .market-heading h2 {
+        max-width: 650px;
+
+        font-size: 52px;
+    }
+
+
+    .market-intro p {
+        max-width: 620px;
+    }
+
+
+    .market-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .market-stat {
+        min-height: 285px;
+    }
+
+
+    .market-stat:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    .market-stat:nth-child(3),
+    .market-stat:nth-child(4) {
+        border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+
+    .market-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .market-industries {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .market-section {
+        padding: 72px 0;
+    }
+
+
+    .market-container {
+        width: 88%;
+    }
+
+
+    .market-top {
+        gap: 22px;
+
+        padding-bottom: 38px;
+    }
+
+
+    .market-label {
+        margin-bottom: 17px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .market-label span {
+        width: 22px;
+    }
+
+
+    .market-heading h2 {
+        font-size: 39px;
+
+        line-height: 1.05;
+
+        letter-spacing: -1.6px;
+    }
+
+
+    .market-intro p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* STATS */
+
+    .market-stats {
+        display: block;
+    }
+
+
+    .market-stat,
+    .market-stat:nth-child(2),
+    .market-stat:nth-child(3),
+    .market-stat:nth-child(4) {
+
+        min-height: auto;
+
+        padding: 28px 23px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(255,255,255,.12);
+
+        border-top: 0;
+    }
+
+
+    .market-stat:last-child {
+        border-bottom: 0;
+    }
+
+
+    .market-stat-main {
+        padding-top: 30px;
+        padding-bottom: 32px;
+    }
+
+
+    .stat-top {
+        margin-bottom: 35px;
+    }
+
+
+    .stat-value {
+        min-height: 58px;
+
+        margin-bottom: 13px;
+    }
+
+
+    .stat-value strong {
+        font-size: 46px;
+    }
+
+
+    .stat-value span {
+        font-size: 15px;
+    }
+
+
+    .market-stat h3 {
+        font-size: 17px;
+    }
+
+
+    .market-stat p {
+        max-width: 100%;
+
+        font-size: 13px;
+    }
+
+
+    /* BOTTOM */
+
+    .market-bottom {
+        gap: 25px;
+
+        padding-top: 34px;
+    }
+
+
+    .market-bottom-title h3 {
+        font-size: 21px;
+
+        line-height: 1.35;
+    }
+
+
+    .market-industries {
+        justify-content: flex-start;
+
+        gap: 7px 9px;
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .market-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .stat-value strong {
+        font-size: 42px;
+    }
+
+
+    .market-stat {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
