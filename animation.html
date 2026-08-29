@@ -1,0 +1,3927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Partner With Keytal | Animation & VFX Franchise</title>
+
+<meta name="description" content="Partner with Keytal Consultancy and build a career-focused Animation, VFX, Gaming and Design education centre with structured business, course and marketing support.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --purple:#54219a;
+    --purple-dark:#351064;
+    --purple-deep:#21063f;
+    --purple-soft:#f1ebf8;
+
+    --gold:#d6ad35;
+    --gold-light:#f1d474;
+
+    --ink:#18151d;
+    --muted:#716c78;
+
+    --white:#ffffff;
+    --off-white:#faf9fc;
+
+    --dark:#17111d;
+
+    --border:#e7e1ed;
+
+    --container:1240px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    overflow-x:hidden;
+}
+
+body.menu-open{
+    overflow:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+.container{
+    width:min(var(--container), calc(100% - 50px));
+    margin:auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    padding:18px 0;
+    transition:.3s ease;
+}
+
+.header.scrolled{
+    background:rgba(255,255,255,.96);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    backdrop-filter:blur(15px);
+}
+
+.nav-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    width:max-content;
+}
+
+.logo img{
+    display:block;
+    width:155px;
+    height:auto;
+    max-height:60px;
+    object-fit:contain;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--purple);
+    color:#fff;
+    padding:13px 22px;
+    border-radius:5px;
+    font-weight:700;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-btn span{
+    font-size:18px;
+}
+
+.nav-btn:hover{
+    background:var(--purple-dark);
+    transform:translateY(-2px);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    width:42px;
+    height:42px;
+    cursor:pointer;
+}
+
+.menu-btn span{
+    display:block;
+    width:25px;
+    height:2px;
+    background:var(--purple-dark);
+    margin:6px auto;
+    transition:.3s;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.franchise-hero{
+    position:relative;
+    min-height:850px;
+    padding-top:135px;
+    background:
+        radial-gradient(circle at 80% 15%,rgba(84,33,154,.12),transparent 30%),
+        linear-gradient(135deg,#fff 0%,#faf8fd 100%);
+    overflow:hidden;
+}
+
+.franchise-hero-bg{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.hero-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(2px);
+}
+
+.hero-orb-one{
+    width:450px;
+    height:450px;
+    right:-220px;
+    top:100px;
+    background:rgba(84,33,154,.08);
+}
+
+.hero-orb-two{
+    width:260px;
+    height:260px;
+    left:-140px;
+    bottom:130px;
+    background:rgba(214,173,53,.09);
+}
+
+.hero-grid-pattern{
+    position:absolute;
+    inset:0;
+    opacity:.35;
+    background-image:
+        linear-gradient(rgba(84,33,154,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(84,33,154,.035) 1px,transparent 1px);
+    background-size:50px 50px;
+}
+
+.franchise-hero-container{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.franchise-hero-content{
+    padding:30px 0 80px;
+}
+
+.franchise-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--purple);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.franchise-eyebrow span{
+    width:34px;
+    height:2px;
+    background:var(--gold);
+}
+
+.franchise-hero h1{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(48px,5.3vw,78px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    max-width:700px;
+}
+
+.franchise-hero h1 span{
+    display:block;
+    color:var(--purple);
+}
+
+.franchise-hero-description{
+    max-width:600px;
+    color:var(--muted);
+    font-size:18px;
+    line-height:1.7;
+    margin:28px 0 34px;
+}
+
+.franchise-hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.franchise-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    padding:16px 24px;
+    border-radius:4px;
+    font-weight:700;
+    font-size:14px;
+    transition:.3s;
+}
+
+.franchise-btn-primary{
+    background:var(--purple);
+    color:#fff;
+    box-shadow:0 12px 30px rgba(84,33,154,.2);
+}
+
+.franchise-btn-primary:hover{
+    background:var(--purple-dark);
+    transform:translateY(-3px);
+}
+
+.franchise-hero-points{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:60px;
+    max-width:700px;
+}
+
+.hero-point{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.hero-point-icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--purple-soft);
+    color:var(--purple);
+    font-size:11px;
+    font-weight:800;
+}
+
+.hero-point strong{
+    display:block;
+    font-size:13px;
+}
+
+.hero-point small{
+    display:block;
+    color:var(--muted);
+    font-size:10px;
+    margin-top:4px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.franchise-hero-visual{
+    position:relative;
+    min-height:590px;
+}
+
+.hero-main-image{
+    position:absolute;
+    top:0;
+    right:0;
+    width:90%;
+    height:540px;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 30px 70px rgba(40,20,60,.2);
+}
+
+.hero-main-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-image-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(to top,rgba(23,10,38,.85),transparent 60%),
+        linear-gradient(90deg,rgba(40,10,65,.25),transparent);
+}
+
+.hero-image-content{
+    position:absolute;
+    left:35px;
+    bottom:35px;
+    color:#fff;
+}
+
+.hero-image-content span{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:var(--gold-light);
+}
+
+.hero-image-content strong{
+    display:block;
+    font-family:"Manrope",sans-serif;
+    font-size:36px;
+    line-height:1.05;
+    margin-top:10px;
+}
+
+.hero-opportunity-card{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:310px;
+    background:#fff;
+    padding:27px;
+    box-shadow:0 25px 60px rgba(30,10,50,.18);
+    border-left:4px solid var(--gold);
+    z-index:5;
+}
+
+.opportunity-card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.opportunity-card-top span{
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:800;
+    color:var(--purple);
+}
+
+.opportunity-icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--purple-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--purple);
+}
+
+.hero-opportunity-card h3{
+    font-family:"Manrope",sans-serif;
+    font-size:24px;
+    line-height:1.15;
+    margin:20px 0 12px;
+}
+
+.hero-opportunity-card p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.hero-opportunity-card a{
+    color:var(--purple);
+    font-size:13px;
+    font-weight:800;
+}
+
+.hero-opportunity-card a span{
+    margin-left:8px;
+}
+
+.hero-gold-circle{
+    position:absolute;
+    width:95px;
+    height:95px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    right:-25px;
+    bottom:40px;
+    z-index:-1;
+}
+
+
+/* =========================================================
+   INDUSTRY STRIP
+========================================================= */
+
+.franchise-industry-strip{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:var(--purple-dark);
+    color:#fff;
+    z-index:10;
+}
+
+.industry-strip-inner{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.industry-strip-inner>span{
+    color:var(--gold-light);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.8px;
+}
+
+.industry-items{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.industry-items div{
+    font-size:13px;
+    color:#fff;
+}
+
+.industry-items b{
+    color:var(--gold);
+    margin-right:8px;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section{
+    padding:110px 0;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--purple);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.eyebrow span{
+    width:30px;
+    height:2px;
+    background:var(--gold);
+}
+
+.center-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 60px;
+}
+
+.center-heading .eyebrow{
+    justify-content:center;
+}
+
+.center-heading h2{
+    font-family:"Manrope",sans-serif;
+    font-size:48px;
+    line-height:1.08;
+    letter-spacing:-2px;
+    margin:15px 0;
+}
+
+.center-heading h2 em{
+    color:var(--purple);
+    font-style:normal;
+}
+
+.center-heading p{
+    color:var(--muted);
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   FRANCHISE MODEL
+========================================================= */
+
+.franchise-model{
+    padding:115px 0;
+    background:#fff;
+}
+
+.franchise-model-head{
+    margin-bottom:60px;
+}
+
+.model-heading{
+    max-width:750px;
+}
+
+.model-heading h2{
+    font-family:"Manrope",sans-serif;
+    font-size:55px;
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-top:15px;
+}
+
+.model-heading h2 em{
+    display:block;
+    color:var(--purple);
+    font-style:normal;
+}
+
+.model-features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.model-feature{
+    padding:35px 28px 40px;
+    border-right:1px solid var(--border);
+    position:relative;
+    transition:.3s;
+}
+
+.model-feature:last-child{
+    border-right:0;
+}
+
+.model-feature:hover{
+    background:var(--purple-soft);
+}
+
+.feature-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+}
+
+.feature-number{
+    font-size:11px;
+    font-weight:800;
+    color:var(--purple);
+}
+
+.feature-icon{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--border);
+    color:var(--gold);
+}
+
+.model-feature h3{
+    font-family:"Manrope",sans-serif;
+    font-size:23px;
+    line-height:1.15;
+    margin-bottom:16px;
+}
+
+.model-feature h3 span{
+    display:block;
+    color:var(--purple);
+}
+
+.model-feature p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.65;
+}
+
+.feature-line{
+    width:45px;
+    height:2px;
+    background:var(--gold);
+    margin-top:28px;
+}
+
+
+/* =========================================================
+   CAREER SECTORS
+========================================================= */
+
+.sectors{
+    background:var(--off-white);
+}
+
+.sector-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.sector-card{
+    background:#fff;
+    border:1px solid var(--border);
+    transition:.35s;
+    overflow:hidden;
+}
+
+.sector-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(30,10,50,.1);
+}
+
+.sector-image{
+    position:relative;
+    height:270px;
+    overflow:hidden;
+}
+
+.sector-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.sector-card:hover .sector-image img{
+    transform:scale(1.06);
+}
+
+.sector-image:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(25,10,40,.55),transparent 55%);
+}
+
+.sector-image span{
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    z-index:2;
+    width:36px;
+    height:36px;
+    background:var(--gold);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:800;
+}
+
+.sector-body{
+    padding:25px;
+}
+
+.sector-body small{
+    color:var(--purple);
+    font-size:9px;
+    letter-spacing:1.5px;
+    font-weight:800;
+}
+
+.sector-body h3{
+    font-family:"Manrope",sans-serif;
+    font-size:22px;
+    margin:9px 0;
+}
+
+.sector-body p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   TICKER
+========================================================= */
+
+.ticker{
+    width:100%;
+    overflow:hidden;
+    background:var(--purple);
+    color:#fff;
+    padding:19px 0;
+}
+
+.ticker-track{
+    display:flex;
+    width:max-content;
+    animation:tickerMove 30s linear infinite;
+}
+
+.ticker-group{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    padding-right:28px;
+    white-space:nowrap;
+}
+
+.ticker span{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.4px;
+}
+
+.ticker b{
+    color:var(--gold-light);
+}
+
+@keyframes tickerMove{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+
+/* =========================================================
+   CAREER OPPORTUNITIES
+========================================================= */
+
+.career-jobs-section{
+    padding:115px 0;
+    background:#fff;
+}
+
+.career-jobs-container{
+    width:min(var(--container),calc(100% - 50px));
+    margin:auto;
+}
+
+.career-jobs-heading{
+    max-width:720px;
+    margin-bottom:60px;
+}
+
+.career-jobs-eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--purple);
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:800;
+}
+
+.career-jobs-eyebrow span{
+    width:30px;
+    height:2px;
+    background:var(--gold);
+}
+
+.career-jobs-heading h2{
+    font-family:"Manrope",sans-serif;
+    font-size:52px;
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin:15px 0;
+}
+
+.career-jobs-heading h2 em{
+    display:block;
+    color:var(--purple);
+    font-style:normal;
+}
+
+.career-jobs-heading p{
+    color:var(--muted);
+    line-height:1.7;
+}
+
+.career-jobs-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.career-job-card{
+    border:1px solid var(--border);
+    background:#fff;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.career-job-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 50px rgba(40,15,60,.12);
+}
+
+.career-job-image{
+    position:relative;
+    height:270px;
+    overflow:hidden;
+}
+
+.career-job-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.career-job-card:hover .career-job-image img{
+    transform:scale(1.07);
+}
+
+.career-job-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(25,8,40,.7),transparent 60%);
+}
+
+.career-job-number{
+    position:absolute;
+    top:18px;
+    right:18px;
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--gold);
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    z-index:2;
+}
+
+.career-job-content{
+    padding:26px;
+}
+
+.career-job-content h3{
+    font-family:"Manrope",sans-serif;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.career-job-content p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   INDUSTRY OUTLOOK
+========================================================= */
+
+.market-section{
+    padding:115px 0;
+    background:var(--purple-deep);
+    color:#fff;
+}
+
+.market-container{
+    width:min(var(--container),calc(100% - 50px));
+    margin:auto;
+}
+
+.market-top{
+    display:grid;
+    grid-template-columns:1fr .8fr;
+    gap:80px;
+    align-items:end;
+    margin-bottom:65px;
+}
+
+.market-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--gold-light);
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:800;
+}
+
+.market-label span{
+    width:30px;
+    height:2px;
+    background:var(--gold);
+}
+
+.market-heading h2{
+    font-family:"Manrope",sans-serif;
+    font-size:52px;
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-top:15px;
+}
+
+.market-heading h2 strong{
+    display:block;
+    color:var(--gold-light);
+}
+
+.market-intro p{
+    color:rgba(255,255,255,.7);
+    line-height:1.8;
+    font-size:15px;
+}
+
+.market-stats{
+    display:grid;
+    grid-template-columns:1.25fr 1fr 1fr 1fr;
+    border-top:1px solid rgba(255,255,255,.18);
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.market-stat{
+    padding:35px 28px;
+    border-right:1px solid rgba(255,255,255,.18);
+}
+
+.market-stat:last-child{
+    border-right:0;
+}
+
+.stat-top{
+    display:flex;
+    justify-content:space-between;
+    color:rgba(255,255,255,.5);
+    font-size:10px;
+}
+
+.stat-top small{
+    color:var(--gold-light);
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.stat-value{
+    margin:40px 0 20px;
+}
+
+.stat-value strong{
+    font-family:"Manrope",sans-serif;
+    font-size:42px;
+    color:#fff;
+}
+
+.market-stat h3{
+    font-family:"Manrope",sans-serif;
+    font-size:20px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.market-stat h3 span{
+    display:block;
+    color:var(--gold-light);
+}
+
+.market-stat p{
+    color:rgba(255,255,255,.65);
+    font-size:12px;
+    line-height:1.7;
+}
+
+.market-stat p strong{
+    color:#fff;
+}
+
+
+/* =========================================================
+   WHO CAN JOIN
+========================================================= */
+
+.partners{
+    background:var(--off-white);
+}
+
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.partner-card{
+    background:#fff;
+    padding:35px 28px;
+    border:1px solid var(--border);
+    min-height:230px;
+    transition:.3s;
+}
+
+.partner-card:hover{
+    background:var(--purple);
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+.partner-card span{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:800;
+}
+
+.partner-card h3{
+    font-family:"Manrope",sans-serif;
+    font-size:21px;
+    margin:35px 0 12px;
+}
+
+.partner-card p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+}
+
+.partner-card:hover p{
+    color:rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process{
+    background:#fff;
+}
+
+.process-line{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--border);
+}
+
+.process-step{
+    padding:35px 25px;
+    border-right:1px solid var(--border);
+    position:relative;
+}
+
+.process-step:last-child{
+    border-right:0;
+}
+
+.process-step>span{
+    width:44px;
+    height:44px;
+    background:var(--purple);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.process-step small{
+    color:var(--gold);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+.process-step h3{
+    font-family:"Manrope",sans-serif;
+    font-size:22px;
+    margin:10px 0;
+}
+
+.process-step p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    position:relative;
+    padding:115px 0;
+    background:#fff;
+    overflow:hidden;
+}
+
+.contact:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:var(--purple-soft);
+    left:-300px;
+    top:-150px;
+}
+
+.contact-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:80px;
+    align-items:center;
+}
+
+.contact-copy{
+    padding:20px 0;
+}
+
+.contact-copy .eyebrow{
+    color:var(--purple);
+}
+
+.contact-copy h2{
+    font-family:"Manrope",sans-serif;
+    font-size:52px;
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin:20px 0;
+}
+
+.contact-copy h2 em{
+    display:block;
+    color:var(--purple);
+    font-style:normal;
+}
+
+.contact-copy>p{
+    color:var(--muted);
+    line-height:1.8;
+    max-width:500px;
+}
+
+.contact-points{
+    margin-top:35px;
+    display:grid;
+    gap:13px;
+}
+
+.contact-points div{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.contact-points b{
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--purple-soft);
+    color:var(--purple);
+    font-size:10px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card{
+    background:#fff;
+    padding:42px;
+    border:1px solid #ddd3e8;
+    box-shadow:0 25px 70px rgba(50,20,70,.1);
+    border-radius:5px;
+}
+
+.form-title small{
+    color:var(--purple);
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:800;
+}
+
+.form-title h3{
+    font-family:"Manrope",sans-serif;
+    font-size:32px;
+    margin:8px 0;
+}
+
+.form-title p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:28px;
+}
+
+.franchise-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.field{
+    width:100%;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    border:1px solid #d9c9e8;
+    background:#f5effa;
+    color:var(--ink);
+    padding:15px 16px;
+    outline:none;
+    font-size:13px;
+    border-radius:3px;
+    transition:.25s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:var(--purple);
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(84,33,154,.08);
+}
+
+.field textarea{
+    min-height:115px;
+    resize:vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+    color:#81758d;
+}
+
+.submit-btn{
+    grid-column:1/-1;
+    border:0;
+    cursor:pointer;
+    background:var(--purple);
+    color:#fff;
+    padding:16px 22px;
+    font-size:14px;
+    font-weight:800;
+    border-radius:3px;
+    transition:.3s;
+}
+
+.submit-btn span{
+    margin-left:10px;
+    font-size:18px;
+}
+
+.submit-btn:hover{
+    background:var(--purple-dark);
+    transform:translateY(-2px);
+}
+
+.submit-btn:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+    transform:none;
+}
+
+.form-status{
+    grid-column:1/-1;
+    font-size:13px;
+    min-height:20px;
+}
+
+.form-status.success{
+    color:#298a4d;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+    background:var(--dark);
+    color:#fff;
+    padding:70px 0 45px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-brand img{
+    width:165px;
+    margin-bottom:20px;
+}
+
+.footer-brand p{
+    color:rgba(255,255,255,.55);
+    font-size:13px;
+    line-height:1.7;
+    max-width:300px;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-column h4{
+    color:var(--gold-light);
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.footer-column a,
+.footer-column p{
+    color:rgba(255,255,255,.6);
+    font-size:13px;
+    transition:.2s;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .franchise-hero-container{
+        gap:45px;
+    }
+
+    .model-features,
+    .sector-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .model-feature:nth-child(2){
+        border-right:0;
+    }
+
+    .model-feature:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+    }
+
+    .career-jobs-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .market-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .market-stat:nth-child(2){
+        border-right:0;
+    }
+
+    .market-stat:nth-child(-n+2){
+        border-bottom:1px solid rgba(255,255,255,.18);
+    }
+
+    .partner-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-line{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process-step:nth-child(2){
+        border-right:0;
+    }
+
+    .process-step:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:800px){
+
+    .container,
+    .career-jobs-container,
+    .market-container{
+        width:min(100% - 30px,700px);
+    }
+
+    .header{
+        padding:13px 0;
+    }
+
+    .logo img{
+        width:135px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav{
+        position:fixed;
+        top:70px;
+        left:15px;
+        right:15px;
+        background:#fff;
+        padding:25px;
+        box-shadow:0 20px 50px rgba(30,10,50,.15);
+        display:flex;
+        flex-direction:column;
+        transform:translateY(-20px);
+        opacity:0;
+        pointer-events:none;
+        transition:.3s;
+    }
+
+    .nav.open{
+        transform:translateY(0);
+        opacity:1;
+        pointer-events:auto;
+    }
+
+    .franchise-hero{
+        padding-top:105px;
+        padding-bottom:100px;
+    }
+
+    .franchise-hero-container{
+        grid-template-columns:1fr;
+    }
+
+    .franchise-hero-content{
+        padding-bottom:0;
+    }
+
+    .franchise-hero h1{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    .franchise-hero-description{
+        font-size:16px;
+    }
+
+    .franchise-hero-points{
+        margin-top:40px;
+    }
+
+    .franchise-hero-visual{
+        min-height:550px;
+    }
+
+    .hero-main-image{
+        width:100%;
+        height:470px;
+    }
+
+    .hero-opportunity-card{
+        width:280px;
+    }
+
+    .franchise-industry-strip{
+        position:relative;
+        margin-top:60px;
+    }
+
+    .industry-strip-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px 0;
+    }
+
+    .industry-items{
+        flex-wrap:wrap;
+        gap:15px 25px;
+    }
+
+    .section,
+    .franchise-model,
+    .career-jobs-section,
+    .market-section,
+    .contact{
+        padding:80px 0;
+    }
+
+    .model-heading h2,
+    .career-jobs-heading h2,
+    .market-heading h2,
+    .contact-copy h2{
+        font-size:42px;
+    }
+
+    .market-top,
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .contact-grid{
+        gap:50px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .franchise-hero h1{
+        font-size:40px;
+    }
+
+    .franchise-hero-points{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .franchise-hero-visual{
+        min-height:510px;
+    }
+
+    .hero-main-image{
+        height:420px;
+    }
+
+    .hero-image-content{
+        left:22px;
+        bottom:25px;
+    }
+
+    .hero-image-content strong{
+        font-size:28px;
+    }
+
+    .hero-opportunity-card{
+        left:10px;
+        bottom:0;
+        width:260px;
+        padding:20px;
+    }
+
+    .model-features,
+    .sector-grid,
+    .career-jobs-grid,
+    .partner-grid,
+    .process-line,
+    .market-stats{
+        grid-template-columns:1fr;
+    }
+
+    .model-feature{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .model-feature:last-child{
+        border-bottom:0;
+    }
+
+    .sector-image,
+    .career-job-image{
+        height:240px;
+    }
+
+    .market-stat{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.18);
+    }
+
+    .market-stat:last-child{
+        border-bottom:0;
+    }
+
+    .process-step{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .process-step:last-child{
+        border-bottom:0;
+    }
+
+    .franchise-form{
+        grid-template-columns:1fr;
+    }
+
+    .field.full,
+    .submit-btn,
+    .form-status{
+        grid-column:1;
+    }
+
+    .form-card{
+        padding:25px 20px;
+    }
+
+    .form-title h3{
+        font-size:26px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .center-heading h2{
+        font-size:38px;
+    }
+
+    .model-heading h2,
+    .career-jobs-heading h2,
+    .market-heading h2,
+    .contact-copy h2{
+        font-size:38px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <img
+                src="images/keytal-logo.webp"
+                alt="Keytal Consultancy">
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="#contact" class="nav-btn">
+                Schedule a Call
+                <span>↗</span>
+            </a>
+
+        </nav>
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="franchise-hero" id="home">
+
+    <div class="franchise-hero-bg">
+
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-grid-pattern"></div>
+
+    </div>
+
+
+    <div class="container franchise-hero-container">
+
+
+        <div class="franchise-hero-content reveal">
+
+            <div class="franchise-eyebrow">
+
+                <span></span>
+
+                KEYTAL ANIMATION FRANCHISE OPPORTUNITY
+
+            </div>
+
+
+            <h1>
+
+                Build a Business
+                <span>That Shapes Creative Careers</span>
+
+            </h1>
+
+
+            <p class="franchise-hero-description">
+
+                Start a career-focused Animation, VFX, Gaming and Design
+                education centre with Keytal Consultancy, backed by a
+                structured business model, industry-relevant courses
+                and ongoing business support.
+
+            </p>
+
+
+            <div class="franchise-hero-actions">
+
+                <a
+                    href="#contact"
+                    class="franchise-btn franchise-btn-primary">
+
+                    Become a Franchise Partner
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="franchise-hero-points">
+
+
+                <div class="hero-point">
+
+                    <div class="hero-point-icon">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Business Model
+                        </strong>
+
+                        <small>
+                            Structured framework
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-point">
+
+                    <div class="hero-point-icon">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Creative Courses
+                        </strong>
+
+                        <small>
+                            Industry-focused learning
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-point">
+
+                    <div class="hero-point-icon">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ongoing Support
+                        </strong>
+
+                        <small>
+                            Guidance for growth
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="franchise-hero-visual reveal">
+
+            <div class="hero-main-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1400&q=85"
+                    alt="Animation and filmmaking studio">
+
+                <div class="hero-image-overlay"></div>
+
+                <div class="hero-image-content">
+
+                    <span>
+                        CREATE • ANIMATE • INSPIRE
+                    </span>
+
+                    <strong>
+                        Your Centre.<br>
+                        Your Creative Business.
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-opportunity-card">
+
+                <div class="opportunity-card-top">
+
+                    <span>
+                        FRANCHISE
+                    </span>
+
+                    <div class="opportunity-icon">
+                        ↗
+                    </div>
+
+                </div>
+
+
+                <h3>
+                    Turn Creative
+                    Opportunity Into
+                    a Business.
+                </h3>
+
+
+                <p>
+                    Build a centre that prepares students
+                    for careers across Animation, VFX,
+                    Gaming, Design and Digital Media.
+                </p>
+
+
+                <a href="#contact">
+
+                    Discuss Your Opportunity
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-gold-circle"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INDUSTRY STRIP -->
+
+    <div class="franchise-industry-strip">
+
+        <div class="container industry-strip-inner">
+
+            <span>
+                BUILT FOR CREATIVE CAREER OPPORTUNITIES
+            </span>
+
+
+            <div class="industry-items">
+
+                <div>
+                    <b>✦</b>
+                    Animation
+                </div>
+
+                <div>
+                    <b>✦</b>
+                    VFX
+                </div>
+
+                <div>
+                    <b>✦</b>
+                    Gaming
+                </div>
+
+                <div>
+                    <b>✦</b>
+                    Graphic Design
+                </div>
+
+                <div>
+                    <b>✦</b>
+                    Film & Media
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FRANCHISE MODEL
+========================================================= -->
+
+<section class="franchise-model" id="about">
+
+    <div class="container">
+
+        <div class="franchise-model-head reveal">
+
+            <div class="model-heading">
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    THE KEYTAL MODEL
+
+                </div>
+
+
+                <h2>
+
+                    More Than a Centre.
+                    <em>Build a Creative Business.</em>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="model-features">
+
+
+            <div class="model-feature reveal">
+
+                <div class="feature-top">
+
+                    <span class="feature-number">
+                        01
+                    </span>
+
+                    <span class="feature-icon">
+                        ◇
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Structured
+                    <span>Business Model</span>
+                </h3>
+
+
+                <p>
+                    Follow a defined framework for setting up,
+                    positioning and developing your creative
+                    education centre.
+                </p>
+
+
+                <div class="feature-line"></div>
+
+            </div>
+
+
+            <div class="model-feature reveal">
+
+                <div class="feature-top">
+
+                    <span class="feature-number">
+                        02
+                    </span>
+
+                    <span class="feature-icon">
+                        ✦
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Career-Focused
+                    <span>Creative Courses</span>
+                </h3>
+
+
+                <p>
+                    Offer programmes built around Animation,
+                    VFX, Gaming, Graphic Design, Film and
+                    emerging digital media careers.
+                </p>
+
+
+                <div class="feature-line"></div>
+
+            </div>
+
+
+            <div class="model-feature reveal">
+
+                <div class="feature-top">
+
+                    <span class="feature-number">
+                        03
+                    </span>
+
+                    <span class="feature-icon">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Marketing &
+                    <span>Growth Guidance</span>
+                </h3>
+
+
+                <p>
+                    Get guidance to create awareness,
+                    attract students and strengthen your
+                    local education presence.
+                </p>
+
+
+                <div class="feature-line"></div>
+
+            </div>
+
+
+            <div class="model-feature reveal">
+
+                <div class="feature-top">
+
+                    <span class="feature-number">
+                        04
+                    </span>
+
+                    <span class="feature-icon">
+                        +
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Ongoing
+                    <span>Support</span>
+                </h3>
+
+
+                <p>
+                    Continue your journey with ongoing
+                    guidance as you establish and grow
+                    your creative education centre.
+                </p>
+
+
+                <div class="feature-line"></div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CREATIVE SECTORS
+========================================================= -->
+
+<section class="section sectors" id="sectors">
+
+    <div class="container">
+
+
+        <div class="center-heading reveal">
+
+            <div class="eyebrow">
+
+                <span></span>
+                CREATIVE INDUSTRIES
+                <span></span>
+
+            </div>
+
+
+            <h2>
+                One Centre.
+                <em>Multiple Creative Paths.</em>
+            </h2>
+
+
+            <p>
+                Prepare students for opportunities across
+                the rapidly evolving creative and digital
+                media industries.
+            </p>
+
+        </div>
+
+
+        <div class="sector-grid">
+
+
+            <!-- ANIMATION -->
+
+            <article class="sector-card reveal">
+
+                <div class="sector-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=80"
+                        alt="3D Animation">
+
+                    <span>
+                        01
+                    </span>
+
+                </div>
+
+
+                <div class="sector-body">
+
+                    <small>
+                        CREATIVE INDUSTRY
+                    </small>
+
+                    <h3>
+                        Animation
+                    </h3>
+
+                    <p>
+                        2D animation, 3D animation,
+                        character animation and digital
+                        storytelling.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- VFX -->
+
+            <article class="sector-card reveal">
+
+                <div class="sector-image">
+
+                <img
+    src="https://images.unsplash.com/photo-1485846234645-a62644f84728?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmlsbSUyMHByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=80&w=1200"
+    alt="Visual Effects"
+    loading="lazy">
+
+                    <span>
+                        02
+                    </span>
+
+                </div>
+
+
+                <div class="sector-body">
+
+                    <small>
+                        FILM & MEDIA
+                    </small>
+
+                    <h3>
+                        VFX
+                    </h3>
+
+                    <p>
+                        Visual effects, compositing,
+                        motion graphics and digital
+                        production.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- GAMING -->
+
+            <article class="sector-card reveal">
+
+                <div class="sector-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80"
+                        alt="Game Development">
+
+                    <span>
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="sector-body">
+
+                    <small>
+                        DIGITAL MEDIA
+                    </small>
+
+                    <h3>
+                        Gaming
+                    </h3>
+
+                    <p>
+                        Game art, game design, 3D assets,
+                        interactive experiences and
+                        game development.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- DESIGN -->
+
+            <article class="sector-card reveal">
+
+                <div class="sector-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=900&q=80"
+                        alt="Graphic Design">
+
+                    <span>
+                        04
+                    </span>
+
+                </div>
+
+
+                <div class="sector-body">
+
+                    <small>
+                        DESIGN
+                    </small>
+
+                    <h3>
+                        Graphic Design
+                    </h3>
+
+                    <p>
+                        Branding, visual communication,
+                        digital design and creative
+                        content production.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TICKER
+========================================================= -->
+
+<div class="ticker">
+
+    <div class="ticker-track">
+
+
+        <div class="ticker-group">
+
+            <span>
+                ANIMATION
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                VFX
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                GAMING
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                GRAPHIC DESIGN
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                FILM & MEDIA
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                CREATIVE CAREERS
+            </span>
+
+            <b>✦</b>
+
+        </div>
+
+
+        <div class="ticker-group">
+
+            <span>
+                ANIMATION
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                VFX
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                GAMING
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                GRAPHIC DESIGN
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                FILM & MEDIA
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                CREATIVE CAREERS
+            </span>
+
+            <b>✦</b>
+
+        </div>
+
+
+        <div class="ticker-group">
+
+            <span>
+                ANIMATION
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                VFX
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                GAMING
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                GRAPHIC DESIGN
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                FILM & MEDIA
+            </span>
+
+            <b>✦</b>
+
+            <span>
+                CREATIVE CAREERS
+            </span>
+
+            <b>✦</b>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     CAREER OPPORTUNITIES
+========================================================= -->
+
+<section
+    class="career-jobs-section"
+    id="career-opportunities">
+
+
+    <div class="career-jobs-container">
+
+
+        <div class="career-jobs-heading reveal">
+
+            <div class="career-jobs-eyebrow">
+
+                <span></span>
+
+                CAREER OPPORTUNITIES
+
+            </div>
+
+
+            <h2>
+
+                Explore Careers Across
+                <em>Creative Industries.</em>
+
+            </h2>
+
+
+            <p>
+
+                Build skills for exciting careers across
+                animation, visual effects, gaming,
+                design, filmmaking and digital media.
+
+            </p>
+
+        </div>
+
+
+        <div class="career-jobs-grid">
+
+
+            <!-- 01 -->
+
+            <article class="career-job-card reveal">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80"
+                        alt="3D Animator">
+
+                    <span class="career-job-number">
+                        01
+                    </span>
+
+                    <div class="career-job-overlay"></div>
+
+                </div>
+
+
+                <div class="career-job-content">
+
+                    <h3>
+                        3D Animator
+                    </h3>
+
+                    <p>
+                        Create expressive characters,
+                        environments and animated sequences
+                        for films, games and digital media.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 02 -->
+<article class="career-job-card reveal">
+
+    <div class="career-job-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85"
+            alt="VFX Artist">
+
+        <span class="career-job-number">
+            02
+        </span>
+
+        <div class="career-job-overlay"></div>
+
+    </div>
+
+    <div class="career-job-content">
+
+        <h3>VFX Artist</h3>
+
+        <p>
+            Create visual effects, digital environments and cinematic
+            experiences for films, advertising and entertainment.
+        </p>
+
+    </div>
+
+</article>
+
+            <!-- 03 -->
+
+            <article class="career-job-card reveal">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80"
+                        alt="Game Artist">
+
+                    <span class="career-job-number">
+                        03
+                    </span>
+
+                    <div class="career-job-overlay"></div>
+
+                </div>
+
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Game Artist
+                    </h3>
+
+                    <p>
+                        Design characters, environments,
+                        props and visual assets for modern
+                        gaming experiences.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 04 -->
+
+            <article class="career-job-card reveal">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=80"
+                        alt="Motion Graphics Designer">
+
+                    <span class="career-job-number">
+                        04
+                    </span>
+
+                    <div class="career-job-overlay"></div>
+
+                </div>
+
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Motion Graphics Designer
+                    </h3>
+
+                    <p>
+                        Create animated graphics and visual
+                        content for advertising, social media,
+                        broadcast and digital platforms.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 05 -->
+
+            <article class="career-job-card reveal">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80"
+                        alt="Film Editor">
+
+                    <span class="career-job-number">
+                        05
+                    </span>
+
+                    <div class="career-job-overlay"></div>
+
+                </div>
+
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Film & Video Editor
+                    </h3>
+
+                    <p>
+                        Shape stories through editing,
+                        post-production, sound and
+                        cinematic visual storytelling.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 06 -->
+
+            <article class="career-job-card reveal">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=80"
+                        alt="Graphic Designer">
+
+                    <span class="career-job-number">
+                        06
+                    </span>
+
+                    <div class="career-job-overlay"></div>
+
+                </div>
+
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Graphic Designer
+                    </h3>
+
+                    <p>
+                        Build visual identities, campaigns,
+                        digital content and communication
+                        materials for brands.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INDUSTRY OUTLOOK
+========================================================= -->
+
+<section class="market-section" id="market">
+
+    <div class="market-container">
+
+
+        <div class="market-top">
+
+
+            <div class="market-heading">
+
+                <div class="market-label">
+
+                    <span></span>
+
+                    INDUSTRY OUTLOOK
+
+                </div>
+
+
+                <h2>
+
+                    A Creative Economy
+                    Driven by
+
+                    <strong>Digital Experiences.</strong>
+
+                </h2>
+
+            </div>
+
+
+            <div class="market-intro">
+
+                <p>
+
+                    Animation, VFX, gaming, design and
+                    digital media continue to create new
+                    opportunities for skilled creative
+                    professionals across entertainment,
+                    advertising, technology and digital
+                    platforms.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="market-stats">
+
+
+            <div class="market-stat market-stat-main">
+
+                <div class="stat-top">
+
+                    <span>
+                        01
+                    </span>
+
+                    <small>
+                        ANIMATION
+                    </small>
+
+                </div>
+
+
+                <div class="stat-value">
+
+                    <strong>
+                        2D + 3D
+                    </strong>
+
+                </div>
+
+
+                <h3>
+
+                    Animation
+
+                    <span>
+                        Creative Careers
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    Opportunities span animation,
+                    character design, storytelling,
+                    modelling and digital production.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+
+                    <span>
+                        02
+                    </span>
+
+                    <small>
+                        VFX
+                    </small>
+
+                </div>
+
+
+                <div class="stat-value">
+
+                    <strong>
+                        Film
+                    </strong>
+
+                </div>
+
+
+                <h3>
+
+                    Visual Effects
+
+                    <span>
+                        Production
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    VFX professionals contribute to
+                    films, advertising, OTT content,
+                    television and digital experiences.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+
+                    <span>
+                        03
+                    </span>
+
+                    <small>
+                        GAMING
+                    </small>
+
+                </div>
+
+
+                <div class="stat-value">
+
+                    <strong>
+                        3D
+                    </strong>
+
+                </div>
+
+
+                <h3>
+
+                    Game Development
+
+                    <span>
+                        Creative Skills
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    Game art and interactive media
+                    require artists, designers and
+                    technical creative professionals.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+
+                    <span>
+                        04
+                    </span>
+
+                    <small>
+                        DIGITAL
+                    </small>
+
+                </div>
+
+
+                <div class="stat-value">
+
+                    <strong>
+                        360°
+                    </strong>
+
+                </div>
+
+
+                <h3>
+
+                    Digital Design
+
+                    <span>
+                        New Opportunities
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    Brands increasingly need visual
+                    content, motion graphics, social
+                    media design and digital experiences.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHO CAN JOIN
+========================================================= -->
+
+<section class="section partners">
+
+    <div class="container">
+
+
+        <div class="center-heading reveal">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                FRANCHISE PARTNERS
+
+                <span></span>
+
+            </div>
+
+
+            <h2>
+
+                Who Can Start a
+                <em>Keytal Franchise?</em>
+
+            </h2>
+
+
+            <p>
+
+                Our franchise opportunity can be suitable
+                for individuals and organisations looking
+                to build a business in creative education.
+
+            </p>
+
+        </div>
+
+
+        <div class="partner-grid">
+
+
+            <div class="partner-card reveal">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Entrepreneurs
+                </h3>
+
+                <p>
+                    Individuals looking to build a
+                    scalable creative education business.
+                </p>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Education Professionals
+                </h3>
+
+                <p>
+                    Existing educators looking to expand
+                    into Animation, VFX, Gaming and Design.
+                </p>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Business Owners
+                </h3>
+
+                <p>
+                    Existing business owners looking to
+                    enter the creative education sector.
+                </p>
+
+            </div>
+
+
+            <div class="partner-card reveal">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Investors
+                </h3>
+
+                <p>
+                    Individuals looking for a structured
+                    business opportunity in education.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section class="section process" id="process">
+
+    <div class="container">
+
+
+        <div class="center-heading reveal">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                HOW IT WORKS
+
+                <span></span>
+
+            </div>
+
+
+            <h2>
+
+                From Enquiry to
+                <em>Launch.</em>
+
+            </h2>
+
+
+            <p>
+
+                A straightforward journey to explore,
+                plan and launch your creative education centre.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-line">
+
+
+            <div class="process-step reveal">
+
+                <span>
+                    01
+                </span>
+
+                <small>
+                    STEP ONE
+                </small>
+
+                <h3>
+                    Submit Enquiry
+                </h3>
+
+                <p>
+                    Tell us about yourself and your
+                    business plans.
+                </p>
+
+            </div>
+
+
+            <div class="process-step reveal">
+
+                <span>
+                    02
+                </span>
+
+                <small>
+                    STEP TWO
+                </small>
+
+                <h3>
+                    Discussion
+                </h3>
+
+                <p>
+                    Understand the franchise model,
+                    courses and business opportunity.
+                </p>
+
+            </div>
+
+
+            <div class="process-step reveal">
+
+                <span>
+                    03
+                </span>
+
+                <small>
+                    STEP THREE
+                </small>
+
+                <h3>
+                    Location & Planning
+                </h3>
+
+                <p>
+                    Discuss location, infrastructure,
+                    setup and centre requirements.
+                </p>
+
+            </div>
+
+
+            <div class="process-step reveal">
+
+                <span>
+                    04
+                </span>
+
+                <small>
+                    STEP FOUR
+                </small>
+
+                <h3>
+                    Launch
+                </h3>
+
+                <p>
+                    Set up your centre and begin
+                    your creative education journey.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT / FORM
+========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-orb"></div>
+
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-copy reveal">
+
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                BECOME A FRANCHISE PARTNER
+
+            </div>
+
+
+            <h2>
+
+                Your Next Business
+                Opportunity
+
+                <em>Starts Here.</em>
+
+            </h2>
+
+
+            <p>
+
+                Connect with Keytal Consultancy to learn
+                more about the franchise model, courses,
+                investment requirements and business
+                opportunity in creative education.
+
+            </p>
+
+
+            <div class="contact-points">
+
+
+                <div>
+
+                    <b>
+                        01
+                    </b>
+
+                    Discuss the franchise model
+
+                </div>
+
+
+                <div>
+
+                    <b>
+                        02
+                    </b>
+
+                    Understand setup requirements
+
+                </div>
+
+
+                <div>
+
+                    <b>
+                        03
+                    </b>
+
+                    Plan your centre with our team
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <div class="form-card reveal">
+
+
+            <div class="form-title">
+
+                <small>
+                    FRANCHISE ENQUIRY
+                </small>
+
+
+                <h3>
+                    Let's Start a Conversation.
+                </h3>
+
+
+                <p>
+                    Fill in your details and our team
+                    will contact you.
+                </p>
+
+            </div>
+
+
+            <form
+                id="franchiseForm"
+                class="franchise-form">
+
+
+                <div class="field">
+
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="field">
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="field">
+
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="Enter your contact number"
+                        required>
+
+                </div>
+
+
+                <div class="field">
+
+                    <input
+                        id="location"
+                        name="location"
+                        type="text"
+                        placeholder="City / Location">
+
+                </div>
+
+
+                <div class="field">
+
+                    <select
+                        id="experience"
+                        name="business_experience"
+                        required>
+
+                        <option
+                            value=""
+                            disabled
+                            selected>
+
+                            Select experience
+
+                        </option>
+
+                        <option>
+                            0-1 Years
+                        </option>
+
+                        <option>
+                            1-3 Years
+                        </option>
+
+                        <option>
+                            3-5 Years
+                        </option>
+
+                        <option>
+                            5-10 Years
+                        </option>
+
+                        <option>
+                            10+ Years
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <select
+                        id="investment"
+                        name="investment">
+
+                        <option
+                            value=""
+                            selected>
+
+                            Select investment capacity
+
+                        </option>
+
+                        <option>
+                            ₹10 - ₹20 Lakhs
+                        </option>
+
+                        <option>
+                            ₹20 - ₹35 Lakhs
+                        </option>
+
+                        <option>
+                            ₹35 Lakhs+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field full">
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell us about your franchise requirements"></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Submit Franchise Enquiry
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="form-status"
+                    id="formStatus"
+                    aria-live="polite">
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/keytal-logo.webp"
+                    alt="Keytal Consultancy">
+
+            </a>
+
+
+            <p>
+
+                Smart advice. Stronger business.
+                Practical consulting for sustainable
+                growth in creative education.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About Us
+            </a>
+
+            <a href="#sectors">
+                Creative Industries
+            </a>
+
+            <a href="#career-opportunities">
+                Careers
+            </a>
+
+            <a href="#process">
+                Our Process
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Our Services
+            </h4>
+
+            <a href="#about">
+                Business Management
+            </a>
+
+            <a href="#about">
+                Business Growth
+            </a>
+
+            <a href="#about">
+                Franchise Management
+            </a>
+
+            <a href="#about">
+                Marketing Management
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Contact
+            </h4>
+
+
+            <p>
+                <a href="tel:+919594949999">
+                    +91 95949 49999
+                </a>
+            </p>
+
+
+            <p>
+                cst@keytal.org
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+const header = document.getElementById("header");
+
+
+menuBtn.addEventListener("click", () => {
+
+    const open = nav.classList.toggle("open");
+
+    menuBtn.classList.toggle("active", open);
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+    );
+
+    document.body.classList.toggle(
+        "menu-open",
+        open
+    );
+
+});
+
+
+/* CLOSE MENU */
+
+nav.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("open");
+
+        menuBtn.classList.remove("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        document.body.classList.remove(
+            "menu-open"
+        );
+
+    });
+
+});
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+window.addEventListener("scroll", () => {
+
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 25
+    );
+
+}, {
+    passive:true
+});
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+const observer = new IntersectionObserver(
+
+    (entries, obs) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+                obs.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(el => observer.observe(el));
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+const form =
+    document.getElementById("franchiseForm");
+
+const status =
+    document.getElementById("formStatus");
+
+
+form.addEventListener("submit", e => {
+
+    e.preventDefault();
+
+
+    const button =
+        form.querySelector(".submit-btn");
+
+
+    const original =
+        button.innerHTML;
+
+
+    button.disabled = true;
+
+    button.innerHTML =
+        "Submitting...";
+
+
+    setTimeout(() => {
+
+        button.innerHTML =
+            "Thank You! ✓";
+
+
+        status.textContent =
+            "Your franchise enquiry has been received.";
+
+
+        status.classList.add(
+            "success"
+        );
+
+
+        form.reset();
+
+
+        setTimeout(() => {
+
+            button.disabled = false;
+
+            button.innerHTML =
+                original;
+
+            status.textContent =
+                "";
+
+            status.classList.remove(
+                "success"
+            );
+
+        },3500);
+
+
+    },900);
+
+});
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener("keydown", e => {
+
+    if(e.key === "Escape"){
+
+        nav.classList.remove("open");
+
+        menuBtn.classList.remove("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        document.body.classList.remove(
+            "menu-open"
+        );
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
