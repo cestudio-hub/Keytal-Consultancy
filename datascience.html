@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1946,93 +1947,323 @@ textarea {
    FOOTER
 ========================================================= */
 
+
 .footer {
-
-    padding: 55px 0 30px;
-
-    background: #100d16;
-
-    color: #fff;
+    background: #35136F;
+    color: #ffffff;
+    padding: 25px 0 12px;
 }
 
-.footer-grid {
 
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
     display: grid;
-
-    grid-template-columns: 1.4fr .7fr .7fr .9fr;
-
-    gap: 60px;
-
-    padding-bottom: 45px;
-
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    grid-template-columns: 1.3fr 2fr 1fr;
+    align-items: center;
+    gap: 40px;
 }
 
-.footer-brand img {
 
-    width: 145px;
+/* =========================================
+   BRAND
+========================================= */
 
-    margin-bottom: 20px;
+.footer-brand {
+    text-align: left;
+}
+
+.footer-logo {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-logo .logo-text {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.footer-logo .logo-text strong {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.footer-logo .logo-text span {
+    color: #c5b6d9;
+    font-size: 10px;
+    letter-spacing: 1.5px;
 }
 
 .footer-brand p {
-
-    max-width: 280px;
-
-    font-size: 10px;
-
-    line-height: 1.8;
-
-    color: rgba(255,255,255,.42);
-}
-
-.footer-column {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 11px;
-}
-
-.footer-column h4 {
-
-    margin-bottom: 8px;
-
-    font-family: "Manrope";
-
+    max-width: 270px;
+    color: #c8b9df;
     font-size: 11px;
+    line-height: 1.45;
+    margin: 7px 0 0;
 }
 
-.footer-column a {
 
-    font-size: 9px;
+/* =========================================
+   QUICK LINKS
+========================================= */
 
-    color: rgba(255,255,255,.45);
-
-    transition: .2s;
+.quick-links {
+    text-align: center;
 }
 
-.footer-column a:hover {
-
-    color: #fff;
+.quick-links h4 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 9px;
 }
+
+
+/* Horizontal Quick Links */
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
+.footer-links a {
+    color: #c8b9df;
+    text-decoration: none;
+    font-size: 11px;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact h4 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.footer-contact a {
+    color: #c8b9df;
+    text-decoration: none;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
 
 .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    margin-top: 20px;
+    padding-top: 9px;
 
     display: flex;
-
+    align-items: center;
     justify-content: space-between;
 
-    gap: 20px;
-
-    padding-top: 22px;
-
-    font-size: 8px;
-
-    color: rgba(255,255,255,.35);
+    color: #a99abb;
+    font-size: 10px;
 }
 
+.footer-bottom div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .footer-main {
+        grid-template-columns: 1.1fr 1.8fr 0.9fr;
+        gap: 25px;
+    }
+
+    .footer-links {
+        gap: 11px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 800px) {
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quick-links {
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 22px 0 10px;
+    }
+
+    .footer-main {
+        gap: 18px;
+    }
+
+    .footer-logo .logo-text strong {
+        font-size: 19px;
+    }
+
+    .footer-logo .logo-text span {
+        font-size: 9px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+
+    .quick-links h4,
+    .footer-contact h4 {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .footer-links {
+        gap: 8px 14px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        margin-top: 17px;
+        padding-top: 8px;
+
+        flex-direction: column;
+        gap: 7px;
+
+        text-align: center;
+    }
+
+    .footer-bottom div {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .footer-links {
+        gap: 7px 12px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 9px;
+    }
+
+}
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.3fr 2.2fr 1fr;
+    align-items: start;
+    gap: 25px;
+}
+
+.quick-links {
+    text-align: center;
+}
+
+.footer-contact {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.footer-contact h4 {
+    margin: 0 0 8px;
+}
+
+.footer-contact a {
+    display: block;
+    margin-bottom: 5px;
+}
 
 /* =========================================================
    TABLET
@@ -2451,7 +2682,7 @@ textarea {
         </a>
 
 
-            <nav class="nav" id="nav">
+      <nav class="nav" id="nav">
 
     <a href="tel:+919594949999" class="nav-btn">
 
@@ -3970,127 +4201,63 @@ textarea {
 
 <footer class="footer">
 
-    <div class="container">
+    <div class="container footer-main">
 
-        <div class="footer-grid">
+        <!-- BRAND -->
+        <div class="footer-brand">
 
+             <a href="index.html" class="logo">
 
-            <div class="footer-brand">
+            <img
+                src="images/Logo Footer.webp"
+                alt="Keytal Consultancy">
 
-                <img
-                    src="images/keytal-logo.webp"
-                    alt="Keytal Consultancy">
+        </a>
 
-                <p>
-
-                    Smart advice. Stronger business.
-                    Practical consulting for sustainable
-                    growth in education and technology.
-
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    Quick Links
-                </h4>
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#programs">
-                    Programs
-                </a>
-
-                <a href="#career-opportunities">
-                    Careers
-                </a>
-
-                <a href="#process">
-                    Franchise Process
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    Programs
-                </h4>
-
-                <a href="#programs">
-                    Data Science
-                </a>
-
-                <a href="#programs">
-                    Data Analytics
-                </a>
-
-                <a href="#programs">
-                    B.Sc Data Science with AI
-                </a>
-
-                <a href="#programs">
-                    Cyber Security
-                </a>
-
-                <a href="#programs">
-                    Full Stack Development
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    Franchise
-                </h4>
-
-                <a href="#contact">
-                    Become a Partner
-                </a>
-
-                <a href="#process">
-                    How It Works
-                </a>
-
-                <a href="#contact">
-                    Investment
-                </a>
-
-                <a href="#contact">
-                    Partner Support
-                </a>
-
-            </div>
-
+            <p>
+                Building opportunities through business,
+                education and franchise solutions.
+            </p>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <!-- QUICK LINKS -->
+        <div class="footer-column quick-links">
 
-            <span>
-                © 2026 Keytal Consultancy. All Rights Reserved.
-            </span>
+            <h4>Quick Links</h4>
 
-            <span>
-                Education Franchise Opportunity
-            </span>
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="franchise.html">Tourism</a>
+                <a href="animation.html">Animation</a>
+                <a href="datascience.html">Data Science</a>
+
+            </div>
 
         </div>
+
+
+        <!-- CONTACT -->
+       <div class="footer-column footer-contact">
+
+    <h4>Contact</h4>
+
+    <a href="tel:+919594949999">
+        +91 95949 49999
+    </a>
+
+    <a href="mailto:cst@keytal.org">
+        cst@keytal.org
+    </a>
+
+</div>
 
     </div>
+
+
 
 </footer>
 
@@ -4198,3 +4365,4 @@ if (contactForm) {
 </body>
 
 </html>
+
