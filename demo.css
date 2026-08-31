@@ -3334,7 +3334,7 @@ SMALL MOBILE
 .ticker-track span {
     padding: 18px 12px;
 
-    font: 800 11px "Manrope", sans-serif;
+    font: 800 11px "Roboto", sans-serif;
 
     letter-spacing: 0.8px;
 color: white;
@@ -3442,7 +3442,7 @@ color: white;
     place-items: center;
     background: var(--purple-soft);
     color: var(--purple);
-    font: 800 10px "Manrope";
+    font: 800 10px "Roboto";
 }
 
 .benefit h3 {
@@ -3515,7 +3515,7 @@ color: white;
     place-items: center;
     /* background: var(--gold); */
     color: white;
-    font: 800 15px "Manrope";
+    font: 800 15px "Roboto";
 }
 
 .partner-card h3 {
@@ -3587,7 +3587,7 @@ color: white;
 .process-step > span {
     font:
         800 28px
-        "Manrope";
+        "Roboto";
 
     color: var(--purple);
 }
@@ -3752,7 +3752,7 @@ color: white;
     place-items: center;
     /* background: var(--gold); */
     color: #000000;
-    font: 802 18px "Manrope";
+    font: 802 18px "Roboto";
 }
 
 
@@ -5535,70 +5535,157 @@ color: white;
         font-size: 47px;
     }
 }
-/* =========================================
-   FOOTER
-========================================= */
 
 .footer {
     background: #35136F;
     color: #ffffff;
-    padding: 55px 0 20px;
+    padding: 25px 0 12px;
 }
 
-.footer-grid {
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr;
-    gap: 60px;
+    grid-template-columns: 1.3fr 2fr 1fr;
+    align-items: center;
+    gap: 40px;
 }
 
-.footer-brand p {
-    max-width: 260px;
-    color: #c8b9df;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: 18px;
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+    text-align: left;
+}
+
+.footer-logo {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-logo .logo-text {
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
 .footer-logo .logo-text strong {
     color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 .footer-logo .logo-text span {
     color: #c5b6d9;
+    font-size: 10px;
+    letter-spacing: 1.5px;
 }
 
-.footer-column h4 {
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 17px;
-}
-
-.footer-column a,
-.footer-column p {
-    display: block;
+.footer-brand p {
+    max-width: 270px;
     color: #c8b9df;
-    font-size: 12px;
-    margin-bottom: 9px;
+    font-size: 11px;
+    line-height: 1.45;
+    margin: 7px 0 0;
+}
+
+
+/* =========================================
+   QUICK LINKS
+========================================= */
+
+.quick-links {
+    text-align: center;
+}
+
+.quick-links h4 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 9px;
+}
+
+
+/* Horizontal Quick Links */
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
+.footer-links a {
+    color: #c8b9df;
+    text-decoration: none;
+    font-size: 11px;
+    white-space: nowrap;
     transition: var(--transition);
 }
 
-.footer-column a:hover {
+.footer-links a:hover {
     color: #ffffff;
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.15);
-    margin-top: 50px;
-    padding-top: 18px;
-    display: flex;
-    justify-content: space-between;
-    color: #a99abb;
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact h4 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.footer-contact a {
+    color: #c8b9df;
+    text-decoration: none;
     font-size: 12px;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    margin-top: 20px;
+    padding-top: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #a99abb;
+    font-size: 10px;
 }
 
 .footer-bottom div {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 18px;
 }
 
 
@@ -5606,10 +5693,55 @@ color: white;
    TABLET
 ========================================= */
 
-@media(max-width:850px) {
+@media (max-width: 1000px) {
 
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
+    .footer-main {
+        grid-template-columns: 1.1fr 1.8fr 0.9fr;
+        gap: 25px;
+    }
+
+    .footer-links {
+        gap: 11px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 800px) {
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quick-links {
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-contact {
+        text-align: center;
     }
 
 }
@@ -5619,20 +5751,104 @@ color: white;
    MOBILE
 ========================================= */
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
 
     .footer {
-        padding: 45px 0 20px;
+        padding: 22px 0 10px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
+    .footer-main {
+        gap: 18px;
+    }
+
+    .footer-logo .logo-text strong {
+        font-size: 19px;
+    }
+
+    .footer-logo .logo-text span {
+        font-size: 9px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+
+    .quick-links h4,
+    .footer-contact h4 {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .footer-links {
+        gap: 8px 14px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+        font-size: 11px;
     }
 
     .footer-bottom {
+        margin-top: 17px;
+        padding-top: 8px;
+
         flex-direction: column;
-        gap: 12px;
+        gap: 7px;
+
+        text-align: center;
     }
 
+    .footer-bottom div {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .footer-links {
+        gap: 7px 12px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 9px;
+    }
+
+}
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.3fr 2.2fr 1fr;
+    align-items: start;
+    gap: 25px;
+}
+
+.quick-links {
+    text-align: center;
+}
+
+.footer-contact {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.footer-contact h4 {
+    margin: 0 0 8px;
+}
+
+.footer-contact a {
+    display: block;
+    margin-bottom: 5px;
 }
