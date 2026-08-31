@@ -1,0 +1,4212 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Keytal Consultancy | Education Franchise</title>
+
+<meta name="description"
+content="Start your own technology education centre with Keytal Consultancy. Explore education franchise opportunities across Data Science, Data Analytics, AI, Cyber Security and Full Stack Development.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --purple: #54219a;
+    --purple-dark: #35136f;
+    --purple-light: #eee7fa;
+
+    --navy: #11101b;
+    --dark: #171320;
+
+    --white: #ffffff;
+    --off-white: #f8f7fa;
+
+    --text: #1c1925;
+    --muted: #73707b;
+
+    --border: #dedbe4;
+
+    --container: 1240px;
+
+    --transition: .3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    color: var(--text);
+
+    background: var(--off-white);
+
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+
+    width: min(var(--container), 92%);
+
+    margin: auto;
+}
+
+.section {
+
+    padding: 120px 0;
+
+}
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: var(--purple);
+}
+
+.eyebrow span {
+
+    width: 30px;
+
+    height: 1px;
+
+    background: currentColor;
+}
+
+.center-heading {
+
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: 0 auto 65px;
+}
+
+.center-heading .eyebrow {
+
+    justify-content: center;
+}
+
+.center-heading h2 {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1.04;
+
+    letter-spacing: -3px;
+
+    font-weight: 700;
+}
+
+.center-heading h2 em {
+
+    color: var(--purple);
+
+    font-style: normal;
+}
+
+.center-heading p {
+
+    max-width: 600px;
+
+    margin: 22px auto 0;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    padding: 18px 0;
+
+    transition: var(--transition);
+
+    background: rgba(255,255,255,.96);
+
+    backdrop-filter: blur(15px);
+}
+
+.header.scrolled {
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+}
+
+.nav-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    width: max-content;
+}
+
+.logo img {
+
+    display: block;
+
+    width: 155px;
+
+    height: auto;
+
+    max-height: 60px;
+
+    object-fit: contain;
+}
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.nav-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    padding: 13px 22px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+.nav-btn span {
+
+    font-size: 18px;
+}
+
+.nav-btn:hover {
+
+    background: var(--purple-dark);
+
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+
+    display: none;
+
+    border: 0;
+
+    background: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    cursor: pointer;
+}
+
+.menu-btn span {
+
+    display: block;
+
+    width: 25px;
+
+    height: 2px;
+
+    background: var(--purple-dark);
+
+    margin: 6px auto;
+
+    transition: var(--transition);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.franchise-hero {
+
+    position: relative;
+
+    min-height: 800px;
+
+    padding: 155px 0 90px;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 28%,
+            rgba(142,91,205,.42),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 15% 90%,
+            rgba(84,33,154,.35),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            120deg,
+            #110e19,
+            #1b1328 55%,
+            #3d176f
+        );
+
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.franchise-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -330px;
+    top: -260px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 50%;
+}
+
+.franchise-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: -210px;
+    top: -150px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 50%;
+}
+
+.franchise-hero-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.franchise-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 25px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #cbb1e8;
+}
+
+.franchise-eyebrow span {
+
+    width: 30px;
+
+    height: 1px;
+
+    background: #cbb1e8;
+}
+
+.franchise-hero h1 {
+
+    max-width: 730px;
+
+    margin-bottom: 28px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(52px, 6.5vw, 82px);
+
+    line-height: .96;
+
+    letter-spacing: -5px;
+
+    font-weight: 700;
+}
+
+.franchise-hero h1 span {
+
+    display: block;
+
+    color: #c8a8e5;
+}
+
+.franchise-hero-description {
+
+    max-width: 580px;
+
+    margin-bottom: 35px;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.62);
+}
+
+.franchise-hero-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+.franchise-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    border-radius: 3px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    transition: var(--transition);
+}
+
+.franchise-btn-primary {
+
+    background: #fff;
+
+    color: var(--purple);
+}
+
+.franchise-btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+
+.franchise-btn span {
+
+    font-size: 16px;
+}
+
+.franchise-hero-points {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 12px;
+
+    max-width: 650px;
+}
+
+.hero-point {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+    color: rgba(255,255,255,.62);
+}
+
+.hero-point-icon {
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    border-radius: 50%;
+
+    font-size: 8px;
+
+    color: #d0b6ea;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.franchise-hero-visual {
+
+    position: relative;
+
+    min-height: 550px;
+}
+
+.hero-main-image {
+
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 88%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+.hero-main-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(20,10,35,.75)
+        );
+}
+
+.hero-main-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: saturate(.8);
+}
+
+.hero-image-content {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 28px;
+    bottom: 30px;
+}
+
+.hero-image-content small {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #cbb1e8;
+}
+
+.hero-image-content strong {
+
+    display: block;
+
+    font-family: "Manrope";
+
+    font-size: 34px;
+
+    line-height: 1;
+}
+
+.hero-opportunity-card {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: -30px;
+
+    bottom: 20px;
+
+    width: 270px;
+
+    padding: 24px;
+
+    background: #fff;
+
+    color: var(--text);
+
+    box-shadow: 0 25px 70px rgba(0,0,0,.28);
+
+    border-radius: 4px;
+}
+
+.hero-opportunity-card small {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--purple);
+}
+
+.hero-opportunity-card strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Manrope";
+
+    font-size: 23px;
+}
+
+.hero-opportunity-card p {
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   TICKER
+========================================================= */
+
+.ticker {
+
+    overflow: hidden;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.ticker-track {
+
+    display: flex;
+
+    width: max-content;
+
+    animation: ticker 28s linear infinite;
+}
+
+.ticker-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 18px 30px;
+
+    white-space: nowrap;
+}
+
+.ticker-group span {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+}
+
+.ticker-group b {
+
+    font-size: 13px;
+
+    color: #cbb1e8;
+}
+
+@keyframes ticker {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   FRANCHISE MODEL
+========================================================= */
+
+.model {
+
+    background: #fff;
+}
+
+.model-heading {
+
+    max-width: 720px;
+
+    margin-bottom: 55px;
+}
+
+.model-heading h2 {
+
+    font-family: "Manrope";
+
+    font-size: clamp(40px,5vw,60px);
+
+    line-height: 1.04;
+
+    letter-spacing: -3px;
+}
+
+.model-heading h2 em {
+
+    color: var(--purple);
+
+    font-style: normal;
+}
+
+.model-heading p {
+
+    max-width: 560px;
+
+    margin-top: 22px;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+.model-features {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.model-feature {
+
+    min-height: 250px;
+
+    padding: 30px;
+
+    border-right: 1px solid var(--border);
+
+    transition: var(--transition);
+}
+
+.model-feature:last-child {
+
+    border-right: 0;
+}
+
+.model-feature:hover {
+
+    background: var(--purple-light);
+}
+
+.model-feature-number {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color: var(--purple);
+}
+
+.model-feature h3 {
+
+    margin-bottom: 10px;
+
+    font-family: "Manrope";
+
+    font-size: 19px;
+}
+
+.model-feature p {
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.programs {
+
+    background: #f7f5f9;
+}
+
+.program-heading {
+
+    display: grid;
+
+    grid-template-columns: 1fr .65fr;
+
+    gap: 80px;
+
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+.program-heading h2 {
+
+    font-family: "Manrope";
+
+    font-size: clamp(40px,5vw,60px);
+
+    line-height: 1.04;
+
+    letter-spacing: -3px;
+}
+
+.program-heading h2 em {
+
+    color: var(--purple);
+
+    font-style: normal;
+}
+
+.program-heading p {
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   SECTOR GRID
+========================================================= */
+
+.sector-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 24px;
+
+    width: 100%;
+}
+
+.sector-card {
+
+    position: relative;
+
+    background: #fff;
+
+    border: 1px solid #e8e4ed;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease,
+        border-color .4s ease;
+}
+
+.sector-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #d8c9e8;
+
+    box-shadow: 0 24px 60px rgba(45,20,80,.12);
+}
+
+.sector-image {
+
+    position: relative;
+
+    height: 265px;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.sector-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.sector-card:hover .sector-image img {
+
+    transform: scale(1.07);
+}
+
+.sector-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15,10,25,.08) 0%,
+            transparent 45%,
+            rgba(15,10,25,.55) 100%
+        );
+
+    pointer-events: none;
+}
+
+.sector-number {
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 18px;
+
+    left: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.94);
+
+    color: #54219a;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+.sector-body {
+
+    padding: 28px 28px 30px;
+}
+
+.sector-body h3 {
+
+    margin: 0 0 12px;
+
+    color: #18152a;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: -.65px;
+}
+
+.sector-body p {
+
+    margin: 0;
+
+    color: #747080;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MARKET OPPORTUNITY
+========================================================= */
+
+.market {
+
+    position: relative;
+
+    background: #15121d;
+
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.market::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -300px;
+    top: -300px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 50%;
+}
+
+.market-top {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 80px;
+
+    margin-bottom: 65px;
+}
+
+.market-heading h2 {
+
+    font-family: "Manrope";
+
+    font-size: clamp(40px,5vw,62px);
+
+    line-height: 1.04;
+
+    letter-spacing: -3px;
+}
+
+.market-heading h2 em {
+
+    color: #c9aae6;
+
+    font-style: normal;
+}
+
+.market-description {
+
+    max-width: 520px;
+
+    align-self: end;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.55);
+}
+
+.market-stats {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.market-stat {
+
+    padding: 25px;
+
+    border-right: 1px solid rgba(255,255,255,.15);
+
+    transition: var(--transition);
+}
+
+.market-stat:last-child {
+
+    border-right: 0;
+}
+
+.market-stat:hover {
+
+    background: rgba(255,255,255,.04);
+}
+
+.stat-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.stat-top span {
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color: #c9aae6;
+}
+
+.stat-value {
+
+    min-height: 45px;
+}
+
+.stat-value strong {
+
+    font-family: "Manrope";
+
+    font-size: 30px;
+
+    letter-spacing: -1px;
+
+    font-weight: 700;
+}
+
+.market-stat h3 {
+
+    margin: 20px 0 10px;
+
+    font-family: "Manrope";
+
+    font-size: 17px;
+}
+
+.market-stat h3 span {
+
+    display: block;
+
+    color: #c9aae6;
+}
+
+.market-stat p {
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.45);
+}
+
+
+/* =========================================================
+   CAREER OPPORTUNITIES
+========================================================= */
+
+.career-jobs-section {
+
+    padding: 120px 0;
+
+    background: #fff;
+}
+
+.career-jobs-heading {
+
+    max-width: 730px;
+
+    margin-bottom: 60px;
+}
+
+.career-jobs-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: var(--purple);
+}
+
+.career-jobs-eyebrow span {
+
+    width: 30px;
+
+    height: 1px;
+
+    background: var(--purple);
+}
+
+.career-jobs-heading h2 {
+
+    font-family: "Manrope";
+
+    font-size: clamp(40px,5vw,60px);
+
+    line-height: 1.04;
+
+    letter-spacing: -3px;
+}
+
+.career-jobs-heading h2 em {
+
+    color: var(--purple);
+
+    font-style: normal;
+}
+
+.career-jobs-heading p {
+
+    max-width: 550px;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+.career-jobs-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 18px;
+}
+
+.career-job-card {
+
+    border: 1px solid var(--border);
+
+    background: #faf9fb;
+
+    transition: var(--transition);
+
+    overflow: hidden;
+}
+
+.career-job-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 50px rgba(40,20,70,.08);
+}
+
+.career-job-image {
+
+    height: 220px;
+
+    overflow: hidden;
+}
+
+.career-job-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.career-job-card:hover .career-job-image img {
+
+    transform: scale(1.05);
+}
+
+.career-job-content {
+
+    padding: 24px;
+}
+
+.career-job-content h3 {
+
+    margin: 0 0 8px;
+
+    font-family: "Manrope";
+
+    font-size: 22px;
+}
+
+.career-job-content p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   WHO CAN JOIN
+========================================================= */
+
+.partners {
+
+    background: #f7f5f9;
+}
+
+.partner-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.partner-card {
+
+    min-height: 280px;
+
+    padding: 30px;
+
+    border-right: 1px solid var(--border);
+
+    transition: var(--transition);
+}
+
+.partner-card:last-child {
+
+    border-right: 0;
+}
+
+.partner-card:hover {
+
+    background: #fff;
+}
+
+.partner-card > span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--purple-light);
+
+    color: var(--purple);
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+.partner-card h3 {
+
+    margin-top: 35px;
+
+    margin-bottom: 10px;
+
+    font-family: "Manrope";
+
+    font-size: 19px;
+}
+
+.partner-card p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process {
+
+    background: #fff;
+}
+
+.process-line {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.process-line::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 53px;
+
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background: var(--border);
+
+    z-index: 0;
+}
+
+.process-step {
+
+    position: relative;
+
+    z-index: 1;
+
+    min-height: 300px;
+
+    padding: 28px;
+
+    border-right: 1px solid var(--border);
+
+    background: #fff;
+}
+
+.process-step:last-child {
+
+    border-right: 0;
+}
+
+.process-step > span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 30px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    color: var(--purple);
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.process-step small {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--purple);
+}
+
+.process-step h3 {
+
+    margin-bottom: 10px;
+
+    font-family: "Manrope";
+
+    font-size: 21px;
+}
+
+.process-step p {
+
+    max-width: 220px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+
+    position: relative;
+
+    padding: 120px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(135,80,195,.38),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            120deg,
+            #15111d,
+            #2b1745,
+            #54219a
+        );
+
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.contact-orb {
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -330px;
+    top: -300px;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 50%;
+}
+
+.contact-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.contact-copy h2 {
+
+    font-family: "Manrope";
+
+    font-size: clamp(42px,5vw,60px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+}
+
+.contact-copy h2 em {
+
+    display: block;
+
+    color: #cbb1e8;
+
+    font-style: normal;
+}
+
+.contact-copy > p {
+
+    max-width: 510px;
+
+    margin: 25px 0 35px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.58);
+}
+
+.contact-points {
+
+    display: grid;
+
+    gap: 14px;
+}
+
+.contact-points > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 14px;
+
+    color: rgba(255,255,255,.7);
+}
+
+.contact-points b {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    color: #cbb1e8;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form-box {
+
+    padding: 35px;
+
+    background: #fff;
+
+    color: var(--text);
+
+    border-radius: 8px;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,.25);
+}
+
+.form-heading {
+
+    margin-bottom: 25px;
+}
+
+.form-heading span {
+
+    display: block;
+
+    font-size: 9px;
+
+    color: var(--purple);
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+.form-heading h3 {
+
+    font-family: "Manrope";
+
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+.form-heading p {
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+.input-group {
+
+    margin-bottom: 10px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select,
+.form-row input {
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    background: #fbfbfd;
+
+    border-radius: 6px;
+
+    padding: 12px;
+
+    font-size: 13px;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition: var(--transition);
+}
+
+.input-group input,
+.input-group select,
+.form-row input {
+
+    height: 46px;
+}
+
+.input-group textarea {
+
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus,
+.form-row input:focus {
+
+    border-color: var(--purple);
+
+    background: #fff;
+
+    box-shadow: 0 0 0 3px rgba(84,33,154,.06);
+}
+
+.input-group select {
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+.input-group select option {
+
+    color: #333;
+
+    background: #fff;
+}
+
+.form-btn {
+
+    width: 100%;
+
+    border: 0;
+
+    background: var(--purple);
+
+    color: #fff;
+
+    padding: 14px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.form-btn:hover {
+
+    background: var(--purple-dark);
+
+    transform: translateY(-2px);
+}
+
+.privacy-text {
+
+    display: block;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    color: #999;
+
+    margin-top: 9px;
+}
+
+#formMessage {
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    padding: 55px 0 30px;
+
+    background: #100d16;
+
+    color: #fff;
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr .7fr .7fr .9fr;
+
+    gap: 60px;
+
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand img {
+
+    width: 145px;
+
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+
+    max-width: 280px;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.42);
+}
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-column h4 {
+
+    margin-bottom: 8px;
+
+    font-family: "Manrope";
+
+    font-size: 11px;
+}
+
+.footer-column a {
+
+    font-size: 9px;
+
+    color: rgba(255,255,255,.45);
+
+    transition: .2s;
+}
+
+.footer-column a:hover {
+
+    color: #fff;
+}
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+
+    font-size: 8px;
+
+    color: rgba(255,255,255,.35);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px) {
+
+    .franchise-hero-container,
+    .market-top,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .franchise-hero {
+
+        padding-top: 130px;
+    }
+
+    .franchise-hero-visual {
+
+        min-height: 520px;
+    }
+
+    .hero-main-image {
+
+        width: 92%;
+    }
+
+    .model-features {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .model-feature:nth-child(2) {
+
+        border-right: 0;
+    }
+
+    .model-feature:nth-child(-n+2) {
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .program-heading {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .sector-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .market-stats {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .market-stat:nth-child(2n) {
+
+        border-right: 0;
+    }
+
+    .career-jobs-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .partner-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .partner-card:nth-child(2) {
+
+        border-right: 0;
+    }
+
+    .partner-card:nth-child(-n+2) {
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .process-line {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-step:nth-child(2) {
+
+        border-right: 0;
+    }
+
+    .process-step:nth-child(-n+2) {
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+
+        gap: 50px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px) {
+
+    .section {
+
+        padding: 80px 0;
+    }
+
+    .nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 4%;
+
+        width: 92%;
+
+        padding: 18px;
+
+        background: #fff;
+
+        box-shadow: 0 20px 40px rgba(0,0,0,.12);
+
+        border-radius: 8px;
+    }
+
+    .nav.active {
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+    .menu-btn {
+
+        display: block;
+    }
+
+    .franchise-hero {
+
+        padding: 120px 0 70px;
+    }
+
+    .franchise-hero h1 {
+
+        font-size: 44px;
+
+        letter-spacing: -3px;
+    }
+
+    .franchise-hero-description {
+
+        font-size: 11px;
+    }
+
+    .franchise-hero-actions {
+
+        flex-direction: column;
+    }
+
+    .franchise-btn {
+
+        width: 100%;
+    }
+
+    .franchise-hero-points {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .franchise-hero-visual {
+
+        min-height: 500px;
+    }
+
+    .hero-main-image {
+
+        width: 100%;
+
+        height: 420px;
+    }
+
+    .hero-opportunity-card {
+
+        left: 10px;
+
+        bottom: 0;
+
+        width: 255px;
+
+        padding: 20px;
+    }
+
+    .hero-image-content {
+
+        left: 22px;
+
+        bottom: 25px;
+    }
+
+    .hero-image-content strong {
+
+        font-size: 28px;
+    }
+
+    .model-features {
+
+        grid-template-columns: 1fr;
+    }
+
+    .model-feature {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+
+        min-height: auto;
+    }
+
+    .model-feature:last-child {
+
+        border-bottom: 0;
+    }
+
+    .sector-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .sector-image {
+
+        height: 240px;
+    }
+
+    .market-top {
+
+        gap: 40px;
+    }
+
+    .market-stats {
+
+        grid-template-columns: 1fr;
+    }
+
+    .market-stat {
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .market-stat:last-child {
+
+        border-bottom: 0;
+    }
+
+    .career-jobs-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .career-job-image {
+
+        height: 240px;
+    }
+
+    .partner-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .partner-card {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .partner-card:last-child {
+
+        border-bottom: 0;
+    }
+
+    .process-line {
+
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+
+        min-height: auto;
+
+        padding: 28px 24px 35px;
+    }
+
+    .process-step:last-child {
+
+        border-bottom: 0;
+    }
+
+    .process-line::before {
+
+        display: none;
+    }
+
+    .contact {
+
+        padding: 80px 0;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-box {
+
+        padding: 25px 20px;
+    }
+
+    .form-heading h3 {
+
+        font-size: 25px;
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-bottom {
+
+        display: block;
+    }
+
+    .footer-bottom span {
+
+        display: block;
+
+        margin-top: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:400px) {
+
+    .franchise-hero h1 {
+
+        font-size: 38px;
+    }
+
+    .hero-opportunity-card {
+
+        width: 230px;
+    }
+
+    .hero-image-content strong {
+
+        font-size: 24px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images/keytal-logo.webp"
+                alt="Keytal Consultancy">
+
+        </a>
+
+
+        <nav class="nav" id="nav">
+
+            <a href="#contact" class="nav-btn">
+
+                Schedule a Call
+
+                <span>↗</span>
+
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="franchise-hero" id="home">
+
+    <div class="container franchise-hero-container">
+
+
+        <div class="franchise-hero-content">
+
+            <div class="franchise-eyebrow">
+
+                <span></span>
+
+                KEYTAL EDUCATION FRANCHISE
+
+            </div>
+
+
+            <h1>
+
+                Build a Business
+
+                <span>
+                    That Shapes Future Careers
+                </span>
+
+            </h1>
+
+
+            <p class="franchise-hero-description">
+
+                Start a career-focused technology education
+                centre with Keytal Consultancy, backed by a
+                structured business model, relevant courses
+                and ongoing partner support.
+
+            </p>
+
+
+            <div class="franchise-hero-actions">
+
+                <a
+                    href="#contact"
+                    class="franchise-btn franchise-btn-primary">
+
+                    Become a Franchise Partner
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="franchise-hero-points">
+
+                <div class="hero-point">
+
+                    <div class="hero-point-icon">
+                        01
+                    </div>
+
+                    Career-focused programs
+
+                </div>
+
+
+                <div class="hero-point">
+
+                    <div class="hero-point-icon">
+                        02
+                    </div>
+
+                    Structured business model
+
+                </div>
+
+
+                <div class="hero-point">
+
+                    <div class="hero-point-icon">
+                        03
+                    </div>
+
+                    Ongoing partner support
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="franchise-hero-visual">
+
+            <div class="hero-main-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85"
+                    alt="Technology Education">
+
+                <div class="hero-image-content">
+
+                    <small>
+                        FUTURE-READY EDUCATION
+                    </small>
+
+                    <strong>
+                        Skills. Careers. Growth.
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-opportunity-card">
+
+                <small>
+                    THE OPPORTUNITY
+                </small>
+
+                <strong>
+                    Technology Education
+                </strong>
+
+                <p>
+
+                    Build a centre around high-demand
+                    technology learning pathways across
+                    data, AI, cybersecurity and web development.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TICKER
+========================================================= -->
+
+<div class="ticker">
+
+    <div class="ticker-track">
+
+        <div class="ticker-group">
+
+            <span>DATA SCIENCE</span>
+            <b>✦</b>
+
+            <span>DATA ANALYTICS</span>
+            <b>✦</b>
+
+            <span>ARTIFICIAL INTELLIGENCE</span>
+            <b>✦</b>
+
+            <span>CYBER SECURITY</span>
+            <b>✦</b>
+
+            <span>FULL STACK DEVELOPMENT</span>
+            <b>✦</b>
+
+            <span>TECHNOLOGY CAREERS</span>
+            <b>✦</b>
+
+        </div>
+
+
+        <div class="ticker-group">
+
+            <span>DATA SCIENCE</span>
+            <b>✦</b>
+
+            <span>DATA ANALYTICS</span>
+            <b>✦</b>
+
+            <span>ARTIFICIAL INTELLIGENCE</span>
+            <b>✦</b>
+
+            <span>CYBER SECURITY</span>
+            <b>✦</b>
+
+            <span>FULL STACK DEVELOPMENT</span>
+            <b>✦</b>
+
+            <span>TECHNOLOGY CAREERS</span>
+            <b>✦</b>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     FRANCHISE MODEL
+========================================================= -->
+
+<section class="section model">
+
+    <div class="container">
+
+        <div class="model-heading">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                THE FRANCHISE MODEL
+
+            </div>
+
+
+            <h2>
+
+                Build a Centre
+
+                <em>
+                    Designed for the Future.
+                </em>
+
+            </h2>
+
+
+            <p>
+
+                Keytal Consultancy brings together a focused
+                technology course portfolio and a structured
+                franchise approach to help partners establish
+                and grow their education centre.
+
+            </p>
+
+        </div>
+
+
+        <div class="model-features">
+
+
+            <div class="model-feature">
+
+                <div class="model-feature-number">
+                    <span>01</span>
+                </div>
+
+                <h3>
+                    Course Portfolio
+                </h3>
+
+                <p>
+
+                    Offer career-oriented technology programs
+                    across data, AI, cybersecurity and web
+                    development.
+
+                </p>
+
+            </div>
+
+
+            <div class="model-feature">
+
+                <div class="model-feature-number">
+                    <span>02</span>
+                </div>
+
+                <h3>
+                    Centre Setup
+                </h3>
+
+                <p>
+
+                    Build your centre with a structured approach
+                    to infrastructure, operations and positioning.
+
+                </p>
+
+            </div>
+
+
+            <div class="model-feature">
+
+                <div class="model-feature-number">
+                    <span>03</span>
+                </div>
+
+                <h3>
+                    Marketing Support
+                </h3>
+
+                <p>
+
+                    Create local awareness and student enquiries
+                    through a focused marketing framework.
+
+                </p>
+
+            </div>
+
+
+            <div class="model-feature">
+
+                <div class="model-feature-number">
+                    <span>04</span>
+                </div>
+
+                <h3>
+                    Business Guidance
+                </h3>
+
+                <p>
+
+                    Receive guidance across admissions, team
+                    enablement and ongoing centre development.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRAMS
+========================================================= -->
+
+<section class="section programs" id="programs">
+
+    <div class="container">
+
+        <div class="program-heading">
+
+            <div>
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    PROGRAM PORTFOLIO
+
+                </div>
+
+
+                <h2>
+
+                    Five Pathways.
+
+                    <em>
+                        One Opportunity.
+                    </em>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Build your centre around programs designed to
+                introduce learners to some of today's most
+                relevant technology skills and career pathways.
+
+            </p>
+
+        </div>
+
+
+        <div class="sector-grid">
+
+
+            <article class="sector-card">
+
+                <div class="sector-image">
+
+                    <img
+                        src="images/data science course.avif"
+                        alt="Data Science Course">
+
+                    <div class="sector-number">
+                        01
+                    </div>
+
+                </div>
+
+                <div class="sector-body">
+
+                    <h3>
+                        Data Science Course
+                    </h3>
+
+                    <p>
+
+                        Build strong foundations in data science,
+                        statistics, machine learning and
+                        data-driven problem solving.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="sector-card">
+
+                <div class="sector-image">
+
+                    <img
+                        src="images/data analytics course.avif"
+                        alt="Data Analytics Course">
+
+                    <div class="sector-number">
+                        02
+                    </div>
+
+                </div>
+
+                <div class="sector-body">
+
+                    <h3>
+                        Data Analytics Course
+                    </h3>
+
+                    <p>
+
+                        Learn to analyse information, identify
+                        patterns and transform data into
+                        meaningful business insights.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="sector-card">
+
+                <div class="sector-image">
+
+                    <img
+                        src="images/b.sc data science with ai.avif"
+                        alt="B.Sc Data Science with AI">
+
+                    <div class="sector-number">
+                        03
+                    </div>
+
+                </div>
+
+                <div class="sector-body">
+
+                    <h3>
+                        B.Sc Data Science with AI
+                    </h3>
+
+                    <p>
+
+                        A structured degree pathway combining
+                        data science, artificial intelligence
+                        and modern technology skills.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="sector-card">
+
+                <div class="sector-image">
+
+                    <img
+                        src="images/cyber security course.avif"
+                        alt="Cyber Security Course">
+
+                    <div class="sector-number">
+                        04
+                    </div>
+
+                </div>
+
+                <div class="sector-body">
+
+                    <h3>
+                        Cyber Security Course
+                    </h3>
+
+                    <p>
+
+                        Develop an understanding of cybersecurity,
+                        networks, digital protection and
+                        essential security practices.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="sector-card">
+
+                <div class="sector-image">
+
+                    <img
+                        src="images/full stack web development.avif"
+                        alt="Full Stack Web Development">
+
+                    <div class="sector-number">
+                        05
+                    </div>
+
+                </div>
+
+                <div class="sector-body">
+
+                    <h3>
+                        Full Stack Web Development
+                    </h3>
+
+                    <p>
+
+                        Develop practical front-end and back-end
+                        skills for building modern websites
+                        and web applications.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MARKET OPPORTUNITY
+========================================================= -->
+
+<section class="section market">
+
+    <div class="container">
+
+        <div class="market-top">
+
+            <div class="market-heading">
+
+                <div
+                    class="eyebrow"
+                    style="color:#c9aae6;">
+
+                    <span></span>
+
+                    MARKET OPPORTUNITY
+
+                </div>
+
+
+                <h2>
+
+                    Technology is reshaping
+
+                    <em>
+                        career pathways.
+                    </em>
+
+                </h2>
+
+            </div>
+
+
+            <p class="market-description">
+
+                From data and artificial intelligence to
+                cybersecurity and software development,
+                technology skills are becoming increasingly
+                important across industries.
+
+            </p>
+
+        </div>
+
+
+        <div class="market-stats">
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+                    <span>01</span>
+                </div>
+
+                <div class="stat-value">
+                    <strong>DATA</strong>
+                </div>
+
+                <h3>
+
+                    Data Science
+
+                    <span>
+                        Career Skills
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    Build skills around analysing data,
+                    modelling and solving business problems.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+                    <span>02</span>
+                </div>
+
+                <div class="stat-value">
+                    <strong>INSIGHT</strong>
+                </div>
+
+                <h3>
+
+                    Data Analytics
+
+                    <span>
+                        Business Decisions
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    Turn business data into insights,
+                    reports and useful decisions.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+                    <span>03</span>
+                </div>
+
+                <div class="stat-value">
+                    <strong>AI</strong>
+                </div>
+
+                <h3>
+
+                    Artificial Intelligence
+
+                    <span>
+                        Future Skills
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    Explore machine learning and AI concepts
+                    shaping modern technology.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+                    <span>04</span>
+                </div>
+
+                <div class="stat-value">
+                    <strong>SECURE</strong>
+                </div>
+
+                <h3>
+
+                    Cyber Security
+
+                    <span>
+                        Digital Protection
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    Security skills support businesses across
+                    an increasingly digital environment.
+
+                </p>
+
+            </div>
+
+
+            <div class="market-stat">
+
+                <div class="stat-top">
+                    <span>05</span>
+                </div>
+
+                <div class="stat-value">
+                    <strong>CODE</strong>
+                </div>
+
+                <h3>
+
+                    Full Stack
+
+                    <span>
+                        Digital Products
+                    </span>
+
+                </h3>
+
+                <p>
+
+                    Build practical skills for modern websites,
+                    platforms and web applications.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAREER OPPORTUNITIES
+========================================================= -->
+
+<section
+    class="career-jobs-section"
+    id="career-opportunities">
+
+    <div class="container">
+
+        <div class="career-jobs-heading">
+
+            <div class="career-jobs-eyebrow">
+
+                <span></span>
+
+                CAREER OPPORTUNITIES
+
+            </div>
+
+
+            <h2>
+
+                Explore Careers Across
+
+                <em>
+                    Technology Industries.
+                </em>
+
+            </h2>
+
+
+            <p>
+
+                Help learners build skills that can open
+                opportunities across data, analytics,
+                cybersecurity, AI and software development.
+
+            </p>
+
+        </div>
+
+
+        <div class="career-jobs-grid">
+
+
+            <article class="career-job-card">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="images/data analyst.avif"
+                        alt="Data Analyst">
+
+                </div>
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Data Analyst
+                    </h3>
+
+                    <p>
+
+                        Analyse data, create reports and
+                        identify useful business insights.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="career-job-card">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="images/data scientist.avif"
+                        alt="Data Scientist">
+
+                </div>
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Data Scientist
+                    </h3>
+
+                    <p>
+
+                        Work with data, models and analytical
+                        techniques to solve complex problems.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="career-job-card">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="images/cyber security analyst.avif"
+                        alt="Cyber Security Analyst">
+
+                </div>
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Cyber Security Analyst
+                    </h3>
+
+                    <p>
+
+                        Support organisations in monitoring
+                        systems and protecting digital assets.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="career-job-card">
+
+                <div class="career-job-image">
+
+                    <img
+                        src="images/full stack developer.avif"
+                        alt="Full Stack Developer">
+
+                </div>
+
+                <div class="career-job-content">
+
+                    <h3>
+                        Full Stack Developer
+                    </h3>
+
+                    <p>
+
+                        Build front-end and back-end systems
+                        for modern web applications.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHO CAN JOIN
+========================================================= -->
+
+<section class="section partners">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                FRANCHISE PARTNERS
+
+                <span></span>
+
+            </div>
+
+
+            <h2>
+
+                Who Can Start a
+
+                <em>
+                    Keytal Franchise?
+                </em>
+
+            </h2>
+
+
+            <p>
+
+                The opportunity can be suitable for individuals
+                and organisations interested in building a
+                technology education business.
+
+            </p>
+
+        </div>
+
+
+        <div class="partner-grid">
+
+
+            <div class="partner-card">
+
+                <span>01</span>
+
+                <h3>
+                    Entrepreneurs
+                </h3>
+
+                <p>
+
+                    Individuals looking to build a structured
+                    education business in the technology sector.
+
+                </p>
+
+            </div>
+
+
+            <div class="partner-card">
+
+                <span>02</span>
+
+                <h3>
+                    Education Professionals
+                </h3>
+
+                <p>
+
+                    Existing education professionals looking
+                    to expand into technology programs.
+
+                </p>
+
+            </div>
+
+
+            <div class="partner-card">
+
+                <span>03</span>
+
+                <h3>
+                    Business Owners
+                </h3>
+
+                <p>
+
+                    Existing business owners looking to enter
+                    the growing technology education space.
+
+                </p>
+
+            </div>
+
+
+            <div class="partner-card">
+
+                <span>04</span>
+
+                <h3>
+                    Investors
+                </h3>
+
+                <p>
+
+                    Individuals exploring a structured
+                    business opportunity within education.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section
+    class="section process"
+    id="process">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                HOW IT WORKS
+
+                <span></span>
+
+            </div>
+
+
+            <h2>
+
+                From Enquiry to
+
+                <em>
+                    Launch.
+                </em>
+
+            </h2>
+
+
+            <p>
+
+                A straightforward journey to explore,
+                plan and launch your technology education centre.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-line">
+
+
+            <div class="process-step">
+
+                <span>01</span>
+
+                <small>
+                    STEP ONE
+                </small>
+
+                <h3>
+                    Submit Enquiry
+                </h3>
+
+                <p>
+
+                    Tell us about yourself, your location
+                    and your business plans.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <span>02</span>
+
+                <small>
+                    STEP TWO
+                </small>
+
+                <h3>
+                    Discussion
+                </h3>
+
+                <p>
+
+                    Understand the franchise model,
+                    programs and business opportunity.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <span>03</span>
+
+                <small>
+                    STEP THREE
+                </small>
+
+                <h3>
+                    Location & Planning
+                </h3>
+
+                <p>
+
+                    Discuss location, infrastructure,
+                    setup and centre requirements.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <span>04</span>
+
+                <small>
+                    STEP FOUR
+                </small>
+
+                <h3>
+                    Launch
+                </h3>
+
+                <p>
+
+                    Establish your centre and begin
+                    your technology education journey.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    class="contact"
+    id="contact">
+
+    <div class="contact-orb"></div>
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-copy">
+
+            <div class="eyebrow" style="color:#cbb1e8;">
+
+                <span></span>
+
+                BECOME A FRANCHISE PARTNER
+
+            </div>
+
+
+            <h2>
+
+                Ready to Build Your
+
+                <em>
+                    Education Business?
+                </em>
+
+            </h2>
+
+
+            <p>
+
+                Connect with Keytal Consultancy to understand
+                the franchise model, course portfolio,
+                investment requirements and centre setup process.
+
+            </p>
+
+
+            <div class="contact-points">
+
+                <div>
+
+                    <b>01</b>
+
+                    Career-focused technology programs
+
+                </div>
+
+
+                <div>
+
+                    <b>02</b>
+
+                    Structured franchise business model
+
+                </div>
+
+
+                <div>
+
+                    <b>03</b>
+
+                    Marketing and business guidance
+
+                </div>
+
+
+                <div>
+
+                    <b>04</b>
+
+                    Ongoing partner support
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form-box">
+
+            <div class="form-heading">
+
+                <span>
+                    START THE CONVERSATION
+                </span>
+
+                <h3>
+                    Send Us an Enquiry
+                </h3>
+
+                <p>
+                    Fill in the details and we'll get back to you.
+                </p>
+
+            </div>
+
+
+            <form
+                id="contactForm"
+                action="https://formsubmit.co/cestudiosseo@gmail.com"
+                method="POST"
+            >
+
+                <!-- FormSubmit Settings -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Business Enquiry - Data Science lp">
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://keytal-consultancy.vercel.app/thankyou.html">
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false">
+
+
+                <!-- NAME + EMAIL -->
+
+                <div class="form-row">
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="input-group">
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Contact No"
+                        required>
+
+                </div>
+
+
+                <!-- EXPERIENCE -->
+
+                <div class="input-group">
+
+                    <select
+                        name="business_experience"
+                        required>
+
+                        <option
+                            value=""
+                            disabled
+                            selected>
+
+                            Business Experience
+
+                        </option>
+
+                        <option value="0-1 Years">
+                            0–1 Years
+                        </option>
+
+                        <option value="1-3 Years">
+                            1–3 Years
+                        </option>
+
+                        <option value="3-5 Years">
+                            3–5 Years
+                        </option>
+
+                        <option value="5-10 Years">
+                            5–10 Years
+                        </option>
+
+                        <option value="10+ Years">
+                            10+ Years
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- INVESTMENT -->
+
+                <div class="input-group">
+
+                    <select
+                        name="investment_capacity"
+                        required>
+
+                        <option
+                            value=""
+                            disabled
+                            selected>
+
+                            Investment Capacity
+
+                        </option>
+
+                        <option value="25-35 Lakhs">
+                            25 Lakhs - 35 Lakhs
+                        </option>
+
+                        <option value="36-50 Lakhs">
+                            36 Lakhs - 50 Lakhs
+                        </option>
+
+                        <option value="51+ Lakhs">
+                            51+ Lakhs
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CITY -->
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        name="city"
+                        placeholder="Preferred City / Location"
+                        required>
+
+                </div>
+
+
+                <!-- REQUIREMENT -->
+
+                <div class="input-group">
+
+                    <textarea
+                        name="requirement"
+                        placeholder="Tell us about your business requirements"
+                        rows="4"></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="form-btn">
+
+                    Submit Enquiry →
+
+                </button>
+
+
+                <span class="privacy-text">
+
+                    Your information will only be used to contact you
+                    regarding the franchise opportunity.
+
+                </span>
+
+
+                <div id="formMessage"></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/keytal-logo.webp"
+                    alt="Keytal Consultancy">
+
+                <p>
+
+                    Smart advice. Stronger business.
+                    Practical consulting for sustainable
+                    growth in education and technology.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#programs">
+                    Programs
+                </a>
+
+                <a href="#career-opportunities">
+                    Careers
+                </a>
+
+                <a href="#process">
+                    Franchise Process
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Programs
+                </h4>
+
+                <a href="#programs">
+                    Data Science
+                </a>
+
+                <a href="#programs">
+                    Data Analytics
+                </a>
+
+                <a href="#programs">
+                    B.Sc Data Science with AI
+                </a>
+
+                <a href="#programs">
+                    Cyber Security
+                </a>
+
+                <a href="#programs">
+                    Full Stack Development
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Franchise
+                </h4>
+
+                <a href="#contact">
+                    Become a Partner
+                </a>
+
+                <a href="#process">
+                    How It Works
+                </a>
+
+                <a href="#contact">
+                    Investment
+                </a>
+
+                <a href="#contact">
+                    Partner Support
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Keytal Consultancy. All Rights Reserved.
+            </span>
+
+            <span>
+                Education Franchise Opportunity
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   HEADER SCROLL EFFECT
+========================================================= */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 30) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+
+const nav = document.getElementById("nav");
+
+
+menuBtn.addEventListener("click", function () {
+
+    nav.classList.toggle("active");
+
+    const isOpen = nav.classList.contains("active");
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+});
+
+
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================================= */
+
+const navLinks = nav.querySelectorAll("a");
+
+navLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        nav.classList.remove("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    });
+
+});
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const formMessage =
+    document.getElementById("formMessage");
+
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        function () {
+
+            formMessage.innerHTML =
+                "Submitting your enquiry...";
+
+        }
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
