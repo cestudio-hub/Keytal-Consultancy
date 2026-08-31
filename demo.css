@@ -5542,187 +5542,302 @@ color: white;
     padding: 25px 0 12px;
 }
 
+/* =========================================================
+   FOOTER
+========================================================= */
 
-/* =========================================
-   MAIN FOOTER
-========================================= */
+.footer {
+    position: relative;
+    background: #35136F;
+    color: #ffffff;
+    padding: 55px 0 18px;
+    overflow: hidden;
+}
 
-.footer-main {
-    display: grid;
-    grid-template-columns: 1.3fr 2fr 1fr;
-    align-items: center;
-    gap: 40px;
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -220px;
+    top: -260px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: -190px;
+    bottom: -230px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 
-/* =========================================
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.footer-main {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1.8fr
+        1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
    BRAND
-========================================= */
+========================================================= */
 
 .footer-brand {
     text-align: left;
 }
 
 .footer-logo {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
 }
 
 .footer-logo .logo-text {
     display: flex;
-    align-items: center;
-    gap: 7px;
+    flex-direction: column;
+    line-height: 1;
 }
 
 .footer-logo .logo-text strong {
     color: #ffffff;
-    font-size: 21px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 22px;
     font-weight: 800;
-    letter-spacing: 1px;
+
+    letter-spacing: 0.5px;
 }
 
 .footer-logo .logo-text span {
-    color: #c5b6d9;
-    font-size: 10px;
-    letter-spacing: 1.5px;
+    margin-top: 5px;
+
+    color: #c8b9df;
+
+    font-size: 8px;
+
+    letter-spacing: 1.8px;
 }
 
 .footer-brand p {
-    max-width: 270px;
-    color: #c8b9df;
-    font-size: 11px;
-    line-height: 1.45;
-    margin: 7px 0 0;
+    max-width: 290px;
+
+    margin: 15px 0 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 12px;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
+/* =========================================================
    QUICK LINKS
-========================================= */
+========================================================= */
 
 .quick-links {
-    text-align: center;
+    text-align: left;
 }
 
-.quick-links h4 {
+.quick-links h4,
+.footer-contact h4 {
+    margin: 0 0 16px;
+
     color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
     font-size: 13px;
-    font-weight: 600;
-    margin: 0 0 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
 }
 
 
-/* Horizontal Quick Links */
+/* LINKS */
 
 .footer-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: nowrap;
+    display: grid;
+
+    grid-template-columns: repeat(2, max-content);
+
+    gap: 12px 35px;
+
+    align-items: start;
 }
 
 .footer-links a {
-    color: #c8b9df;
-    text-decoration: none;
+    color: rgba(255,255,255,0.65);
+
     font-size: 11px;
-    white-space: nowrap;
-    transition: var(--transition);
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
 }
 
 .footer-links a:hover {
     color: #ffffff;
+
+    transform: translateX(3px);
 }
 
 
-/* =========================================
+/* =========================================================
    CONTACT
-========================================= */
+========================================================= */
 
 .footer-contact {
-    text-align: right;
+    text-align: left;
+
+    padding-left: 0;
 }
 
 .footer-contact h4 {
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0 0 8px;
+    margin-bottom: 16px;
 }
 
 .footer-contact a {
-    color: #c8b9df;
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: rgba(255,255,255,0.68);
+
+    font-size: 11px;
+
     text-decoration: none;
-    font-size: 12px;
-    white-space: nowrap;
-    transition: var(--transition);
+
+    transition: 0.25s ease;
 }
 
 .footer-contact a:hover {
     color: #ffffff;
+
+    transform: translateX(3px);
 }
 
 
-/* =========================================
-   FOOTER BOTTOM
-========================================= */
+/* =========================================================
+   FOOTER DIVIDER
+========================================================= */
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
 
-    margin-top: 20px;
-    padding-top: 9px;
+    z-index: 2;
+
+    margin-top: 45px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    color: #a99abb;
+    gap: 20px;
+
+    color: rgba(255,255,255,0.45);
+
     font-size: 10px;
 }
 
 .footer-bottom div {
     display: flex;
+
     align-items: center;
+
     gap: 18px;
 }
 
+.footer-bottom a {
+    color: rgba(255,255,255,0.45);
 
-/* =========================================
+    transition: 0.25s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+
+    .footer {
+        padding: 45px 0 18px;
+    }
 
     .footer-main {
-        grid-template-columns: 1.1fr 1.8fr 0.9fr;
-        gap: 25px;
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px;
     }
 
-    .footer-links {
-        gap: 11px;
+    .footer-brand {
+        grid-column: 1 / -1;
     }
 
-    .footer-links a {
-        font-size: 10px;
+    .footer-brand p {
+        max-width: 500px;
     }
 
 }
 
 
-/* =========================================
-   TABLET / SMALL LAPTOP
-========================================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 42px 0 15px;
+    }
 
     .footer-main {
         grid-template-columns: 1fr;
-        gap: 20px;
+
+        gap: 30px;
     }
 
-    .footer-brand {
+    .footer-brand,
+    .quick-links,
+    .footer-contact {
         text-align: center;
     }
 
@@ -5731,124 +5846,68 @@ color: white;
         margin-right: auto;
     }
 
-    .quick-links {
-        text-align: center;
-    }
-
-    .footer-links {
+    .footer-logo {
         justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .footer-contact {
-        text-align: center;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .footer {
-        padding: 22px 0 10px;
-    }
-
-    .footer-main {
-        gap: 18px;
-    }
-
-    .footer-logo .logo-text strong {
-        font-size: 19px;
-    }
-
-    .footer-logo .logo-text span {
-        font-size: 9px;
-    }
-
-    .footer-brand p {
-        font-size: 11px;
-        margin-top: 6px;
-    }
-
-    .quick-links h4,
-    .footer-contact h4 {
-        font-size: 12px;
-        margin-bottom: 7px;
     }
 
     .footer-links {
-        gap: 8px 14px;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr;
+
+        justify-content: center;
+
+        gap: 11px 20px;
     }
 
-    .footer-links a,
+    .footer-links a {
+        justify-self: center;
+    }
+
     .footer-contact a {
-        font-size: 11px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .footer-bottom {
-        margin-top: 17px;
-        padding-top: 8px;
-
         flex-direction: column;
-        gap: 7px;
+
+        justify-content: center;
 
         text-align: center;
+
+        gap: 9px;
+
+        margin-top: 32px;
     }
 
     .footer-bottom div {
         justify-content: center;
+
         flex-wrap: wrap;
-        gap: 10px;
+
+        gap: 10px 16px;
     }
 
 }
 
 
-/* =========================================
-   VERY SMALL MOBILE
-========================================= */
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 400px) {
 
     .footer-links {
-        gap: 7px 12px;
+        grid-template-columns: 1fr;
+
+        gap: 10px;
     }
 
     .footer-links a {
-        font-size: 10px;
+        font-size: 11px;
     }
 
-    .footer-bottom {
-        font-size: 9px;
+    .footer-brand p {
+        font-size: 11px;
     }
 
-}
-.footer-main {
-    display: grid;
-    grid-template-columns: 1.3fr 2.2fr 1fr;
-    align-items: start;
-    gap: 25px;
-}
-
-.quick-links {
-    text-align: center;
-}
-
-.footer-contact {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.footer-contact h4 {
-    margin: 0 0 8px;
-}
-
-.footer-contact a {
-    display: block;
-    margin-bottom: 5px;
 }
