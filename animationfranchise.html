@@ -867,7 +867,11 @@ textarea {
             35% 100%
         );
 }
-
+@media (max-width: 767px) {
+    .model-section::after , .model-section::before {
+        display: none;
+    }
+}
 .model-grid {
 
     position: relative;
