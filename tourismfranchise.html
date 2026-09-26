@@ -2019,6 +2019,611 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
+
+
+/* =========================================================
+   NETWORK GALLERY
+========================================================= */
+/* 
+.network-gallery-section {
+    padding: 95px 0;
+    background: var(--offwhite);
+    position: relative;
+    overflow: hidden;
+}
+
+.network-gallery-head {
+    max-width: 780px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.network-gallery-head .eyebrow {
+    margin-bottom: 12px;
+}
+
+.network-gallery-head h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    margin-bottom: 14px;
+}
+
+.network-gallery-head h2 span {
+    color: var(--purple);
+}
+
+.network-gallery-head p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.network-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.network-tab {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--purple);
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.network-tab:hover {
+    border-color: var(--gold);
+    transform: translateY(-1px);
+}
+
+.network-tab.active {
+    background: var(--purple);
+    color: var(--gold);
+    border-color: var(--purple);
+    box-shadow: 0 8px 22px rgba(42,16,73,.16);
+}
+
+.network-gallery-panel {
+    display: none;
+}
+
+.network-gallery-panel.active {
+    display: block;
+    animation: networkFade .35s ease;
+}
+
+@keyframes networkFade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.network-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.network-gallery-item {
+    position: relative;
+    height: 285px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--purple-dark);
+    border: 1px solid rgba(42,16,73,.10);
+    box-shadow: 0 12px 30px rgba(42,16,73,.09);
+    cursor: pointer;
+}
+
+.network-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease, filter .35s ease;
+}
+
+.network-gallery-item::after {
+    content: "View Image ↗";
+    position: absolute;
+    left: 16px;
+    bottom: 15px;
+    padding: 8px 11px;
+    border-radius: 5px;
+    background: rgba(22,8,36,.82);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    opacity: 0;
+    transform: translateY(7px);
+    transition: .3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.network-gallery-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(.88);
+}
+
+.network-gallery-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.network-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 75px;
+    background: rgba(8,4,12,.94);
+}
+
+.network-lightbox.active {
+    display: flex;
+}
+
+.network-lightbox-image-wrap {
+    width: min(1050px, 90vw);
+    height: min(80vh, 760px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.network-lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 25px 70px rgba(0,0,0,.45);
+}
+
+.network-lightbox-close,
+.network-lightbox-prev,
+.network-lightbox-next {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    color: white;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.network-lightbox-close:hover,
+.network-lightbox-prev:hover,
+.network-lightbox-next:hover {
+    background: var(--gold);
+    color: var(--purple-dark);
+    border-color: var(--gold);
+}
+
+.network-lightbox-close {
+    top: 24px;
+    right: 25px;
+    font-size: 23px;
+}
+
+.network-lightbox-prev {
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+.network-lightbox-next {
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+body.gallery-open {
+    overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+    .network-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .network-gallery-section {
+        padding: 75px 0;
+    }
+
+    .network-gallery-head h2 {
+        font-size: 31px;
+    }
+
+    .network-gallery-head p {
+        font-size: 13px;
+    }
+
+    .network-tabs {
+        gap: 7px;
+        margin-bottom: 25px;
+    }
+
+    .network-tab {
+        padding: 10px 14px;
+        font-size: 10px;
+    }
+
+    .network-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .network-gallery-item {
+        height: 210px;
+        border-radius: 9px;
+    }
+
+    .network-gallery-item::after {
+        left: 9px;
+        bottom: 9px;
+        padding: 6px 8px;
+        font-size: 8px;
+    }
+
+    .network-lightbox {
+        padding: 65px 15px 80px;
+    }
+
+    .network-lightbox-image-wrap {
+        width: 94vw;
+        height: 70vh;
+    }
+
+    .network-lightbox-close {
+        top: 17px;
+        right: 17px;
+    }
+
+    .network-lightbox-prev,
+    .network-lightbox-next {
+        top: auto;
+        bottom: 20px;
+        transform: none;
+    }
+
+    .network-lightbox-prev {
+        left: calc(50% - 55px);
+    }
+
+    .network-lightbox-next {
+        right: calc(50% - 55px);
+    }
+} */
+
+
+.gallery-section{
+    padding:100px 0;
+    background:var(--offwhite);
+}
+
+.gallery-tabs{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:42px;
+    flex-wrap:wrap;
+}
+
+.gallery-tab{
+    border:1px solid var(--border);
+    background:#fff;
+    color:#5D5665;
+    padding:11px 22px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.gallery-tab:hover{
+    border-color:var(--purple);
+    color:var(--purple);
+}
+
+.gallery-tab.active{
+    background:var(--purple);
+    color:#fff;
+    border-color:var(--purple);
+}
+
+
+/* Default gallery layout for Centres / Students */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+
+/* =========================================================
+   SINGLE BRAND IMAGE
+========================================================= */
+
+.gallery-grid.brand-single{
+    grid-template-columns:1fr;
+    max-width:620px;
+    margin:0 auto;
+}
+
+.gallery-grid.brand-single .gallery-card{
+    height:360px;
+    background:#F7F4FB;
+}
+
+.gallery-grid.brand-single .gallery-card img{
+    object-fit:contain;
+    padding:35px;
+    background:#F7F4FB;
+}
+
+.gallery-grid.brand-single .gallery-card:hover img{
+    transform:scale(1.025);
+}
+
+.gallery-grid.brand-single .gallery-card::after{
+    display:none;
+}
+
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
+
+.gallery-card{
+    height:245px;
+    border-radius:14px;
+    overflow:hidden;
+    position:relative;
+    background:#eee;
+    cursor:pointer;
+    border:1px solid var(--border);
+}
+
+.gallery-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+.gallery-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(30,15,50,.50),
+        transparent 55%
+    );
+    pointer-events:none;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.gallery-lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(18,9,28,.92);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    opacity:0;
+    visibility:hidden;
+    transition:.25s ease;
+    z-index:2000;
+}
+
+.gallery-lightbox.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.lightbox-inner{
+    position:relative;
+    width:min(1000px,100%);
+    max-height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.lightbox-image{
+    max-width:100%;
+    max-height:78vh;
+    object-fit:contain;
+    border-radius:8px;
+}
+
+.lightbox-caption{
+    color:#fff;
+    margin-top:15px;
+    font-size:14px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.1);
+    color:#fff;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    font-size:24px;
+    z-index:5;
+}
+
+.lightbox-close{
+    top:-55px;
+    right:0;
+}
+
+.lightbox-prev{
+    left:-65px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.lightbox-next{
+    right:-65px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover{
+    background:rgba(255,255,255,.2);
+}
+
+
+/* =========================================================
+   BRAND BENEFIT
+========================================================= */
+
+.brand-benefit{
+    padding:100px 0;
+    background:#fff;
+}
+
+.brand-benefit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.brand-benefit-content h2{
+    margin-bottom:20px;
+}
+
+.brand-benefit-content > p{
+    color:var(--muted);
+    max-width:600px;
+}
+
+.benefit-list{
+    margin-top:30px;
+    display:grid;
+    gap:14px;
+}
+
+.benefit-item{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+}
+
+.benefit-check{
+    flex:0 0 25px;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:var(--purple-light);
+    color:var(--purple);
+    display:grid;
+    place-items:center;
+    font-size:12px;
+    font-weight:800;
+}
+
+.benefit-item strong{
+    display:block;
+    font-size:14px;
+    margin-bottom:2px;
+}
+
+.benefit-item span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.brand-visual{
+    min-height:430px;
+    border-radius:18px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(84,33,154,.88),
+            rgba(53,18,100,.92)
+        ),
+        url("images/centre/d1.jpeg") center/cover;
+    position:relative;
+    overflow:hidden;
+}
+
+.brand-visual::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(255,255,255,.20);
+    border-radius:50%;
+    right:-80px;
+    top:-80px;
+}
+
+.brand-visual-content{
+    position:absolute;
+    left:40px;
+    bottom:40px;
+    color:#fff;
+    max-width:390px;
+}
+
+.brand-visual-content small{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:11px;
+    opacity:.75;
+}
+
+.brand-visual-content h3{
+    font-size:35px;
+    margin-top:10px;
+}
+
+
 </style>
 
 </head>
@@ -2852,6 +3457,411 @@ textarea:focus-visible {
 </div>
 
 
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery-section" id="gallery">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="eyebrow">
+                KEYTAL ECOSYSTEM
+            </span>
+
+            <h2>
+                Our Brand, Centres
+                <span>& Students.</span>
+            </h2>
+
+            <p>
+                Explore the Keytal ecosystem through our education brand,
+                learning centres and the students who are part of our
+                growing learning community.
+            </p>
+
+        </div>
+
+
+        <!-- TABS -->
+
+        <div class="gallery-tabs">
+
+            <button
+                class="gallery-tab active"
+                data-gallery="brands"
+            >
+                Our Brand
+            </button>
+
+            <button
+                class="gallery-tab"
+                data-gallery="centres"
+            >
+                Centres
+            </button>
+
+            <button
+                class="gallery-tab"
+                data-gallery="students"
+            >
+                Students
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY GRID -->
+
+        <div
+            class="gallery-grid brand-single"
+            id="galleryGrid"
+        >
+
+
+            <!-- =================================================
+                 SINGLE BRAND IMAGE
+            ================================================== -->
+
+            <div
+                class="gallery-card reveal"
+                data-category="brands"
+                data-caption="Keytal Education"
+                data-image="images/Columbus Academy Pvt Ltd_Final Logo-04.png"
+            >
+
+                <img
+                    src="images/Columbus Academy Pvt Ltd_Final Logo-04.png"
+                    alt="Keytal Education brand"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CENTRES
+            ================================================== -->
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/1.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/1.jpg"
+                    alt="Keytal learning centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/2.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/2.jpg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+ <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/5.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/5.jpeg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/3.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/3.jpg"
+                    alt="Keytal technology education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/4.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/4.jpg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+           
+
+             <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/6.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/6.jpeg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+             <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/7.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/7.jpeg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+             <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/ca/8.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/8.jpg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+            <!-- =================================================
+                 STUDENTS
+            ================================================== -->
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s1.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s1.jpeg"
+                    alt="Keytal students"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s2.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s2.jpeg"
+                    alt="Keytal students learning"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s3.JPG"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s3.JPG"
+                    alt="Keytal technology students"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s5.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s5.jpg"
+                    alt="Keytal learning community"
+                    loading="lazy"
+                >
+
+            </div>
+
+            
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s6.jpg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s6.jpg"
+                    alt="Keytal learning community"
+                    loading="lazy"
+                >
+
+            </div>
+
+                <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s7/JPG"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s7.JPG"
+                    alt="Keytal learning community"
+                    loading="lazy"
+                >
+
+            </div>
+
+                <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s8.JPG"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s8.JPG"
+                    alt="Keytal learning community"
+                    loading="lazy"
+                >
+
+            </div>
+
+                <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/ca/s9.JPG"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/ca/s9.JPG"
+                    alt="Keytal learning community"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     GALLERY LIGHTBOX
+========================================================= -->
+
+<div
+    class="gallery-lightbox"
+    id="galleryLightbox"
+    aria-hidden="true"
+>
+
+    <div class="lightbox-inner">
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image"
+        >
+            ×
+        </button>
+
+        <button
+            class="lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous image"
+        >
+            ‹
+        </button>
+
+        <img
+            class="lightbox-image"
+            id="lightboxImage"
+            src=""
+            alt=""
+        >
+
+        <div
+            class="lightbox-caption"
+            id="lightboxCaption"
+        ></div>
+
+        <button
+            class="lightbox-next"
+            id="lightboxNext"
+            aria-label="Next image"
+        >
+            ›
+        </button>
+
+    </div>
+
+</div>
+
+
 <section class="brand-section">
 
     <div class="container">
@@ -3375,6 +4385,311 @@ document.addEventListener(
     }
 );
 
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+const galleryTabs =
+    document.querySelectorAll(".gallery-tab");
+
+const galleryCards =
+    document.querySelectorAll(".gallery-card");
+
+const galleryGrid =
+    document.getElementById("galleryGrid");
+
+const galleryLightbox =
+    document.getElementById("galleryLightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxCaption =
+    document.getElementById("lightboxCaption");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+const lightboxPrev =
+    document.getElementById("lightboxPrev");
+
+const lightboxNext =
+    document.getElementById("lightboxNext");
+
+let currentCategory = "brands";
+let currentIndex = 0;
+
+
+/* Get currently visible category cards */
+
+function getCurrentCards(){
+
+    return Array.from(galleryCards).filter(
+        card =>
+            card.dataset.category === currentCategory
+    );
+
+}
+
+
+/* Change layout depending on category */
+
+function updateGalleryLayout(category){
+
+    if(category === "brands"){
+
+        galleryGrid.classList.add("brand-single");
+
+    }else{
+
+        galleryGrid.classList.remove("brand-single");
+
+    }
+
+}
+
+
+/* Show selected gallery */
+
+function showGallery(category){
+
+    currentCategory = category;
+
+    updateGalleryLayout(category);
+
+    galleryCards.forEach(card => {
+
+        if(card.dataset.category === category){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* Tab click */
+
+galleryTabs.forEach(tab => {
+
+    tab.addEventListener("click",function(){
+
+        galleryTabs.forEach(item =>
+            item.classList.remove("active")
+        );
+
+        this.classList.add("active");
+
+        showGallery(
+            this.dataset.gallery
+        );
+
+    });
+
+});
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+function openLightbox(index){
+
+    const cards = getCurrentCards();
+
+    if(!cards.length) return;
+
+    currentIndex = index;
+
+    const card = cards[currentIndex];
+
+    lightboxImage.src =
+        card.dataset.image;
+
+    lightboxImage.alt =
+        card.dataset.caption ||
+        card.querySelector("img")?.alt ||
+        "Keytal image";
+
+    lightboxCaption.textContent =
+        card.dataset.caption || "";
+
+    galleryLightbox.classList.add("active");
+
+    galleryLightbox.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.style.overflow = "hidden";
+
+
+    /* Hide arrows when there is only one image */
+
+    if(cards.length <= 1){
+
+        lightboxPrev.style.display = "none";
+        lightboxNext.style.display = "none";
+
+    }else{
+
+        lightboxPrev.style.display = "grid";
+        lightboxNext.style.display = "grid";
+
+    }
+
+}
+
+
+/* Gallery card click */
+
+galleryCards.forEach(card => {
+
+    card.addEventListener("click",function(){
+
+        const cards = getCurrentCards();
+
+        const index =
+            cards.indexOf(this);
+
+        openLightbox(index);
+
+    });
+
+});
+
+
+/* Next */
+
+function nextImage(){
+
+    const cards = getCurrentCards();
+
+    if(cards.length <= 1) return;
+
+    currentIndex =
+        (currentIndex + 1) %
+        cards.length;
+
+    openLightbox(currentIndex);
+
+}
+
+
+/* Previous */
+
+function previousImage(){
+
+    const cards = getCurrentCards();
+
+    if(cards.length <= 1) return;
+
+    currentIndex =
+        (currentIndex - 1 + cards.length) %
+        cards.length;
+
+    openLightbox(currentIndex);
+
+}
+
+
+lightboxNext.addEventListener(
+    "click",
+    nextImage
+);
+
+lightboxPrev.addEventListener(
+    "click",
+    previousImage
+);
+
+
+/* Close */
+
+function closeLightbox(){
+
+    galleryLightbox.classList.remove(
+        "active"
+    );
+
+    galleryLightbox.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.style.overflow = "";
+
+}
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+/* Close by clicking background */
+
+galleryLightbox.addEventListener(
+    "click",
+    function(e){
+
+        if(e.target === galleryLightbox){
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+/* Keyboard controls */
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(!galleryLightbox.classList.contains("active"))
+            return;
+
+        if(e.key === "Escape"){
+
+            closeLightbox();
+
+        }
+
+        if(e.key === "ArrowRight"){
+
+            nextImage();
+
+        }
+
+        if(e.key === "ArrowLeft"){
+
+            previousImage();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INITIAL GALLERY
+========================================================= */
+
+showGallery("brands");
+
+
 </script>
 
 
@@ -3382,3 +4697,4 @@ document.addEventListener(
 
 </html>
 
+    
