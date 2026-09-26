@@ -18,8 +18,8 @@ content="Explore the Keytal Data Science and Technology Education Franchise oppo
 
 <link
 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
-rel="stylesheet">
-
+rel="stylesheet"
+>
 
 <style>
 
@@ -28,7 +28,6 @@ rel="stylesheet">
 ========================================================= */
 
 :root {
-
     --purple: #54219A;
     --purple-dark: #351264;
     --purple-mid: #6B35B8;
@@ -41,16 +40,12 @@ rel="stylesheet">
 
     --text: #171323;
     --muted: #6E6877;
-
     --border: #E4DFEA;
 
     --container: 1240px;
 
-    --shadow:
-        0 18px 45px rgba(53,18,100,.10);
-
-    --shadow-hover:
-        0 25px 55px rgba(53,18,100,.15);
+    --shadow: 0 18px 45px rgba(53,18,100,.10);
+    --shadow-hover: 0 25px 55px rgba(53,18,100,.15);
 }
 
 
@@ -71,7 +66,8 @@ html {
 body {
     font-family: "Inter", sans-serif;
     color: var(--text);
-    background: var(--white);
+    background: #fff;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
@@ -89,16 +85,62 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
 }
 
 .container {
-    width: min(
-        var(--container),
-        calc(100% - 50px)
-    );
+    width: min(var(--container), calc(100% - 40px));
+    margin: 0 auto;
+}
 
-    margin: auto;
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Manrope", sans-serif;
+    line-height: 1.15;
+}
+
+.section-head {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.section-head h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.4px;
+}
+
+.section-head h2 span {
+    color: var(--purple);
+}
+
+.section-head p {
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 
@@ -107,138 +149,70 @@ textarea {
 ========================================================= */
 
 .header {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 82px;
-
     z-index: 1000;
-
-    background: rgba(22,8,36,.96);
-
-    border-bottom:
-        1px solid rgba(255,255,255,.08);
-
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid rgba(228,223,234,.75);
     transition: .3s ease;
 }
 
 .header.scrolled {
-
-    background: rgba(22,8,36,.99);
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.22);
+    box-shadow: 0 8px 30px rgba(20,10,40,.08);
 }
 
-.nav-container {
-
-    height: 100%;
-
+.header-inner {
+    height: 82px;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
-
-/* HEADER LOGO */
-
-.logo {
-    width: 155px;
-}
-
 .logo img {
-
-    width: 100%;
-
+    width: 145px;
     height: auto;
-
-    object-fit: contain;
 }
 
 .nav {
-
     display: flex;
-
     align-items: center;
-
     gap: 28px;
 }
 
 .nav a {
-
-    color: #fff;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
     transition: .25s ease;
 }
 
 .nav a:hover {
-    color: var(--gold);
+    color: var(--purple);
 }
 
-.nav-btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    background: #edd170;
-
-    color: #160824 !important;
-
-    padding: 14px 21px;
-
-    border-radius: 5px;
-
-    font-weight: 800 !important;
-
-    transition: .25s ease;
+.nav-cta {
+    background: var(--purple);
+    color: #fff !important;
+    padding: 12px 20px;
+    border-radius: 7px;
 }
 
-.nav-btn:hover {
-
-    background: #edd170;
-
-    transform: translateY(-2px);
-}
-
-.nav-btn span {
-    font-size: 18px;
+.nav-cta:hover {
+    background: var(--purple-dark);
 }
 
 .menu-btn {
-
     display: none;
-
-    background: transparent;
-
-    border: 0;
-
-    cursor: pointer;
-}
-
-.menu-btn span {
-
-    width: 26px;
-
-    height: 2px;
-
-    background: white;
-
-    display: block;
-
-    margin: 5px 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 7px;
+    font-size: 20px;
+    color: var(--purple);
 }
 
 
@@ -247,498 +221,201 @@ textarea {
 ========================================================= */
 
 .hero {
-
-    min-height: 720px;
-
-    padding-top: 76px;
-
     position: relative;
-
+    padding: 150px 0 90px;
     background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(84,33,154,.13),
+            transparent 30%
+        ),
         linear-gradient(
-            110deg,
-            #F7F4FB 0%,
-            #F9F8FB 52%,
-            #EEE7F7 100%
+            135deg,
+            #F9F7FC 0%,
+            #FFFFFF 60%
         );
-
     overflow: hidden;
 }
 
 .hero::before {
-
     content: "";
-
     position: absolute;
-
-    width: 550px;
-    height: 550px;
-
-    right: -220px;
-    top: -160px;
-
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-
-    background:
-        rgba(84,33,154,.07);
+    background: rgba(84,33,154,.035);
+    top: -200px;
+    right: -150px;
 }
 
-.hero::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-    height: 280px;
-
-    left: -160px;
-    bottom: -140px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(84,33,154,.05);
-}
-
-.hero-inner {
-
-    min-height: 644px;
-
-    position: relative;
-
-    z-index: 2;
-
+.hero-grid {
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        390px;
-
-    gap: 75px;
-
+    grid-template-columns: 1.05fr .95fr;
     align-items: center;
+    gap: 70px;
 }
 
 .hero-content {
-
-    max-width: 650px;
+    position: relative;
+    z-index: 2;
 }
 
-.hero-tag {
-
+.hero-eyebrow {
     display: inline-flex;
-
     align-items: center;
-
     gap: 8px;
-
-    color: var(--purple);
-
+    padding: 8px 13px;
     background: var(--purple-light);
-
-    padding: 8px 14px;
-
+    color: var(--purple);
     border-radius: 30px;
-
     font-size: 10px;
-
     font-weight: 800;
-
-    letter-spacing: .8px;
-
-    margin-bottom: 21px;
-}
-
-.hero-tag::before {
-
-    content: "";
-
-    width: 7px;
-    height: 7px;
-
-    border-radius: 50%;
-
-    background: var(--purple);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-
-    font-family: "Manrope", sans-serif;
-
-    color: var(--purple-dark);
-
-    font-size:
-        clamp(40px, 5vw, 57px);
-
-    line-height: 1.02;
-
-    letter-spacing: -2.7px;
-
-    margin-bottom: 22px;
+    max-width: 720px;
+    font-size: clamp(42px, 5.2vw, 72px);
+    font-weight: 800;
+    letter-spacing: -2.8px;
 }
 
 .hero h1 span {
-
     color: var(--purple);
 }
 
 .hero-description {
-
-    max-width: 600px;
-
-    color: var(--muted);
-
-    font-size: 14px;
-
-    line-height: 1.75;
-
-    margin-bottom: 27px;
-}
-
-.hero-list {
-
-    list-style: none;
-
-    display: grid;
-
-    gap: 12px;
-}
-
-.hero-list li {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 11px;
-
-    color: #37323F;
-
-    font-size: 13px;
-
-    font-weight: 500;
-}
-
-.hero-list li::before {
-
-    content: "✓";
-
-    width: 20px;
-    height: 20px;
-
-    display: grid;
-
-    place-items: center;
-
-    background: var(--purple);
-
-    color: white;
-
-    border-radius: 50%;
-
-    font-size: 10px;
-
-    font-weight: 900;
-}
-
-.hero-note {
-
+    max-width: 650px;
     margin-top: 23px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.85;
+}
 
-    padding-left: 14px;
+.hero-points {
+    display: grid;
+    gap: 13px;
+    margin-top: 28px;
+}
 
-    border-left:
-        3px solid var(--purple);
+.hero-point {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
 
-    color: #77717E;
-
-    font-size: 11px;
-
-    line-height: 1.6;
-
-    max-width: 560px;
+.hero-point-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    display: grid;
+    place-items: center;
+    background: var(--purple);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
 }
 
 
 /* =========================================================
-   HERO FORM
+   FORM
 ========================================================= */
 
-.hero-form {
-
-    width: 100%;
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 12px;
-
-    padding: 27px 25px 22px;
-
-    box-shadow:
-        0 22px 55px rgba(44,22,72,.13);
-
+.hero-form-card {
     position: relative;
+    z-index: 3;
+    background: #fff;
+    padding: 34px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
-.hero-form::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background: var(--purple);
-
-    border-radius:
-        12px 12px 0 0;
+.form-top {
+    margin-bottom: 25px;
 }
 
-.form-heading {
-
-    margin-bottom: 18px;
-}
-
-.form-heading span {
-
-    display: block;
-
-    color: var(--purple);
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 1.3px;
-
-    margin-bottom: 6px;
-}
-
-.form-heading h3 {
-
-    color: var(--purple-dark);
-
-    font-family: "Manrope", sans-serif;
-
+.form-top h3 {
     font-size: 25px;
-
-    line-height: 1.1;
-
-    margin-bottom: 7px;
+    font-weight: 800;
 }
 
-.form-heading p {
-
-    color: #77727D;
-
-    font-size: 11px;
-
-    line-height: 1.5;
-}
-
-.hero-form form {
-
-    display: grid;
-
-    gap: 10px;
-}
-
-.input-group {
-
-    width: 100%;
-}
-
-.input-group input,
-.input-group select,
-.input-group textarea {
-
-    width: 100%;
-
-    height: 43px;
-
-    border:
-        1px solid #DDD8E4;
-
-    background: #FBFAFC;
-
-    border-radius: 5px;
-
-    padding: 0 12px;
-
-    color: #333;
-
+.form-top p {
+    margin-top: 7px;
+    color: var(--muted);
     font-size: 12px;
+}
 
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #423C4B;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: #fff;
+    color: var(--text);
+    padding: 12px 13px;
     outline: none;
-
+    font-size: 12px;
     transition: .2s ease;
 }
 
-.input-group input::placeholder {
-
-    color: #9A969F;
-}
-
-.input-group select {
-
-    cursor: pointer;
-
-    appearance: auto;
-}
-
-.input-group textarea {
-
-    height: 72px;
-
-    padding:
-        11px 12px;
-
-    resize: vertical;
-}
-
-.input-group input:focus,
-.input-group select:focus,
-.input-group textarea:focus {
-
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     border-color: var(--purple);
-
-    background: #ffffff;
-
-    box-shadow:
-        0 0 0 3px rgba(84,33,154,.07);
+    box-shadow: 0 0 0 3px rgba(84,33,154,.08);
 }
 
-.form-btn {
-
+.form-submit {
     width: 100%;
-
-    min-height: 44px;
-
     border: 0;
-
-    border-radius: 5px;
-
+    border-radius: 7px;
+    padding: 14px 20px;
+    margin-top: 17px;
     background: var(--purple);
-
-    color: white;
-
+    color: #fff;
     font-size: 12px;
-
     font-weight: 800;
-
-    cursor: pointer;
-
     transition: .25s ease;
 }
 
-.form-btn:hover {
-
+.form-submit:hover {
     background: var(--purple-dark);
-
     transform: translateY(-2px);
-
-    box-shadow:
-        0 10px 25px rgba(84,33,154,.18);
 }
 
-.privacy-text {
-
-    display: block;
-
-    text-align: center;
-
-    color: #9A969F;
-
-    font-size: 8px;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================================
-   COMMON SECTIONS
-========================================================= */
-
-.section {
-
-    padding: 100px 0;
-
-    position: relative;
-}
-
-.section-light {
-
-    background:
-        #F7F6F9;
-}
-
-.section-white {
-
-    background:
-        #ffffff;
-}
-
-.section-head {
-
-    max-width: 800px;
-
-    margin:
-        0 auto 52px;
-
-    text-align: center;
-}
-
-.eyebrow {
-
-    display: block;
-
-    color: var(--purple);
-
+.form-note {
+    margin-top: 12px;
+    color: var(--muted);
     font-size: 10px;
-
-    font-weight: 900;
-
-    letter-spacing: 1.8px;
-
-    margin-bottom: 12px;
-}
-
-.section-head h2 {
-
-    font-family: "Manrope", sans-serif;
-
-    color: var(--purple-dark);
-
-    font-size:
-        clamp(31px, 4vw, 46px);
-
-    line-height: 1.08;
-
-    letter-spacing: -1.8px;
-
-    margin-bottom: 15px;
-}
-
-.section-head h2 span {
-
-    color: var(--purple);
-}
-
-.section-head p {
-
-    color: #706A77;
-
-    font-size: 14px;
-
-    line-height: 1.75;
+    text-align: center;
 }
 
 
@@ -747,133 +424,86 @@ textarea {
 ========================================================= */
 
 .model-section {
-
-    background: white;
-
-    overflow: hidden;
+    padding: 100px 0;
+    background: #fff;
 }
 
 .model-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
-
-    max-width: 920px;
-
-    margin: auto;
 }
 
 .model-card {
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 12px;
-
+    position: relative;
+    min-height: 460px;
     overflow: hidden;
-
-    box-shadow:
-        0 12px 32px rgba(40,20,60,.07);
-
-    transition: .3s ease;
+    border-radius: 15px;
+    background: var(--purple-dark);
+    color: #fff;
 }
 
-.model-card:hover {
-
-    transform:
-        translateY(-7px);
-
-    box-shadow:
-        var(--shadow-hover);
-}
-
-.model-image {
-
-    height: 220px;
-
-    overflow: hidden;
-}
-
-.model-image img {
-
+.model-card img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    transition: .5s ease;
+    opacity: .35;
 }
 
-.model-card:hover
-.model-image img {
-
-    transform:
-        scale(1.05);
+.model-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(28,8,52,.95),
+        rgba(53,18,100,.45),
+        rgba(53,18,100,.1)
+    );
 }
 
 .model-content {
+    position: relative;
+    z-index: 2;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+}
 
-    padding:
-        24px 24px 27px;
+.model-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #DCCDF1;
+    text-transform: uppercase;
+    margin-bottom: 9px;
 }
 
 .model-content h3 {
+    font-size: 30px;
+    margin-bottom: 13px;
+}
 
-    color: var(--purple);
-
+.model-content p {
+    max-width: 500px;
+    color: rgba(255,255,255,.78);
     font-size: 13px;
-
-    font-weight: 900;
-
-    letter-spacing: .7px;
-
-    padding-bottom: 12px;
-
-    border-bottom:
-        1px solid var(--border);
-
-    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
-.model-content ul {
-
-    list-style: none;
-
+.model-list {
+    margin-top: 20px;
     display: grid;
-
-    gap: 10px;
+    gap: 8px;
 }
 
-.model-content li {
-
-    position: relative;
-
-    padding-left: 18px;
-
-    color: #625D68;
-
+.model-list li {
+    list-style: none;
     font-size: 12px;
-
-    line-height: 1.55;
-}
-
-.model-content li::before {
-
-    content: "✓";
-
-    position: absolute;
-
-    left: 0;
-
-    color: var(--purple);
-
-    font-weight: 900;
+    color: rgba(255,255,255,.88);
 }
 
 
@@ -881,123 +511,51 @@ textarea {
    SUPPORT
 ========================================================= */
 
+.support-section {
+    padding: 95px 0;
+    background: var(--offwhite);
+}
+
 .support-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 22px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
 
 .support-card {
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 30px;
     border-radius: 12px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 12px 32px rgba(40,20,60,.07);
-
     transition: .3s ease;
 }
 
 .support-card:hover {
-
-    transform:
-        translateY(-7px);
-
-    box-shadow:
-        var(--shadow-hover);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
 }
 
-.support-image {
-
-    height: 205px;
-
-    overflow: hidden;
-}
-
-.support-image img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: .5s ease;
-}
-
-.support-card:hover
-.support-image img {
-
-    transform:
-        scale(1.05);
-}
-
-.support-body {
-
-    padding:
-        24px 23px 28px;
-}
-
-.support-body h3 {
-
-    color: var(--purple-dark);
-
-    font-size: 15px;
-
-    font-weight: 800;
-
-    line-height: 1.3;
-
-    padding-bottom: 12px;
-
-    border-bottom:
-        1px solid var(--border);
-
-    margin-bottom: 15px;
-}
-
-.support-body ul {
-
-    list-style: none;
-
+.support-icon {
+    width: 48px;
+    height: 48px;
     display: grid;
-
-    gap: 11px;
-}
-
-.support-body li {
-
-    color: #68626F;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-
-    padding-left: 19px;
-
-    position: relative;
-}
-
-.support-body li::before {
-
-    content: "✓";
-
-    position: absolute;
-
-    left: 0;
-
+    place-items: center;
+    border-radius: 10px;
+    background: var(--purple-light);
     color: var(--purple);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
 
-    font-weight: 900;
+.support-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.support-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
 }
 
 
@@ -1006,201 +564,70 @@ textarea {
 ========================================================= */
 
 .courses-section {
-
-    background:
-        #F7F6F9;
+    padding: 100px 0;
+    background: #fff;
 }
 
 .course-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+    gap: 16px;
 }
 
 .course-card {
-
-    position: relative;
-
-    background: white;
-
-    border:
-        1px solid #E1DCE7;
-
+    padding: 25px 20px;
+    border: 1px solid var(--border);
     border-radius: 11px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 10px 28px rgba(40,20,60,.06);
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
+    background: #fff;
+    transition: .3s ease;
 }
 
 .course-card:hover {
-
-    transform:
-        translateY(-6px);
-
-    box-shadow:
-        0 20px 42px rgba(40,20,60,.12);
-}
-
-.course-image {
-
-    position: relative;
-
-    height: 215px;
-
-    overflow: hidden;
-}
-
-.course-image img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform .5s ease;
-}
-
-.course-card:hover
-.course-image img {
-
-    transform:
-        scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba(84,33,154,.25);
 }
 
 .course-number {
-
-    position: absolute;
-
-    top: 14px;
-    left: 15px;
-
-    width: 38px;
-    height: 38px;
-
+    width: 35px;
+    height: 35px;
     display: grid;
-
     place-items: center;
-
-    background: rgba(255,255,255,.95);
-
-    color: var(--purple);
-
     border-radius: 50%;
-
+    background: var(--purple-light);
+    color: var(--purple);
     font-size: 11px;
-
     font-weight: 800;
-
-    box-shadow:
-        0 5px 15px rgba(0,0,0,.08);
+    margin-bottom: 20px;
 }
 
-.course-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(84,33,154,0) 50%,
-            rgba(35,13,65,.15) 100%
-        );
+.course-card h3 {
+    font-size: 16px;
+    line-height: 1.35;
 }
 
-.course-content {
-
-    padding:
-        22px 22px 25px;
+.course-card p {
+    color: var(--muted);
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.7;
 }
 
-.course-content h3 {
-
-    color: #12101A;
-
-    font-family: "Manrope", sans-serif;
-
-    font-size: 17px;
-
-    line-height: 1.25;
-
-    margin-bottom: 9px;
-}
-
-.course-content p {
-
-    color: #746E7A;
-
-    font-size: 12px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   COURSE FEATURE STRIP
-========================================================= */
-
-.course-strip {
-
-    margin-top: 35px;
-
+.course-pills {
     display: flex;
-
-    justify-content: center;
-
     flex-wrap: wrap;
-
-    gap: 10px;
+    gap: 7px;
+    margin-top: 18px;
 }
 
 .course-pill {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 30px;
-
-    padding:
-        9px 15px;
-
-    color: var(--purple-dark);
-
-    font-size: 10px;
-
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 20px;
+    background: var(--purple-soft);
+    color: var(--purple);
+    font-size: 9px;
     font-weight: 700;
-}
-
-.course-pill::before {
-
-    content: "";
-
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-
-    background: var(--purple);
 }
 
 
@@ -1209,149 +636,337 @@ textarea {
 ========================================================= */
 
 .ticker {
-
-    background:
-        var(--purple);
-
+    padding: 18px 0;
+    background: var(--purple);
     overflow: hidden;
-
-    padding:
-        16px 0;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
-    border-bottom:
-        1px solid rgba(255,255,255,.08);
 }
 
 .ticker-track {
-
-    width: max-content;
-
     display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-
-    animation:
-        ticker 30s linear infinite;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .ticker-item {
-
-    color: white;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: .7px;
-
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 9px;
 }
 
-.ticker-dot {
-
-    color:
-        rgba(255,255,255,.55);
-
-    font-size: 16px;
-}
-
-@keyframes ticker {
-
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
+.ticker-item::before {
+    content: "•";
+    color: #DCCDF1;
+    font-size: 18px;
 }
 
 
 /* =========================================================
-   BUSINESS BENEFIT
+   GALLERY
 ========================================================= */
 
-.brand-section {
-
-    padding:
-        65px 0;
-
-    background:
-        white;
+.gallery-section {
+    padding: 100px 0;
+    background: #fff;
+    overflow: hidden;
 }
 
-.brand-box {
+.gallery-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 38px;
+    flex-wrap: wrap;
+}
 
-    max-width: 930px;
+.gallery-tab {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--muted);
+    padding: 11px 21px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .25s ease;
+}
 
-    margin: auto;
+.gallery-tab:hover {
+    color: var(--purple);
+    border-color: var(--purple);
+}
+
+.gallery-tab.active {
+    background: var(--purple);
+    color: #fff;
+    border-color: var(--purple);
+    box-shadow: 0 8px 20px rgba(84,33,154,.16);
+}
+
+
+/* =========================================================
+   NORMAL CENTRE / STUDENT GRID
+========================================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+
+/* =========================================================
+   OUR BRAND - SINGLE CENTERED FRAMEBOXX STYLE BOX
+========================================================= */
+
+.gallery-grid.brand-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gallery-grid.brand-single .gallery-card {
+    width: 620px;
+    max-width: 100%;
+    height: 360px;
+
+    background: #F7F4FB;
+
+    border: 1px solid #DED8E7;
+    border-radius: 15px;
+
+    overflow: hidden;
+    position: relative;
+
+    box-shadow: none;
+    cursor: pointer;
 
     display: flex;
-
     align-items: center;
+    justify-content: center;
+}
 
-    gap: 20px;
 
-    padding:
-        27px 32px;
+/* BRAND LOGO */
 
+.gallery-grid.brand-single .gallery-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 55px;
+
+    background: #F7F4FB;
+
+    transition: none;
+}
+
+
+/* REMOVE IMAGE OVERLAY */
+
+.gallery-grid.brand-single .gallery-card::after {
+    display: none;
+}
+
+
+/* NO HOVER EFFECT FOR BRAND BOX */
+
+.gallery-grid.brand-single .gallery-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.gallery-grid.brand-single .gallery-card:hover img {
+    transform: none;
+}
+
+
+/* =========================================================
+   NORMAL GALLERY CARDS
+========================================================= */
+
+.gallery-card {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    border-radius: 11px;
+    background: #fff;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 28px rgba(40,20,60,.06);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 42px rgba(40,20,60,.13);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background:
-        var(--purple-soft);
-
-    border:
-        1px solid #DED3EA;
-
-    border-radius: 14px;
+        linear-gradient(
+            to top,
+            rgba(35,13,65,.48),
+            rgba(35,13,65,0) 55%
+        );
+    pointer-events: none;
 }
 
-.brand-icon {
 
-    width: 50px;
-    height: 50px;
+/* =========================================================
+   GALLERY LIGHTBOX
+========================================================= */
 
-    flex:
-        0 0 50px;
-
-    display: grid;
-
-    place-items: center;
-
-    border-radius: 50%;
-
-    background:
-        var(--purple-light);
-
-    color:
-        var(--purple);
-
-    font-size: 21px;
-
-    font-weight: 900;
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(12,7,20,.92);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
 }
 
-.brand-box h3 {
-
-    color:
-        var(--purple-dark);
-
-    font-size: 17px;
-
-    margin-bottom: 6px;
+.gallery-lightbox.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-.brand-box p {
+.lightbox-inner {
+    position: relative;
+    width: min(1000px, 95vw);
+    height: min(720px, 90vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    color:
-        #706A77;
+.lightbox-image {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
+.lightbox-caption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
     font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
 
-    line-height: 1.65;
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    z-index: 2;
+    border: none;
+    background: rgba(255,255,255,.12);
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-close {
+    top: 5px;
+    right: 5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 27px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.lightbox-prev {
+    left: 0;
+}
+
+.lightbox-next {
+    right: 0;
+}
+
+
+/* =========================================================
+   BRAND BENEFITS
+========================================================= */
+
+.benefits-section {
+    padding: 100px 0;
+    background: var(--purple-soft);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.benefit-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 27px;
+}
+
+.benefit-card span {
+    display: block;
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 13px;
+}
+
+.benefit-card h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.benefit-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.75;
 }
 
 
@@ -1360,91 +975,75 @@ textarea {
 ========================================================= */
 
 .why-section {
-
-    background:
-        #F7F6F9;
+    padding: 100px 0;
+    background: #fff;
 }
 
 .why-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 22px;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 70px;
+    align-items: center;
 }
 
-.why-card {
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 11px;
-
-    padding:
-        27px 24px 28px;
-
-    transition: .3s ease;
+.why-image {
+    min-height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.why-card:hover {
-
-    transform:
-        translateY(-6px);
-
-    box-shadow:
-        var(--shadow);
+.why-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
 }
 
-.why-number {
+.why-content h2 {
+    font-size: clamp(32px,4vw,48px);
+    letter-spacing: -1.5px;
+}
 
-    width: 36px;
-    height: 36px;
+.why-content > p {
+    color: var(--muted);
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.85;
+}
 
+.why-list {
+    margin-top: 28px;
     display: grid;
+    gap: 17px;
+}
 
+.why-item {
+    display: flex;
+    gap: 14px;
+}
+
+.why-check {
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+    display: grid;
     place-items: center;
-
-    background:
-        var(--purple-light);
-
-    color:
-        var(--purple);
-
+    background: var(--purple-light);
+    color: var(--purple);
     border-radius: 50%;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    margin-bottom: 18px;
-}
-
-.why-card h3 {
-
-    color:
-        var(--purple-dark);
-
-    font-family:
-        "Manrope",
-        sans-serif;
-
-    font-size: 17px;
-
-    margin-bottom: 9px;
-}
-
-.why-card p {
-
-    color:
-        #716B77;
-
     font-size: 12px;
+    font-weight: 800;
+}
 
-    line-height: 1.65;
+.why-item h4 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.why-item p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
 }
 
 
@@ -1453,120 +1052,53 @@ textarea {
 ========================================================= */
 
 .final-cta {
-
-    min-height: 430px;
-
-    display: flex;
-
-    align-items: center;
-
-    position: relative;
-
+    padding: 90px 0;
     background:
-        linear-gradient(
-            120deg,
-            rgba(53,18,100,.94),
-            rgba(84,33,154,.89)
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(255,255,255,.12),
+            transparent 25%
         ),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2200&q=85");
-
-    background-size: cover;
-
-    background-position: center;
+        var(--purple-dark);
+    color: #fff;
 }
 
-.final-cta-content {
-
-    max-width: 800px;
-
-    margin: auto;
-
+.final-cta-inner {
+    max-width: 850px;
+    margin: 0 auto;
     text-align: center;
-
-    color: white;
 }
 
-.final-cta-content .eyebrow {
-
-    color:
-        rgba(255,255,255,.78);
+.final-cta h2 {
+    font-size: clamp(32px,4.5vw,56px);
+    letter-spacing: -1.7px;
 }
 
-.final-cta-content h2 {
-
-    font-family:
-        "Manrope",
-        sans-serif;
-
-    font-size:
-        clamp(34px, 5vw, 55px);
-
-    line-height: 1.06;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 18px;
-}
-
-.final-cta-content h2 span {
-
-    color: white;
-}
-
-.final-cta-content p {
-
+.final-cta p {
     max-width: 650px;
-
-    margin:
-        0 auto 27px;
-
-    color:
-        rgba(255,255,255,.78);
-
-    font-size: 13px;
-
-    line-height: 1.7;
+    margin: 18px auto 0;
+    color: rgba(255,255,255,.75);
+    font-size: 14px;
+    line-height: 1.8;
 }
 
-.cta-btn {
-
+.final-cta-btn {
     display: inline-flex;
-
     align-items: center;
-
-    gap: 11px;
-
-    background: white;
-
-    color: var(--purple);
-
-    padding:
-        14px 25px;
-
-    border-radius: 5px;
-
+    justify-content: center;
+    margin-top: 28px;
+    padding: 14px 25px;
+    border-radius: 7px;
+    background: #fff;
+    color: var(--purple-dark);
     font-size: 12px;
-
     font-weight: 800;
-
-    transition: .3s ease;
+    transition: .25s ease;
 }
 
-.cta-btn:hover {
-
-    transform:
-        translateY(-3px);
-
-    background:
-        var(--purple-light);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.16);
-}
-
-.cta-btn span {
-
-    font-size: 17px;
+.final-cta-btn:hover {
+    transform: translateY(-3px);
+    background: var(--purple-light);
 }
 
 
@@ -1575,185 +1107,70 @@ textarea {
 ========================================================= */
 
 .footer {
-
-    background:
-        #351264;
-
-    color: white;
-
-    padding:
-        27px 0 12px;
+    padding: 60px 0 25px;
+    background: #11071D;
+    color: #fff;
 }
 
-.footer-main {
-
+.footer-grid {
     display: grid;
-
-    grid-template-columns:
-        1.2fr 2fr 1fr;
-
-    align-items: center;
-
-    gap: 35px;
-}
-
-.footer-brand {
-
-    text-align: left;
-}
-
-.footer-logo {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    width: 160px;
-
-    line-height: 0;
+    grid-template-columns: 1.4fr .8fr .8fr;
+    gap: 50px;
+    padding-bottom: 45px;
 }
 
 .footer-logo img {
-
-    display: block;
-
-    width: 160px;
-
-    max-width: 100%;
-
-    height: auto;
-
-    object-fit: contain;
+    width: 150px;
+    margin-bottom: 17px;
+    filter: brightness(0) invert(1);
 }
 
-.footer-brand p {
-
-    max-width: 280px;
-
-    color:
-        #D8CDE5;
-
-    font-size: 10px;
-
-    line-height: 1.55;
-
-    margin-top: 9px;
+.footer-about {
+    max-width: 430px;
+    color: rgba(255,255,255,.58);
+    font-size: 11px;
+    line-height: 1.8;
 }
 
-.quick-links {
-
-    text-align: center;
-}
-
-.quick-links h4,
-.footer-contact h4 {
-
-    color: white;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    margin-bottom: 9px;
+.footer h4 {
+    font-size: 13px;
+    margin-bottom: 17px;
 }
 
 .footer-links {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
+    display: grid;
+    gap: 9px;
 }
 
 .footer-links a {
-
-    color:
-        #D8CDE5;
-
-    font-size: 10px;
-
-    transition: .25s ease;
+    color: rgba(255,255,255,.58);
+    font-size: 11px;
+    transition: .2s ease;
 }
 
-.footer-links a:hover,
-.footer-contact a:hover {
-
-    color: white;
+.footer-links a:hover {
+    color: #fff;
 }
 
 .footer-contact {
-
-    text-align: left;
-
-    padding-left: 10px;
+    display: grid;
+    gap: 10px;
 }
 
-.footer-contact a {
-
-    display: block;
-
-    color:
-        #D8CDE5;
-
-    font-size: 10px;
-
-    margin-bottom: 5px;
-
-    transition: .25s ease;
+.footer-contact a,
+.footer-contact p {
+    color: rgba(255,255,255,.58);
+    font-size: 11px;
 }
-
-
-/* =========================================================
-   FOOTER BOTTOM
-========================================================= */
 
 .footer-bottom {
-
-    border-top:
-        1px solid rgba(255,255,255,.12);
-
-    margin-top: 20px;
-
-    padding-top: 9px;
-
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 22px;
     display: flex;
-
     justify-content: space-between;
-
-    color:
-        #BEB0CC;
-
-    font-size: 9px;
-}
-
-
-/* =========================================================
-   REVEAL
-========================================================= */
-
-.reveal {
-
-    opacity: 0;
-
-    transform:
-        translateY(25px);
-
-    transition:
-        opacity .7s ease,
-        transform .7s ease;
-}
-
-.reveal.show {
-
-    opacity: 1;
-
-    transform:
-        translateY(0);
+    gap: 20px;
+    color: rgba(255,255,255,.4);
+    font-size: 10px;
 }
 
 
@@ -1762,398 +1179,358 @@ textarea {
 ========================================================= */
 
 .back-top {
-
     position: fixed;
-
     right: 22px;
     bottom: 22px;
-
+    z-index: 900;
     width: 42px;
     height: 42px;
-
-    border: 0;
-
+    display: grid;
+    place-items: center;
+    border: none;
     border-radius: 50%;
-
-    background:
-        var(--purple);
-
-    color: white;
-
-    font-size: 17px;
-
-    cursor: pointer;
-
+    background: var(--purple);
+    color: #fff;
     opacity: 0;
-
     visibility: hidden;
-
-    z-index: 900;
-
-    box-shadow:
-        0 8px 25px rgba(84,33,154,.25);
-
-    transition: .3s ease;
+    transform: translateY(10px);
+    transition: .25s ease;
 }
 
 .back-top.show {
-
     opacity: 1;
-
     visibility: visible;
-}
-
-.back-top:hover {
-
-    background:
-        var(--purple-dark);
-
-    transform:
-        translateY(-3px);
+    transform: translateY(0);
 }
 
 
 /* =========================================================
-   RESPONSIVE — 1100px
+   REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1100px) {
 
-    .hero-inner {
-
-        grid-template-columns:
-            minmax(0,1fr)
-            370px;
-
-        gap: 45px;
-    }
-
-    .hero h1 {
-
-        font-size: 49px;
-    }
-
-    .course-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .footer-main {
-
-        grid-template-columns:
-            1.1fr 1.8fr .9fr;
-
-        gap: 25px;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — 850px
-========================================================= */
-
-@media (max-width: 850px) {
-
-    .header {
-
-        height: 70px;
-    }
-
-    .logo {
-
-        width: 130px;
-    }
-
-    .nav {
-
-        position: fixed;
-
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-
-        background: white;
-
-        display: none;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        padding: 20px 25px;
-
-        box-shadow:
-            0 12px 25px rgba(0,0,0,.08);
-    }
-
-    .nav.active {
-
-        display: flex;
-    }
-
-    .nav-btn {
-
-        justify-content: center;
-    }
-
-    .menu-btn {
-
-        display: block;
-    }
-
-    .hero {
-
-        padding-top: 70px;
-    }
-
-    .hero-inner {
-
-        padding:
-            65px 0 55px;
-
+    .hero-grid {
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
     .hero-content {
+        max-width: 800px;
+    }
 
+    .hero-form-card {
         max-width: 700px;
     }
 
-    .hero h1 {
-
-        font-size: 46px;
+    .course-grid {
+        grid-template-columns: repeat(3,1fr);
     }
 
-    .hero-form {
-
-        max-width: 600px;
-
-        margin: auto;
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .support-grid,
+    .gallery-grid.brand-single {
+        display: flex;
+        grid-template-columns: none;
+        max-width: 100%;
+    }
+
+    .gallery-grid.brand-single .gallery-card {
+        width: 560px;
+        height: 330px;
+    }
+
+    .gallery-grid.brand-single .gallery-card img {
+        padding: 45px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .why-grid {
-
         grid-template-columns: 1fr;
-
-        max-width: 600px;
-
-        margin: auto;
+        gap: 40px;
     }
 
-    .footer-main {
-
-        grid-template-columns:
-            1fr 1fr;
+    .why-image {
+        max-width: 700px;
     }
 
-    .footer-contact {
-
-        padding-left: 0;
-    }
 }
 
 
 /* =========================================================
-   RESPONSIVE — 600px
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .nav {
+        position: absolute;
+        top: 82px;
+        left: 20px;
+        right: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 13px;
+    }
+
+    .nav-cta {
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .model-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid > :first-child {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
     .container {
-
-        width:
-            min(
-                100% - 32px,
-                var(--container)
-            );
+        width: min(100% - 28px, var(--container));
     }
 
-    .section {
-
-        padding:
-            75px 0;
+    .header,
+    .header-inner {
+        height: 72px;
     }
 
-    .hero-inner {
+    .nav {
+        top: 72px;
+        left: 14px;
+        right: 14px;
+    }
 
-        padding:
-            50px 0 45px;
+    .logo img {
+        width: 125px;
+    }
+
+    .hero {
+        padding: 115px 0 65px;
     }
 
     .hero h1 {
-
-        font-size: 37px;
-
-        letter-spacing:
-            -1.7px;
+        font-size: 40px;
+        letter-spacing: -1.8px;
     }
 
     .hero-description {
-
-        font-size: 13px;
+        font-size: 14px;
     }
 
-    .hero-list li {
-
-        font-size: 12px;
+    .hero-form-card {
+        padding: 23px 18px;
     }
 
-    .hero-form {
-
-        padding:
-            25px 20px 21px;
-    }
-
-    .form-heading h3 {
-
-        font-size: 23px;
-    }
-
-    .section-head {
-
-        margin-bottom: 35px;
-    }
-
-    .section-head h2 {
-
-        font-size: 30px;
-    }
-
-    .model-grid {
-
+    .form-grid {
         grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .model-section,
+    .support-section,
+    .courses-section,
+    .gallery-section,
+    .benefits-section,
+    .why-section {
+        padding: 75px 0;
+    }
+
+    .model-content {
+        min-height: 430px;
+        padding: 27px;
+    }
+
+    .model-card {
+        min-height: 430px;
     }
 
     .course-grid {
-
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 
-    .course-image {
-
-        height: 220px;
+    .course-card {
+        padding: 20px 15px;
     }
 
-    .brand-box {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        padding:
-            27px 22px;
+    .gallery-section {
+        padding: 75px 0;
     }
 
-    .final-cta {
-
-        min-height: 410px;
+    .gallery-tabs {
+        gap: 7px;
+        margin-bottom: 28px;
     }
 
-    .final-cta-content h2 {
-
-        font-size: 36px;
+    .gallery-tab {
+        padding: 9px 15px;
+        font-size: 10px;
     }
 
-    .footer {
-
-        padding:
-            25px 0 12px;
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
     }
 
-    .footer-main {
 
-        grid-template-columns: 1fr;
+    /* =====================================================
+       OUR BRAND - MOBILE FRAMEBOXX STYLE
+    ===================================================== */
 
-        gap: 24px;
-
-        text-align: center;
-    }
-
-    .footer-brand {
-
-        text-align: center;
-    }
-
-    .footer-logo {
-
-        width: 150px;
-
+    .gallery-grid.brand-single {
+        display: flex;
         justify-content: center;
-
-        margin: auto;
+        width: 100%;
     }
 
-    .footer-logo img {
+    .gallery-grid.brand-single .gallery-card {
+        width: 100%;
+        height: 250px;
 
-        width: 150px;
+        background: #F7F4FB;
+        border: 1px solid #DED8E7;
+        border-radius: 12px;
+
+        box-shadow: none;
     }
 
-    .footer-brand p {
-
-        margin:
-            9px auto 0;
+    .gallery-grid.brand-single .gallery-card img {
+        padding: 30px;
+        background: #F7F4FB;
     }
 
-    .footer-contact {
 
-        text-align: center;
+    .gallery-card {
+        height: 190px;
+        border-radius: 9px;
     }
 
-    .footer-links {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
 
-        gap:
-            8px 14px;
+    .why-image,
+    .why-image img {
+        min-height: 350px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-grid > :first-child {
+        grid-column: auto;
     }
 
     .footer-bottom {
-
         flex-direction: column;
-
-        gap: 7px;
-
-        text-align: center;
     }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 38px;
+        height: 38px;
+    }
+
+    .lightbox-image {
+        max-width: 88%;
+    }
+
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 400px) {
 
     .hero h1 {
-
         font-size: 34px;
     }
 
-    .footer-logo,
-    .footer-logo img {
-
-        width: 140px;
+    .course-grid {
+        grid-template-columns: 1fr;
     }
-}
 
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
+    .gallery-grid.brand-single {
+        grid-template-columns: 1fr;
+    }
 
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
+    .gallery-grid.brand-single .gallery-card {
+        height: 220px;
+    }
 
-    outline:
-        2px solid var(--purple);
-
-    outline-offset: 3px;
 }
 
 </style>
@@ -2164,46 +1541,44 @@ textarea:focus-visible {
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
 <header class="header" id="header">
 
-    <div class="container nav-container">
+    <div class="container header-inner">
 
-        <a href="#home" class="logo">
+        <a href="#" class="logo">
 
             <img
                 src="images/Logo Footer.webp"
-                alt="Keytal Consultancy">
+                alt="Keytal Consultancy"
+            >
 
         </a>
 
+
         <nav class="nav" id="nav">
 
-          
-        <a href="#heroForm"
-   class="nav-btn">
-
-    Enquire About Your City
-
-    <span>→</span>
-
-</a>
-
+            <a
+                href="#heroForm"
+                class="nav-cta"
+            >
+                Enquire About Your City
+            </a>
 
         </nav>
 
+
         <button
+            type="button"
             class="menu-btn"
             id="menuBtn"
-            aria-label="Open menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            ☰
         </button>
 
     </div>
@@ -2212,38 +1587,26 @@ textarea:focus-visible {
 
 
 
-
-<main>
-
-
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
-<section
-    class="hero"
-    id="home"
->
+<section class="hero">
 
-    <div class="container hero-inner">
+    <div class="container hero-grid">
 
 
-        <div class="hero-content">
+        <div class="hero-content reveal">
 
-            <div class="hero-tag">
-
-                DATA SCIENCE & TECHNOLOGY
-                FRANCHISE
-
-            </div>
+            <span class="hero-eyebrow">
+                Data Science &amp; Technology Franchise
+            </span>
 
 
             <h1>
 
                 Build a
-                <span>
-                    Future-Ready
-                </span>
+                <span>Future-Ready</span>
                 Technology Education Centre
 
             </h1>
@@ -2251,38 +1614,50 @@ textarea:focus-visible {
 
             <p class="hero-description">
 
-                Bring career-focused technology education
-                to your city with a Keytal centre offering
-                structured learning pathways across Data
-                Science, Data Analytics, Artificial
-                Intelligence, Cyber Security and Full Stack
+                Partner with Keytal Consultancy to establish a
+                technology-focused education centre offering
+                industry-relevant programmes in Data Science,
+                Data Analytics, AI, Cyber Security and Full Stack
                 Web Development.
 
             </p>
 
 
-            <ul class="hero-list">
-
-                <li>
-                    Technology-focused education model
-                </li>
-
-                <li>
-                    Multiple programmes under one centre
-                </li>
-
-                <li>
-                    Guidance for centre setup and operations
-                </li>
-
-            </ul>
+            <div class="hero-points">
 
 
-            <div class="hero-note">
+                <div class="hero-point">
 
-                Share your preferred location, business
-                experience and investment plans with the
-                Keytal team to explore the franchise model.
+                    <span class="hero-point-icon">
+                        ✓
+                    </span>
+
+                    Industry-focused technology programmes
+
+                </div>
+
+
+                <div class="hero-point">
+
+                    <span class="hero-point-icon">
+                        ✓
+                    </span>
+
+                    Structured academic and operational framework
+
+                </div>
+
+
+                <div class="hero-point">
+
+                    <span class="hero-point-icon">
+                        ✓
+                    </span>
+
+                    Support for launching and growing your centre
+
+                </div>
+
 
             </div>
 
@@ -2290,39 +1665,36 @@ textarea:focus-visible {
 
 
 
-        <!-- =================================================
-             FORM
-        ================================================== -->
+        <!-- FORM -->
 
         <div
-            class="hero-form"
-            id="contact"
+            class="hero-form-card reveal"
+            id="heroForm"
         >
 
-            <div class="form-heading">
-
-                <span>
-                    EXPLORE THE OPPORTUNITY
-                </span>
+            <div class="form-top">
 
                 <h3>
-                    Schedule a Call
+                    Start Your Franchise Journey
                 </h3>
 
                 <p>
-                    Tell us about your location and plans
-                    so our team can understand your
-                    franchise requirements.
+                    Share your details and our team will connect with you.
                 </p>
 
             </div>
 
 
             <form
-                id="heroForm"
                 action="https://formsubmit.co/cestudiosseo@gmail.com"
                 method="POST"
             >
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://keytal-consultancy.vercel.app/thankyou.html"
+                >
 
                 <input
                     type="hidden"
@@ -2336,159 +1708,168 @@ textarea:focus-visible {
                     value="false"
                 >
 
-                <input
-                    type="hidden"
-                    name="_template"
-                    value="blank"
-                >
 
-                <input
-                    type="hidden"
-                    name="_next"
-                    value="https://keytal-consultancy.vercel.app/thankyou.html"
-                >
+                <div class="form-grid">
 
 
-                <div class="input-group">
+                    <div class="form-group">
 
-                    <input
-                        type="text"
-                        name="Name"
-                        placeholder="Your Name"
-                        autocomplete="name"
-                        required
-                    >
+                        <label for="name">
+                            Name
+                        </label>
 
-                </div>
-
-
-                <div class="input-group">
-
-                    <input
-                        type="email"
-                        name="Email"
-                        placeholder="Email Address"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <input
-                        type="tel"
-                        name="Contact_number"
-                        placeholder="Contact Number"
-                        autocomplete="tel"
-                        inputmode="tel"
-                    >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <select
-                        name="Business_experience"
-                        required
-                    >
-
-                        <option
-                            value=""
-                            disabled
-                            selected
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your Name"
+                            required
                         >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Your Contact Number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="business_experience">
                             Business Experience
-                        </option>
+                        </label>
 
-                        <option value="0-1 Years">
-                            0-1 Years
-                        </option>
-
-                        <option value="1-3 Years">
-                            1-3 Years
-                        </option>
-
-                        <option value="3-5 Years">
-                            3-5 Years
-                        </option>
-
-                        <option value="5-10 Years">
-                            5-10 Years
-                        </option>
-
-                        <option value="10+ Years">
-                            10+ Years
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <select
-                        name="Investment_capacity"
-                        required
-                    >
-
-                        <option
-                            value=""
-                            disabled
-                            selected
+                        <select
+                            id="business_experience"
+                            name="business_experience"
+                            required
                         >
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="First Time Entrepreneur">
+                                First Time Entrepreneur
+                            </option>
+
+                            <option value="Existing Business Owner">
+                                Existing Business Owner
+                            </option>
+
+                            <option value="Education Industry">
+                                Education Industry
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="investment_capacity">
                             Investment Capacity
-                        </option>
+                        </label>
 
-                        <option value="25-35 Lakhs">
-                            25 Lakhs - 35 Lakhs
-                        </option>
+                        <select
+                            id="investment_capacity"
+                            name="investment_capacity"
+                            required
+                        >
 
-                        <option value="36-50 Lakhs">
-                            36 Lakhs - 50 Lakhs
-                        </option>
+                            <option value="">
+                                Select
+                            </option>
 
-                        <option value="51+ Lakhs">
-                            51+ Lakhs
-                        </option>
+                            <option value="Below 10 Lakhs">
+                                Below ₹10 Lakhs
+                            </option>
 
-                    </select>
+                            <option value="10 - 20 Lakhs">
+                                ₹10 - ₹20 Lakhs
+                            </option>
 
-                </div>
+                            <option value="20 - 30 Lakhs">
+                                ₹20 - ₹30 Lakhs
+                            </option>
+
+                            <option value="30 Lakhs Plus">
+                                ₹30 Lakhs+
+                            </option>
+
+                        </select>
+
+                    </div>
 
 
-                <div class="input-group">
+                    <div class="form-group">
 
-                    <input
-                        type="text"
-                        name="City"
-                        placeholder="Preferred City / Location"
-                        autocomplete="address-level2"
-                    >
+                        <label for="city">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Your City"
+                            required
+                        >
+
+                    </div>
 
                 </div>
 
 
                 <button
                     type="submit"
-                    class="form-btn"
+                    class="form-submit"
                 >
-
-                    Discuss Franchise Opportunity
-                    →
-
+                    Request Franchise Information
                 </button>
 
 
-                <small class="privacy-text">
+                <p class="form-note">
 
-                    Your information is safe and will only be
-                    used to respond to your enquiry.
+                    Your information will be used only to contact
+                    you regarding the franchise opportunity.
 
-                </small>
+                </p>
 
             </form>
 
@@ -2500,40 +1881,31 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FRANCHISE MODEL
-========================================================= -->
+===================================================== -->
 
-<section
-    class="section model-section"
-    id="model"
->
+<section class="model-section">
 
     <div class="container">
 
 
-        <div class="section-head">
+        <div class="section-head reveal">
 
             <span class="eyebrow">
                 THE FRANCHISE MODEL
             </span>
 
             <h2>
-
-                Build Your Centre.
-                <span>
-                    Grow Your Local Market.
-                </span>
-
+                Build Locally.
+                <span>Grow With Keytal.</span>
             </h2>
 
             <p>
 
-                The Keytal franchise model brings together
-                a local centre partner and a structured
-                technology education framework, helping
-                entrepreneurs establish and manage a
-                professional learning centre.
+                Establish a professional technology education centre
+                in your city while Keytal provides the framework,
+                programmes and support required to build the centre.
 
             </p>
 
@@ -2543,88 +1915,121 @@ textarea:focus-visible {
         <div class="model-grid">
 
 
-            <article class="model-card reveal">
+            <!-- YOUR ROLE -->
 
-                <div class="model-image">
+            <div class="model-card reveal">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
-                        alt="Education business team"
-                    >
+                <img
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80"
+                    alt="Business team"
+                    loading="lazy"
+                >
 
-                </div>
+                <div class="model-overlay"></div>
+
 
                 <div class="model-content">
 
+                    <span class="model-label">
+                        Your Role
+                    </span>
+
                     <h3>
-                        YOUR ROLE
+                        Build Your Local Centre
                     </h3>
 
-                    <ul>
+                    <p>
+
+                        Take ownership of the local business,
+                        create awareness in your city and build
+                        relationships with students, parents and
+                        professionals.
+
+                    </p>
+
+
+                    <ul class="model-list">
 
                         <li>
-                            Establish and manage the centre
-                            in your chosen market
+                            ✓ Local centre management
                         </li>
 
                         <li>
-                            Build relationships with students,
-                            parents and local communities
+                            ✓ Student admissions and counselling
                         </li>
 
                         <li>
-                            Oversee admissions, faculty and
-                            daily centre operations
+                            ✓ Local marketing and outreach
+                        </li>
+
+                        <li>
+                            ✓ Centre operations
                         </li>
 
                     </ul>
 
                 </div>
 
-            </article>
+            </div>
 
 
 
-            <article class="model-card reveal">
+            <!-- KEYTAL FRAMEWORK -->
 
-                <div class="model-image">
+            <div class="model-card reveal">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
-                        alt="Modern technology education centre"
-                    >
+                <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+                    alt="Education business planning"
+                    loading="lazy"
+                >
 
-                </div>
+                <div class="model-overlay"></div>
+
 
                 <div class="model-content">
 
+                    <span class="model-label">
+                        Keytal Framework
+                    </span>
+
                     <h3>
-                        KEYTAL FRAMEWORK
+                        A Structured Education System
                     </h3>
 
-                    <ul>
+                    <p>
+
+                        Keytal provides the academic and operational
+                        framework designed to help franchise partners
+                        establish and develop their technology
+                        education centre.
+
+                    </p>
+
+
+                    <ul class="model-list">
 
                         <li>
-                            Programme and academic framework
-                            for technology-focused learning
+                            ✓ Industry-relevant courses
                         </li>
 
                         <li>
-                            Guidance for centre setup,
-                            processes and launch planning
+                            ✓ Academic framework
                         </li>
 
                         <li>
-                            Business, marketing and
-                            operational guidance
+                            ✓ Branding and marketing support
+                        </li>
+
+                        <li>
+                            ✓ Business guidance
                         </li>
 
                     </ul>
 
                 </div>
 
-            </article>
-
+            </div>
 
         </div>
 
@@ -2634,40 +2039,32 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      SUPPORT
-========================================================= -->
+===================================================== -->
 
-<section
-    class="section section-light"
-    id="support"
->
+<section class="support-section">
 
     <div class="container">
 
 
-        <div class="section-head">
+        <div class="section-head reveal">
 
             <span class="eyebrow">
-                SUPPORT FOR YOUR CENTRE
+                PARTNER SUPPORT
             </span>
 
             <h2>
-
-                From Setup to Operations,
-                <span>
-                    Build with a Framework.
-                </span>
-
+                Support Beyond
+                <span>the Centre</span>
             </h2>
 
             <p>
 
-                A technology education centre requires
-                more than classrooms and computers.
-                Keytal's franchise framework can support
-                the planning, academic and business
-                aspects of your centre.
+                From academic programmes to business guidance,
+                the franchise framework is designed to support
+                partners across different stages of their
+                centre's development.
 
             </p>
 
@@ -2677,130 +2074,67 @@ textarea:focus-visible {
         <div class="support-grid">
 
 
-            <article class="support-card reveal">
+            <div class="support-card reveal">
 
-                <div class="support-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
-                        alt="Technology education centre setup"
-                    >
-
+                <div class="support-icon">
+                    01
                 </div>
 
-                <div class="support-body">
+                <h3>
+                    Academic Support
+                </h3>
 
-                    <h3>
-                        Centre Setup & Launch
-                    </h3>
+                <p>
 
-                    <ul>
+                    Access structured technology education
+                    programmes designed around current industry
+                    requirements and learner needs.
 
-                        <li>
-                            Guidance for centre planning
-                            and infrastructure requirements
-                        </li>
+                </p>
 
-                        <li>
-                            Branding and launch planning
-                            for the local market
-                        </li>
+            </div>
 
-                        <li>
-                            Operational processes for
-                            starting your centre
-                        </li>
 
-                    </ul>
+            <div class="support-card reveal">
 
+                <div class="support-icon">
+                    02
                 </div>
 
-            </article>
+                <h3>
+                    Marketing Support
+                </h3>
+
+                <p>
+
+                    Build your local presence with brand
+                    communication, promotional guidance and
+                    marketing support.
+
+                </p>
+
+            </div>
 
 
+            <div class="support-card reveal">
 
-            <article class="support-card reveal">
-
-                <div class="support-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
-                        alt="Technology learning and systems"
-                    >
-
+                <div class="support-icon">
+                    03
                 </div>
 
-                <div class="support-body">
+                <h3>
+                    Business Guidance
+                </h3>
 
-                    <h3>
-                        Academic & Technology Support
-                    </h3>
+                <p>
 
-                    <ul>
+                    Get guidance across centre planning,
+                    operations, admissions and the broader
+                    franchise journey.
 
-                        <li>
-                            Programme structure across
-                            technology learning areas
-                        </li>
+                </p>
 
-                        <li>
-                            Guidance for faculty onboarding
-                            and centre processes
-                        </li>
-
-                        <li>
-                            Digital resources and technology
-                            learning support
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="support-card reveal">
-
-                <div class="support-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
-                        alt="Business planning and marketing"
-                    >
-
-                </div>
-
-                <div class="support-body">
-
-                    <h3>
-                        Business & Marketing Guidance
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            Guidance for local marketing
-                            and student outreach
-                        </li>
-
-                        <li>
-                            Support for admissions and
-                            centre-level business processes
-                        </li>
-
-                        <li>
-                            Ongoing consultation around
-                            centre operations and growth
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </article>
+            </div>
 
 
         </div>
@@ -2811,39 +2145,33 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      COURSES
-========================================================= -->
+===================================================== -->
 
-<section
-    class="section courses-section"
-    id="courses"
->
+<section class="courses-section">
 
     <div class="container">
 
 
-        <div class="section-head">
+        <div class="section-head reveal">
 
             <span class="eyebrow">
-                TECHNOLOGY EDUCATION PORTFOLIO
+                PROGRAMMES
             </span>
 
             <h2>
 
-                One Centre.
-                <span>
-                    Multiple Technology Pathways.
-                </span>
+                Build a Centre Around
+                <span>Technology Skills</span>
 
             </h2>
 
             <p>
 
-                Offer students a range of technology-focused
-                learning options through a single education
-                centre, from foundational data skills to
-                advanced technology and development pathways.
+                Offer learners a portfolio of technology-focused
+                programmes covering data, artificial intelligence,
+                cyber security and software development.
 
             </p>
 
@@ -2855,227 +2183,207 @@ textarea:focus-visible {
 
             <!-- COURSE 01 -->
 
-            <article class="course-card reveal">
+            <div class="course-card reveal">
 
-                <div class="course-image">
+                <div class="course-number">
+                    01
+                </div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85"
-                        alt="Data Science Course"
-                    >
+                <h3>
+                    Data Science Course
+                </h3>
 
-                    <div class="course-number">
-                        01
-                    </div>
+                <p>
 
-                    <div class="course-overlay"></div>
+                    Develop practical skills in data science,
+                    statistics, Python, machine learning and
+                    data-driven problem solving.
+
+                </p>
+
+
+                <div class="course-pills">
+
+                    <span class="course-pill">
+                        Python
+                    </span>
+
+                    <span class="course-pill">
+                        ML
+                    </span>
+
+                    <span class="course-pill">
+                        Data
+                    </span>
 
                 </div>
 
-                <div class="course-content">
-
-                    <h3>
-                        Data Science Course
-                    </h3>
-
-                    <p>
-
-                        Build foundations in data science,
-                        statistics, machine learning and
-                        data-driven problem solving.
-
-                    </p>
-
-                </div>
-
-            </article>
+            </div>
 
 
 
             <!-- COURSE 02 -->
 
-            <article class="course-card reveal">
+            <div class="course-card reveal">
 
-                <div class="course-image">
+                <div class="course-number">
+                    02
+                </div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
-                        alt="Data Analytics Course"
-                    >
+                <h3>
+                    Data Analytics Course
+                </h3>
 
-                    <div class="course-number">
-                        02
-                    </div>
+                <p>
 
-                    <div class="course-overlay"></div>
+                    Build analytical thinking and practical data
+                    skills for business reporting, dashboards
+                    and decision-making.
+
+                </p>
+
+
+                <div class="course-pills">
+
+                    <span class="course-pill">
+                        Analytics
+                    </span>
+
+                    <span class="course-pill">
+                        SQL
+                    </span>
+
+                    <span class="course-pill">
+                        BI
+                    </span>
 
                 </div>
 
-                <div class="course-content">
-
-                    <h3>
-                        Data Analytics Course
-                    </h3>
-
-                    <p>
-
-                        Learn to work with data, identify
-                        patterns and develop insights that
-                        support practical business decisions.
-
-                    </p>
-
-                </div>
-
-            </article>
+            </div>
 
 
 
             <!-- COURSE 03 -->
 
-            <article class="course-card reveal">
+            <div class="course-card reveal">
 
-                <div class="course-image">
+                <div class="course-number">
+                    03
+                </div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
-                        alt="B.Sc Data Science with AI"
-                    >
+                <h3>
+                    B.Sc Data Science with AI
+                </h3>
 
-                    <div class="course-number">
-                        03
-                    </div>
+                <p>
 
-                    <div class="course-overlay"></div>
+                    A structured academic pathway combining
+                    data science concepts with artificial
+                    intelligence.
+
+                </p>
+
+
+                <div class="course-pills">
+
+                    <span class="course-pill">
+                        AI
+                    </span>
+
+                    <span class="course-pill">
+                        Data Science
+                    </span>
+
+                    <span class="course-pill">
+                        Degree
+                    </span>
 
                 </div>
 
-                <div class="course-content">
-
-                    <h3>
-                        B.Sc Data Science with AI
-                    </h3>
-
-                    <p>
-
-                        A structured academic pathway
-                        combining data science, artificial
-                        intelligence and modern technology
-                        skills.
-
-                    </p>
-
-                </div>
-
-            </article>
+            </div>
 
 
 
             <!-- COURSE 04 -->
 
-            <article class="course-card reveal">
+            <div class="course-card reveal">
 
-                <div class="course-image">
+                <div class="course-number">
+                    04
+                </div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1000&q=85"
-                        alt="Cyber Security Course"
-                    >
+                <h3>
+                    Cyber Security Course
+                </h3>
 
-                    <div class="course-number">
-                        04
-                    </div>
+                <p>
 
-                    <div class="course-overlay"></div>
+                    Introduce learners to cyber security concepts,
+                    digital security practices and modern
+                    security technologies.
+
+                </p>
+
+
+                <div class="course-pills">
+
+                    <span class="course-pill">
+                        Security
+                    </span>
+
+                    <span class="course-pill">
+                        Networks
+                    </span>
+
+                    <span class="course-pill">
+                        Cyber
+                    </span>
 
                 </div>
 
-                <div class="course-content">
-
-                    <h3>
-                        Cyber Security Course
-                    </h3>
-
-                    <p>
-
-                        Develop an understanding of cyber
-                        security, networks, digital protection
-                        and essential security practices.
-
-                    </p>
-
-                </div>
-
-            </article>
+            </div>
 
 
 
             <!-- COURSE 05 -->
 
-            <article class="course-card reveal">
+            <div class="course-card reveal">
 
-                <div class="course-image">
+                <div class="course-number">
+                    05
+                </div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85"
-                        alt="Full Stack Web Development"
-                    >
+                <h3>
+                    Full Stack Web Development
+                </h3>
 
-                    <div class="course-number">
-                        05
-                    </div>
+                <p>
 
-                    <div class="course-overlay"></div>
+                    Develop front-end and back-end web development
+                    skills through practical programming and
+                    project work.
+
+                </p>
+
+
+                <div class="course-pills">
+
+                    <span class="course-pill">
+                        Frontend
+                    </span>
+
+                    <span class="course-pill">
+                        Backend
+                    </span>
+
+                    <span class="course-pill">
+                        Web
+                    </span>
 
                 </div>
 
-                <div class="course-content">
+            </div>
 
-                    <h3>
-                        Full Stack Web Development
-                    </h3>
-
-                    <p>
-
-                        Develop practical front-end and
-                        back-end skills for creating modern
-                        websites and web applications.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            
-
-
-        </div>
-
-
-        <div class="course-strip">
-
-            <span class="course-pill">
-                Data Science
-            </span>
-
-            <span class="course-pill">
-                Data Analytics
-            </span>
-
-            <span class="course-pill">
-                Artificial Intelligence
-            </span>
-
-            <span class="course-pill">
-                Cyber Security
-            </span>
-
-            <span class="course-pill">
-                Web Development
-            </span>
 
         </div>
 
@@ -3085,84 +2393,343 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      TICKER
-========================================================= -->
+===================================================== -->
 
-<div class="ticker">
+<section class="ticker">
 
-    <div class="ticker-track">
+    <div class="container ticker-track">
 
-        <span class="ticker-item">
-            DATA SCIENCE
-        </span>
+        <div class="ticker-item">
+            Data Science
+        </div>
 
-        <span class="ticker-dot">•</span>
+        <div class="ticker-item">
+            Data Analytics
+        </div>
 
-        <span class="ticker-item">
-            DATA ANALYTICS
-        </span>
+        <div class="ticker-item">
+            Artificial Intelligence
+        </div>
 
-        <span class="ticker-dot">•</span>
+        <div class="ticker-item">
+            Cyber Security
+        </div>
 
-        <span class="ticker-item">
-            ARTIFICIAL INTELLIGENCE
-        </span>
+        <div class="ticker-item">
+            Full Stack Development
+        </div>
 
-        <span class="ticker-dot">•</span>
+    </div>
 
-        <span class="ticker-item">
-            CYBER SECURITY
-        </span>
-
-        <span class="ticker-dot">•</span>
-
-        <span class="ticker-item">
-            FULL STACK DEVELOPMENT
-        </span>
-
-        <span class="ticker-dot">•</span>
-
-        <span class="ticker-item">
-            TECHNOLOGY EDUCATION
-        </span>
-
-        <span class="ticker-dot">•</span>
+</section>
 
 
-        <span class="ticker-item">
-            DATA SCIENCE
-        </span>
 
-        <span class="ticker-dot">•</span>
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
-        <span class="ticker-item">
-            DATA ANALYTICS
-        </span>
+<section
+    class="gallery-section"
+    id="gallery"
+>
 
-        <span class="ticker-dot">•</span>
+    <div class="container">
 
-        <span class="ticker-item">
-            ARTIFICIAL INTELLIGENCE
-        </span>
 
-        <span class="ticker-dot">•</span>
+        <div class="section-head reveal">
 
-        <span class="ticker-item">
-            CYBER SECURITY
-        </span>
+            <span class="eyebrow">
+                KEYTAL ECOSYSTEM
+            </span>
 
-        <span class="ticker-dot">•</span>
+            <h2>
 
-        <span class="ticker-item">
-            FULL STACK DEVELOPMENT
-        </span>
+                Our Brand, Centres
+                <span>&amp; Students.</span>
 
-        <span class="ticker-dot">•</span>
+            </h2>
 
-        <span class="ticker-item">
-            TECHNOLOGY EDUCATION
-        </span>
+            <p>
+
+                Explore the Keytal ecosystem through our education
+                brand, learning centres and the students who are
+                part of our growing learning community.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- GALLERY TABS -->
+
+        <div class="gallery-tabs">
+
+
+            <button
+                type="button"
+                class="gallery-tab active"
+                data-gallery="brands"
+            >
+                Our Brand
+            </button>
+
+
+            <button
+                type="button"
+                class="gallery-tab"
+                data-gallery="centres"
+            >
+                Centres
+            </button>
+
+
+            <button
+                type="button"
+                class="gallery-tab"
+                data-gallery="students"
+            >
+                Students
+            </button>
+
+
+        </div>
+
+
+
+        <!-- GALLERY GRID -->
+
+        <div
+            class="gallery-grid brand-single"
+            id="galleryGrid"
+        >
+
+
+            <!-- =================================================
+                 OUR BRAND
+            ================================================= -->
+
+            <div
+                class="gallery-card reveal"
+                data-category="brands"
+                data-caption="DeveLearn"
+                data-image="images/centre/Develearn_Logo_02-50kb-removebg-preview.png"
+            >
+
+                <img
+                    src="images/centre/Develearn_Logo_02-50kb-removebg-preview.png"
+                    alt="DeveLearn Logo"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CENTRES
+            ================================================= -->
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/d1.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/d1.jpeg"
+                    alt="Keytal learning centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/d3.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/d3.jpeg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/d7.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/d7.jpeg"
+                    alt="Keytal technology education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="centres"
+                data-image="images/centre/d8.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/d8.jpeg"
+                    alt="Keytal education centre"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STUDENTS
+            ================================================= -->
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/dev5.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/dev5.jpeg"
+                    alt="Keytal students"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/dev2.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/dev2.jpeg"
+                    alt="Keytal students learning"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/dev3.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/dev3.jpeg"
+                    alt="Keytal technology students"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div
+                class="gallery-card reveal"
+                data-category="students"
+                data-image="images/centre/dev4.jpeg"
+                style="display:none;"
+            >
+
+                <img
+                    src="images/centre/dev4.jpeg"
+                    alt="Keytal learning community"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+    class="gallery-lightbox"
+    id="galleryLightbox"
+    aria-hidden="true"
+>
+
+    <div class="lightbox-inner">
+
+
+        <button
+            type="button"
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image"
+        >
+            &times;
+        </button>
+
+
+        <button
+            type="button"
+            class="lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous image"
+        >
+            &#10094;
+        </button>
+
+
+        <img
+            class="lightbox-image"
+            id="lightboxImage"
+            src=""
+            alt=""
+        >
+
+
+        <div
+            class="lightbox-caption"
+            id="lightboxCaption"
+        ></div>
+
+
+        <button
+            type="button"
+            class="lightbox-next"
+            id="lightboxNext"
+            aria-label="Next image"
+        >
+            &#10095;
+        </button>
+
 
     </div>
 
@@ -3170,151 +2737,120 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
-     BRAND BENEFIT
-========================================================= -->
+<!-- =====================================================
+     BENEFITS
+===================================================== -->
 
-<section class="brand-section">
-
-    <div class="container">
-
-        <div class="brand-box">
-
-            <div class="brand-icon">
-                ✓
-            </div>
-
-            <div>
-
-                <h3>
-                    Build Under the Keytal Education Brand
-                </h3>
-
-                <p>
-
-                    Create a professional technology
-                    education centre supported by a
-                    structured programme portfolio,
-                    centre framework and business
-                    guidance from Keytal Consultancy.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     WHY KEYTAL
-========================================================= -->
-
-<section
-    class="section why-section"
->
+<section class="benefits-section">
 
     <div class="container">
 
 
-        <div class="section-head">
+        <div class="section-head reveal">
 
             <span class="eyebrow">
-                DESIGNED FOR EDUCATION ENTREPRENEURS
+                FRANCHISE OPPORTUNITY
             </span>
 
             <h2>
 
-                A Technology Education
-                <span>
-                    Model Built Around Your Centre
-                </span>
+                Create a Technology
+                <span>Education Business</span>
 
             </h2>
 
             <p>
 
-                Bring together technology programmes,
-                local student engagement and structured
-                business processes within one centre.
+                The Keytal franchise model brings together
+                technology education, local entrepreneurship
+                and a structured centre framework.
 
             </p>
 
         </div>
 
 
-        <div class="why-grid">
+        <div class="benefits-grid">
 
 
-            <article class="why-card reveal">
+            <div class="benefit-card reveal">
 
-                <div class="why-number">
+                <span>
                     01
-                </div>
+                </span>
 
                 <h3>
-                    Diverse Programme Portfolio
+                    Technology-Focused
                 </h3>
 
                 <p>
 
-                    Offer learning pathways across
-                    data, AI, cyber security and
-                    software development rather than
-                    relying on a single programme.
+                    Build your centre around programmes aligned
+                    with technology and digital skills.
 
                 </p>
 
-            </article>
+            </div>
 
 
+            <div class="benefit-card reveal">
 
-            <article class="why-card reveal">
-
-                <div class="why-number">
+                <span>
                     02
-                </div>
+                </span>
 
                 <h3>
-                    Structured Centre Framework
+                    Multiple Programmes
                 </h3>
 
                 <p>
 
-                    Establish your centre around
-                    defined academic, operational
-                    and student-facing processes.
+                    Create a broader course portfolio for
+                    students and professionals.
 
                 </p>
 
-            </article>
+            </div>
 
 
+            <div class="benefit-card reveal">
 
-            <article class="why-card reveal">
-
-                <div class="why-number">
+                <span>
                     03
-                </div>
+                </span>
 
                 <h3>
-                    Local Business Opportunity
+                    Local Opportunity
                 </h3>
 
                 <p>
 
-                    Develop relationships with students,
-                    graduates, working professionals
-                    and organisations in your target
-                    market.
+                    Establish an education presence within
+                    your target city and local market.
 
                 </p>
 
-            </article>
+            </div>
+
+
+            <div class="benefit-card reveal">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Structured Framework
+                </h3>
+
+                <p>
+
+                    Follow a defined academic and operational
+                    framework while developing your centre.
+
+                </p>
+
+            </div>
 
 
         </div>
@@ -3325,55 +2861,194 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
+     WHY KEYTAL
+===================================================== -->
+
+<section class="why-section">
+
+    <div class="container why-grid">
+
+
+        <div class="why-image reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
+                alt="Students learning technology"
+                loading="lazy"
+            >
+
+        </div>
+
+
+
+        <div class="why-content reveal">
+
+            <span class="eyebrow">
+                WHY KEYTAL
+            </span>
+
+
+            <h2>
+
+                Turn Your City Into
+                a <span>Learning Opportunity.</span>
+
+            </h2>
+
+
+            <p>
+
+                Technology skills continue to influence how
+                businesses, organisations and professionals work.
+                A dedicated technology education centre can create
+                opportunities for learners while building a local
+                education business.
+
+            </p>
+
+
+            <div class="why-list">
+
+
+                <div class="why-item">
+
+                    <span class="why-check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Industry-Relevant Learning
+                        </h4>
+
+                        <p>
+
+                            Programmes covering data, AI,
+                            cyber security and software development.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span class="why-check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Practical Education
+                        </h4>
+
+                        <p>
+
+                            Help learners develop skills through
+                            structured learning and practical exposure.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span class="why-check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Business Framework
+                        </h4>
+
+                        <p>
+
+                            Build your centre with a defined academic,
+                            operational and marketing framework.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <span class="why-check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Long-Term Centre Development
+                        </h4>
+
+                        <p>
+
+                            Develop a local education brand that can
+                            grow with your market and learner community.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
      FINAL CTA
-========================================================= -->
+===================================================== -->
 
 <section class="final-cta">
 
     <div class="container">
 
-        <div class="final-cta-content">
-
-            <span class="eyebrow">
-                EXPLORE THE KEYTAL FRANCHISE
-            </span>
-
+        <div class="final-cta-inner reveal">
 
             <h2>
 
-                Bring Technology Education
-                <br>
-
-                <span>
-                    To Your City.
-                </span>
+                Ready to Explore the
+                Data Science Franchise Opportunity?
 
             </h2>
 
 
             <p>
 
-                Tell us about your preferred location,
-                business background and plans for a
-                technology education centre. Connect
-                with Keytal to understand the franchise
-                framework and next steps.
+                Share your city and business details with our team
+                to learn more about the Keytal Consultancy technology
+                education franchise model.
 
             </p>
 
 
             <a
-                href="#contact"
-                class="cta-btn"
+                href="#heroForm"
+                class="final-cta-btn"
             >
-
-                Schedule a Call
-
-                <span>
-                    ↗
-                </span>
-
+                Enquire About Your City
             </a>
 
         </div>
@@ -3383,104 +3058,106 @@ textarea:focus-visible {
 </section>
 
 
-</main>
 
-
-
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer class="footer">
 
-    <div class="container footer-main">
+    <div class="container">
 
 
-        <div class="footer-brand">
+        <div class="footer-grid">
 
-            <a
-                href="index.html"
-                class="footer-logo"
-                aria-label="Keytal Consultancy Home"
-            >
 
-                <img
-                    src="images/Logo Footer.webp"
-                    alt="Keytal Consultancy"
+            <div>
+
+                <a
+                    href="#"
+                    class="footer-logo"
                 >
 
-            </a>
+                    <img
+                        src="images/Logo Footer.webp"
+                        alt="Keytal Consultancy"
+                    >
 
-
-            <p>
-
-                Building opportunities through
-                education, business and franchise
-                solutions.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="footer-column quick-links">
-
-            <h4>
-                Quick Links
-            </h4>
-
-
-            <div class="footer-links">
-
-                <a href="index.html">
-                    Home
                 </a>
 
-                <a href="index.html#about">
-                    About Us
-                </a>
 
-                <a href="franchise.html">
-                    Tourism
-                </a>
+                <p class="footer-about">
 
-                <a href="animation.html">
-                    Animation
-                </a>
+                    Keytal Consultancy helps entrepreneurs explore
+                    education-focused business opportunities across
+                    technology, travel, tourism and other emerging
+                    sectors.
 
-                <a href="datascience.html">
-                    Data Science
-                </a>
+                </p>
 
             </div>
 
+
+
+            <div>
+
+                <h4>
+                    Quick Links
+                </h4>
+
+
+                <div class="footer-links">
+
+                    <a href="franchise.html">
+                        Franchise
+                    </a>
+
+                    <a href="animation.html">
+                        Animation
+                    </a>
+
+                    <a href="datascience.html">
+                        Data Science
+                    </a>
+
+                    <a href="#gallery">
+                        Our Ecosystem
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+
+                <div class="footer-contact">
+
+                    <a href="tel:+919594949999">
+                        +91 95949 49999
+                    </a>
+
+                    <a href="mailto:cst@keytal.org">
+                        cst@keytal.org
+                    </a>
+
+                    <p>
+                        Mumbai, Maharashtra
+                    </p>
+
+                </div>
+
+            </div>
+
+
         </div>
 
-
-
-        <div class="footer-column footer-contact">
-
-            <h4>
-                Contact
-            </h4>
-
-            <a href="tel:+919594949999">
-                +91 95949 49999
-            </a>
-
-            <a href="mailto:cst@keytal.org">
-                cst@keytal.org
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="container">
 
         <div class="footer-bottom">
 
@@ -3489,7 +3166,7 @@ textarea:focus-visible {
             </span>
 
             <span>
-                Data Science & Technology Franchise
+                Data Science &amp; Technology Franchise
             </span>
 
         </div>
@@ -3500,201 +3177,727 @@ textarea:focus-visible {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      BACK TO TOP
-========================================================= -->
+===================================================== -->
 
 <button
+    type="button"
     class="back-top"
     id="backTop"
     aria-label="Back to top"
 >
-
     ↑
-
 </button>
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuBtn =
-    document.getElementById("menuBtn");
-
-const nav =
-    document.getElementById("nav");
+document.addEventListener("DOMContentLoaded", function () {
 
 
-if (menuBtn && nav) {
+    /* =====================================================
+       HEADER / MOBILE MENU
+    ===================================================== */
 
-    menuBtn.addEventListener(
-        "click",
-        function () {
+    const header =
+        document.getElementById("header");
 
-            nav.classList.toggle("active");
+    const menuBtn =
+        document.getElementById("menuBtn");
 
-        }
-    );
-
-
-    document
-        .querySelectorAll(".nav a")
-        .forEach(function(link) {
-
-            link.addEventListener(
-                "click",
-                function() {
-
-                    nav.classList.remove("active");
-
-                }
-            );
-
-        });
-
-}
+    const nav =
+        document.getElementById("nav");
 
 
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
+    if (menuBtn && nav) {
 
-const header =
-    document.getElementById("header");
+        menuBtn.addEventListener(
+            "click",
+            function () {
 
+                nav.classList.toggle("active");
 
-window.addEventListener(
-    "scroll",
-    function() {
-
-        if (window.scrollY > 30) {
-
-            header.classList.add("scrolled");
-
-        } else {
-
-            header.classList.remove("scrolled");
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-if ("IntersectionObserver" in window) {
-
-    const revealObserver =
-        new IntersectionObserver(
-            function(entries) {
-
-                entries.forEach(
-                    function(entry) {
-
-                        if (
-                            entry.isIntersecting
-                        ) {
-
-                            entry.target
-                                .classList
-                                .add("show");
-
-                            revealObserver
-                                .unobserve(
-                                    entry.target
-                                );
-
-                        }
-
-                    }
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    nav.classList.contains("active")
                 );
 
-            },
-            {
-                threshold: .12
             }
         );
 
 
-    revealElements.forEach(
-        function(element) {
+        nav.querySelectorAll("a").forEach(
+            function (link) {
 
-            revealObserver.observe(element);
+                link.addEventListener(
+                    "click",
+                    function () {
 
-        }
-    );
+                        nav.classList.remove("active");
 
-} else {
+                        menuBtn.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-    revealElements.forEach(
-        function(element) {
+                    }
+                );
 
-            element.classList.add("show");
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-const backTop =
-    document.getElementById("backTop");
-
-
-window.addEventListener(
-    "scroll",
-    function() {
-
-        if (window.scrollY > 500) {
-
-            backTop
-                .classList
-                .add("show");
-
-        } else {
-
-            backTop
-                .classList
-                .remove("show");
-
-        }
+            }
+        );
 
     }
-);
 
 
-backTop.addEventListener(
-    "click",
-    function() {
+    window.addEventListener(
+        "scroll",
+        function () {
 
-        window.scrollTo({
+            if (header) {
 
-            top: 0,
+                header.classList.toggle(
+                    "scrolled",
+                    window.scrollY > 20
+                );
 
-            behavior: "smooth"
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    const galleryTabs =
+        document.querySelectorAll(
+            ".gallery-tab"
+        );
+
+    const galleryCards =
+        document.querySelectorAll(
+            ".gallery-card"
+        );
+
+    const galleryGrid =
+        document.getElementById(
+            "galleryGrid"
+        );
+
+    const galleryLightbox =
+        document.getElementById(
+            "galleryLightbox"
+        );
+
+    const lightboxImage =
+        document.getElementById(
+            "lightboxImage"
+        );
+
+    const lightboxCaption =
+        document.getElementById(
+            "lightboxCaption"
+        );
+
+    const lightboxClose =
+        document.getElementById(
+            "lightboxClose"
+        );
+
+    const lightboxPrev =
+        document.getElementById(
+            "lightboxPrev"
+        );
+
+    const lightboxNext =
+        document.getElementById(
+            "lightboxNext"
+        );
+
+
+    let currentCategory = "brands";
+    let currentIndex = 0;
+
+
+    function getCurrentCards() {
+
+        return Array.from(
+            galleryCards
+        ).filter(function (card) {
+
+            return (
+                card.dataset.category ===
+                currentCategory
+            );
 
         });
 
     }
-);
+
+
+    function updateGalleryLayout(
+        category
+    ) {
+
+        if (!galleryGrid) {
+            return;
+        }
+
+        galleryGrid.classList.toggle(
+            "brand-single",
+            category === "brands"
+        );
+
+    }
+
+
+    function showGallery(category) {
+
+        currentCategory = category;
+        currentIndex = 0;
+
+        updateGalleryLayout(
+            category
+        );
+
+
+        galleryCards.forEach(
+            function (card) {
+
+                const isActive =
+                    card.dataset.category ===
+                    category;
+
+
+                card.style.display =
+                    isActive
+                        ? "block"
+                        : "none";
+
+
+                if (isActive) {
+
+                    requestAnimationFrame(
+                        function () {
+
+                            card.classList.add(
+                                "show"
+                            );
+
+                        }
+                    );
+
+                } else {
+
+                    card.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    galleryTabs.forEach(
+        function (tab) {
+
+            tab.addEventListener(
+                "click",
+                function () {
+
+                    galleryTabs.forEach(
+                        function (item) {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    this.classList.add(
+                        "active"
+                    );
+
+
+                    showGallery(
+                        this.dataset.gallery
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       OPEN LIGHTBOX
+    ===================================================== */
+
+    function openLightbox(index) {
+
+        const cards =
+            getCurrentCards();
+
+
+        if (
+            !cards.length ||
+            !galleryLightbox ||
+            !lightboxImage
+        ) {
+            return;
+        }
+
+
+        currentIndex = index;
+
+
+        const card =
+            cards[currentIndex];
+
+
+        lightboxImage.src =
+            card.dataset.image;
+
+
+        lightboxImage.alt =
+            card.dataset.caption ||
+            card.querySelector("img")?.alt ||
+            "Keytal image";
+
+
+        if (lightboxCaption) {
+
+            lightboxCaption.textContent =
+                card.dataset.caption || "";
+
+        }
+
+
+        galleryLightbox.classList.add(
+            "active"
+        );
+
+
+        galleryLightbox.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.style.overflow =
+            "hidden";
+
+
+        const showArrows =
+            cards.length > 1;
+
+
+        if (lightboxPrev) {
+
+            lightboxPrev.style.display =
+                showArrows
+                    ? "grid"
+                    : "none";
+
+        }
+
+
+        if (lightboxNext) {
+
+            lightboxNext.style.display =
+                showArrows
+                    ? "grid"
+                    : "none";
+
+        }
+
+    }
+
+
+
+    /* =====================================================
+       GALLERY CARD CLICK
+    ===================================================== */
+
+    galleryCards.forEach(
+        function (card) {
+
+            card.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        this.dataset.category !==
+                        currentCategory
+                    ) {
+                        return;
+                    }
+
+
+                    const cards =
+                        getCurrentCards();
+
+
+                    const index =
+                        cards.indexOf(this);
+
+
+                    if (index !== -1) {
+
+                        openLightbox(index);
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       NEXT IMAGE
+    ===================================================== */
+
+    function nextImage() {
+
+        const cards =
+            getCurrentCards();
+
+
+        if (cards.length <= 1) {
+            return;
+        }
+
+
+        currentIndex =
+            (
+                currentIndex + 1
+            ) % cards.length;
+
+
+        openLightbox(
+            currentIndex
+        );
+
+    }
+
+
+
+    /* =====================================================
+       PREVIOUS IMAGE
+    ===================================================== */
+
+    function previousImage() {
+
+        const cards =
+            getCurrentCards();
+
+
+        if (cards.length <= 1) {
+            return;
+        }
+
+
+        currentIndex =
+            (
+                currentIndex -
+                1 +
+                cards.length
+            ) % cards.length;
+
+
+        openLightbox(
+            currentIndex
+        );
+
+    }
+
+
+
+    /* =====================================================
+       CLOSE LIGHTBOX
+    ===================================================== */
+
+    function closeLightbox() {
+
+        if (!galleryLightbox) {
+            return;
+        }
+
+
+        galleryLightbox.classList.remove(
+            "active"
+        );
+
+
+        galleryLightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            "";
+
+
+        if (lightboxImage) {
+
+            lightboxImage.src = "";
+
+        }
+
+    }
+
+
+    if (lightboxNext) {
+
+        lightboxNext.addEventListener(
+            "click",
+            nextImage
+        );
+
+    }
+
+
+    if (lightboxPrev) {
+
+        lightboxPrev.addEventListener(
+            "click",
+            previousImage
+        );
+
+    }
+
+
+    if (lightboxClose) {
+
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+    }
+
+
+    if (galleryLightbox) {
+
+        galleryLightbox.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target ===
+                    galleryLightbox
+                ) {
+
+                    closeLightbox();
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       KEYBOARD CONTROLS
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                !galleryLightbox ||
+                !galleryLightbox.classList.contains(
+                    "active"
+                )
+            ) {
+                return;
+            }
+
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+
+                closeLightbox();
+
+            }
+
+
+            if (
+                event.key ===
+                "ArrowRight"
+            ) {
+
+                nextImage();
+
+            }
+
+
+            if (
+                event.key ===
+                "ArrowLeft"
+            ) {
+
+                previousImage();
+
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       REVEAL ANIMATION
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".reveal"
+        );
+
+
+    if (
+        "IntersectionObserver" in window
+    ) {
+
+        const revealObserver =
+            new IntersectionObserver(
+                function (
+                    entries,
+                    observer
+                ) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "show"
+                                );
+
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(
+            function (element) {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+    } else {
+
+        revealElements.forEach(
+            function (element) {
+
+                element.classList.add(
+                    "show"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    const backTop =
+        document.getElementById(
+            "backTop"
+        );
+
+
+    if (backTop) {
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                backTop.classList.toggle(
+                    "show",
+                    window.scrollY > 500
+                );
+
+            }
+        );
+
+
+        backTop.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       INITIAL GALLERY
+       OUR BRAND
+    ===================================================== */
+
+    showGallery("brands");
+
+});
 
 </script>
 
 
 </body>
+
 </html>
