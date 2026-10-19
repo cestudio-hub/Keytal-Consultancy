@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You | Keytal Consultancy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(84, 33, 154, 0.08), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(84, 33, 154, 0.07), transparent 30%),
+                #faf9fc;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Decorative background shapes */
+
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        body::before {
+            width: 420px;
+            height: 420px;
+            background: rgba(84, 33, 154, 0.035);
+            top: -180px;
+            left: -160px;
+        }
+
+        body::after {
+            width: 500px;
+            height: 500px;
+            background: rgba(84, 33, 154, 0.035);
+            bottom: -250px;
+            right: -200px;
+        }
+
+        .thankyou-wrapper {
+            width: 100%;
+            max-width: 720px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Main Card */
+
+        .thankyou-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(84, 33, 154, 0.10);
+            border-radius: 28px;
+
+            padding: 65px 60px;
+            text-align: center;
+
+            box-shadow:
+                0 30px 80px rgba(32, 20, 55, 0.10),
+                0 5px 20px rgba(84, 33, 154, 0.05);
+        }
+
+        /* Small Top Label */
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: #54219A;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 28px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 1px;
+            background: #54219A;
+        }
+
+        .eyebrow::after {
+            content: "";
+            width: 28px;
+            height: 1px;
+            background: #54219A;
+        }
+
+        /* Success Icon */
+
+        .success-icon {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 28px;
+
+            border-radius: 50%;
+            background: #54219A;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            box-shadow:
+                0 15px 35px rgba(84, 33, 154, 0.25);
+
+            animation: iconAppear 0.7s ease forwards;
+        }
+
+        .success-icon::before {
+            content: "";
+            position: absolute;
+            inset: -9px;
+
+            border-radius: 50%;
+            border: 1px solid rgba(84, 33, 154, 0.15);
+        }
+
+        .success-icon::after {
+            content: "✓";
+
+            color: #ffffff;
+            font-size: 45px;
+            font-weight: 500;
+
+            line-height: 1;
+        }
+
+        /* Heading */
+
+        h1 {
+            color: #54219A;
+            font-size: clamp(36px, 6vw, 52px);
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+        }
+
+        .subtitle {
+            max-width: 520px;
+            margin: 0 auto 30px;
+
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Message Box */
+
+        .message {
+            max-width: 540px;
+            margin: 0 auto 32px;
+
+            padding: 20px 24px;
+
+            background: #f7f3fc;
+            border: 1px solid rgba(84, 33, 154, 0.07);
+            border-radius: 14px;
+
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Button */
+
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            text-decoration: none;
+
+            background: #54219A;
+            color: #ffffff;
+
+            padding: 15px 28px;
+            min-width: 180px;
+
+            border-radius: 10px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            box-shadow: 0 10px 25px rgba(84, 33, 154, 0.20);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .home-btn span {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .home-btn:hover {
+            background: #42177d;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(84, 33, 154, 0.28);
+        }
+
+        .home-btn:hover span {
+            transform: translateX(-4px);
+        }
+
+        /* Bottom Brand */
+
+        .brand {
+            margin-top: 30px;
+
+            font-size: 13px;
+            color: #999;
+            letter-spacing: 0.3px;
+        }
+
+        .brand strong {
+            color: #54219A;
+            font-weight: 700;
+        }
+
+        /* Animation */
+
+        @keyframes iconAppear {
+            0% {
+                opacity: 0;
+                transform: scale(0.6);
+            }
+
+            70% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tablet */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .thankyou-card {
+                padding: 55px 40px;
+                border-radius: 24px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .thankyou-card {
+                padding: 45px 24px;
+                border-radius: 20px;
+            }
+
+            .eyebrow {
+                font-size: 10px;
+                letter-spacing: 1.6px;
+                margin-bottom: 24px;
+            }
+
+            .success-icon {
+                width: 76px;
+                height: 76px;
+                margin-bottom: 25px;
+            }
+
+            .success-icon::after {
+                font-size: 37px;
+            }
+
+            h1 {
+                font-size: 34px;
+                letter-spacing: -0.8px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 24px;
+            }
+
+            .message {
+                font-size: 14px;
+                padding: 17px 18px;
+                margin-bottom: 26px;
+            }
+
+            .home-btn {
+                width: 100%;
+                padding: 15px 20px;
+            }
+
+            .brand {
+                margin-top: 25px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .thankyou-card {
+                padding: 38px 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thankyou-wrapper">
+
+        <div class="thankyou-card">
+
+            <div class="eyebrow">
+                Submission Successful
+            </div>
+
+            <div class="success-icon"></div>
+
+            <h1>Thank You!</h1>
+
+            <p class="subtitle">
+                Your enquiry has been successfully submitted.
+            </p>
+
+            <div class="message">
+                We have received your details. Our team will review your
+                enquiry and get in touch with you shortly.
+            </div>
+
+            <a href="index.html" class="home-btn">
+                <span>←</span>
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

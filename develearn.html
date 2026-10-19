@@ -1,0 +1,2835 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Keytal Consultancy | Data Science & Technology Franchise</title>
+
+<meta name="description" content="Start your own technology-focused education centre with Keytal Consultancy. Explore franchise opportunities in Data Science, Data Analytics, Artificial Intelligence, Cyber Security and Full Stack Web Development.">
+
+<meta name="theme-color" content="#0B4669">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #0B4669;
+    --blue-mid: #087DB5;
+    --blue-light: #2D91C3;
+    --blue-bright: #159ED4;
+    --cyan: #65D8F7;
+    --navy: #071C30;
+    --navy-dark: #041321;
+    --pale: #EAF5FB;
+    --soft: #F5FAFD;
+    --white: #FFFFFF;
+    --text: #263B4D;
+    --muted: #687D8D;
+    --border: #DCE8F0;
+    --container: 1240px;
+    --header-height: 82px;
+    --radius: 18px;
+    --shadow: 0 15px 45px rgba(7, 48, 75, .09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body, button, input, select, textarea {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Manrope", sans-serif;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img, svg {
+    max-width: 100%;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-light {
+    background: var(--white);
+}
+
+.section-soft {
+    background: var(--soft);
+}
+
+.section-blue {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blue-mid);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: currentColor;
+}
+
+.eyebrow-light {
+    color: var(--cyan);
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--navy);
+    margin-bottom: 17px;
+}
+
+.section-heading h2 span {
+    color: var(--blue-mid);
+}
+
+.section-blue .section-heading h2 {
+    color: var(--white);
+}
+
+.section-blue .section-heading h2 span {
+    color: var(--cyan);
+}
+
+.section-heading p {
+    max-width: 660px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.section-blue .section-heading p {
+    color: rgba(255,255,255,.75);
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1000;
+    background: var(--blue);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    transition: box-shadow .3s ease, background .3s ease;
+}
+
+.header.scrolled {
+    background: #083D5B;
+    box-shadow: 0 8px 28px rgba(0, 22, 38, .2);
+}
+
+.header-inner {
+    width: min(1380px, calc(100% - 48px));
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 155px;
+    max-height: 58px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav a {
+    color: rgba(255,255,255,.9);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+    transition: color .25s ease;
+}
+
+.nav a:not(.nav-cta)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--cyan);
+    transition: width .25s ease;
+}
+
+.nav a:not(.nav-cta):hover,
+.nav a.active {
+    color: var(--cyan);
+}
+
+.nav a:not(.nav-cta):hover::after,
+.nav a.active::after {
+    width: 100%;
+}
+
+.nav .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 17px;
+    background: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    transition: .25s ease;
+}
+
+.nav .nav-cta:hover {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+    display: none;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.25);
+    background: transparent;
+    color: var(--white);
+    border-radius: 7px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    min-height: 49px;
+    padding: 13px 21px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--blue-mid);
+    color: var(--white);
+    border: 1px solid var(--blue-mid);
+    box-shadow: 0 8px 20px rgba(8,125,181,.18);
+}
+
+.btn-primary:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-white {
+    background: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--white);
+}
+
+.btn-white:hover {
+    background: var(--cyan);
+    border-color: var(--cyan);
+}
+
+.btn-outline {
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,.55);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,.1);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 740px;
+    padding: calc(var(--header-height) + 65px) 0 75px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 76% 42%, rgba(45,145,195,.13), transparent 30%),
+        linear-gradient(135deg, #F5FAFD 0%, #EAF5FB 58%, #FFFFFF 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 130px;
+    right: -180px;
+    width: 570px;
+    height: 570px;
+    border: 1px solid rgba(8,125,181,.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 185px;
+    right: -100px;
+    width: 410px;
+    height: 410px;
+    border: 1px solid rgba(8,125,181,.1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.04fr .96fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-content {
+    max-width: 660px;
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 13px;
+    background: rgba(8,125,181,.08);
+    color: var(--blue);
+    border: 1px solid rgba(8,125,181,.13);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 23px;
+}
+
+.hero-kicker span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--blue-mid);
+    box-shadow: 0 0 0 4px rgba(8,125,181,.12);
+}
+
+.hero h1 {
+    color: var(--navy);
+    font-size: clamp(39px, 5vw, 65px);
+    font-weight: 800;
+    letter-spacing: -2.6px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--blue-mid);
+}
+
+.hero-description {
+    max-width: 580px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 34px;
+}
+
+.hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.trust-icon {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--blue-mid);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.hero-visual {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.data-visual {
+    width: 100%;
+    max-width: 535px;
+    min-height: 400px;
+    position: relative;
+    border-radius: 22px;
+    padding: 28px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(101,216,247,.18), transparent 35%),
+        linear-gradient(145deg, #0B4669, #071C30 85%);
+    box-shadow: 0 28px 65px rgba(7,28,48,.22);
+}
+
+.data-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .2;
+    background-image:
+        linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+    background-size: 31px 31px;
+    mask-image: linear-gradient(to bottom right, black, transparent);
+}
+
+.visual-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    color: rgba(255,255,255,.8);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.visual-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #8AE8C4;
+    font-size: 10px;
+    letter-spacing: 0;
+}
+
+.visual-status::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #8AE8C4;
+}
+
+.visual-chart {
+    position: relative;
+    z-index: 1;
+    height: 205px;
+    margin: 32px 0 20px;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    gap: 12px;
+    padding: 0 12px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 49px,
+        rgba(255,255,255,.09) 50px
+    );
+}
+
+.chart-bar {
+    flex: 1;
+    max-width: 39px;
+    min-width: 12px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(to top, #159ED4, #65D8F7);
+    animation: barRise 1.2s ease both;
+    transform-origin: bottom;
+}
+
+.chart-bar:nth-child(1) { height: 35%; animation-delay: .1s; }
+.chart-bar:nth-child(2) { height: 49%; animation-delay: .2s; }
+.chart-bar:nth-child(3) { height: 41%; animation-delay: .3s; }
+.chart-bar:nth-child(4) { height: 64%; animation-delay: .4s; }
+.chart-bar:nth-child(5) { height: 57%; animation-delay: .5s; }
+.chart-bar:nth-child(6) { height: 78%; animation-delay: .6s; }
+.chart-bar:nth-child(7) { height: 70%; animation-delay: .7s; }
+.chart-bar:nth-child(8) { height: 96%; animation-delay: .8s; }
+
+@keyframes barRise {
+    from { transform: scaleY(.1); opacity: .3; }
+    to { transform: scaleY(1); opacity: 1; }
+}
+
+.visual-stats {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.visual-stat {
+    padding: 13px 12px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px;
+}
+
+.visual-stat strong {
+    display: block;
+    color: var(--cyan);
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.visual-stat span {
+    color: rgba(255,255,255,.7);
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.float-tag {
+    position: absolute;
+    z-index: 2;
+    padding: 12px 16px;
+    border-radius: 9px;
+    background: var(--white);
+    box-shadow: 0 12px 35px rgba(7,28,48,.14);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    animation: floatTag 4s ease-in-out infinite;
+}
+
+.float-tag-one {
+    top: 42px;
+    left: -14px;
+}
+
+.float-tag-two {
+    bottom: 32px;
+    right: -12px;
+    animation-delay: -2s;
+}
+
+@keyframes floatTag {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* HIGHLIGHT STRIP */
+
+.highlight-strip {
+    position: relative;
+    z-index: 3;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.highlight-item {
+    min-height: 105px;
+    padding: 23px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-right: 1px solid var(--border);
+}
+
+.highlight-item:last-child {
+    border-right: 0;
+}
+
+.highlight-symbol {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--pale);
+    border-radius: 9px;
+    color: var(--blue-mid);
+    font-size: 19px;
+}
+
+.highlight-item strong {
+    display: block;
+    color: var(--navy);
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.highlight-item span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* FRANCHISE MODEL */
+
+.model-section {
+    background: var(--soft);
+    overflow: hidden;
+}
+
+.model-intro {
+    max-width: 760px;
+    margin: -23px auto 40px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.model-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.model-note {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    padding: 36px;
+    border-radius: var(--radius);
+    background: var(--blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.model-note::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    bottom: -100px;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    box-shadow: 0 0 0 30px rgba(255,255,255,.025),
+                0 0 0 60px rgba(255,255,255,.025);
+}
+
+.model-note-content {
+    position: relative;
+    z-index: 1;
+}
+
+.model-note .small-label {
+    color: var(--cyan);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 19px;
+}
+
+.model-note h3 {
+    font-size: 28px;
+    letter-spacing: -.7px;
+    margin-bottom: 17px;
+}
+
+.model-note p {
+    color: rgba(255,255,255,.78);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.model-note-bottom {
+    position: relative;
+    z-index: 1;
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 11px;
+    color: rgba(255,255,255,.8);
+}
+
+.model-note-bottom strong {
+    color: var(--cyan);
+}
+
+.model-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.model-card {
+    position: relative;
+    padding: 29px 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: rgba(8,125,181,.35);
+}
+
+.model-card-number {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--pale);
+    color: var(--blue-mid);
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 23px;
+}
+
+.model-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.model-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: "✓";
+    width: 19px;
+    height: 19px;
+    flex: 0 0 19px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #E5F6F1;
+    color: #158566;
+    font-size: 10px;
+    font-weight: 800;
+    margin-top: 1px;
+}
+
+/* SUPPORT */
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.support-card {
+    position: relative;
+    padding: 31px 28px;
+    min-height: 260px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    transition: transform .3s ease, box-shadow .3s ease;
+    overflow: hidden;
+}
+
+.support-card::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -45px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: var(--pale);
+    transition: transform .35s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.support-card:hover::after {
+    transform: scale(1.4);
+}
+
+.support-icon {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--pale);
+    color: var(--blue-mid);
+    font-size: 23px;
+    margin-bottom: 23px;
+}
+
+.support-card h3 {
+    position: relative;
+    z-index: 1;
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.support-card p {
+    position: relative;
+    z-index: 1;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* COURSES */
+
+.courses-section {
+    background: var(--soft);
+    overflow: hidden;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.course-card {
+    position: relative;
+    min-height: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: rgba(8,125,181,.4);
+}
+
+.course-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+}
+
+.course-card:hover::before {
+    transform: scaleX(1);
+}
+
+.course-number {
+    color: #A6C6D8;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 23px;
+}
+
+.course-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    color: var(--blue-mid);
+    background: var(--pale);
+    border-radius: 12px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 23px;
+}
+
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: var(--blue-mid);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.course-link span {
+    transition: transform .2s ease;
+}
+
+.course-link:hover span {
+    transform: translateX(5px);
+}
+
+/* TECHNOLOGY TICKER */
+
+.ticker {
+    overflow: hidden;
+    background: var(--navy);
+    padding: 21px 0;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 32px;
+    animation: tickerMove 32s linear infinite;
+}
+
+.ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: rgba(255,255,255,.8);
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.ticker-item::after {
+    content: "✳";
+    color: var(--cyan);
+    font-size: 16px;
+}
+
+@keyframes tickerMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* WHY KEYTAL */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.why-visual {
+    min-height: 420px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(101,216,247,.16), transparent 35%),
+        linear-gradient(145deg, #0B4669, #071C30);
+}
+
+.why-visual::before,
+.why-visual::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(101,216,247,.25);
+    border-radius: 50%;
+}
+
+.why-visual::before {
+    width: 300px;
+    height: 300px;
+}
+
+.why-visual::after {
+    width: 220px;
+    height: 220px;
+}
+
+.why-center {
+    position: relative;
+    z-index: 1;
+    width: 145px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(101,216,247,.45);
+    color: var(--white);
+    box-shadow: 0 0 60px rgba(101,216,247,.12);
+}
+
+.why-center strong {
+    font-size: 23px;
+    color: var(--cyan);
+}
+
+.why-center span {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.orbit-label {
+    position: absolute;
+    z-index: 2;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.15);
+    color: var(--white);
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.orbit-label.one { top: 65px; left: 35px; }
+.orbit-label.two { top: 110px; right: 28px; }
+.orbit-label.three { bottom: 92px; left: 28px; }
+.orbit-label.four { bottom: 45px; right: 38px; }
+
+.why-content .section-heading {
+    text-align: left;
+    margin: 0 0 27px;
+}
+
+.why-content .section-heading p {
+    margin: 0;
+}
+
+.why-points {
+    display: grid;
+    gap: 18px;
+}
+
+.why-point {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.why-check {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--pale);
+    color: var(--blue-mid);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.why-point h3 {
+    color: var(--navy);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.why-point p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* CTA */
+
+.final-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+    background: linear-gradient(115deg, #0B4669, #071C30);
+    color: var(--white);
+}
+
+.final-cta::before {
+    content: "";
+    position: absolute;
+    top: -160px;
+    right: -80px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(101,216,247,.2);
+    border-radius: 50%;
+    box-shadow: 0 0 0 45px rgba(101,216,247,.025),
+                0 0 0 90px rgba(101,216,247,.025);
+}
+
+.cta-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta-content {
+    max-width: 720px;
+}
+
+.cta-content .eyebrow {
+    color: var(--cyan);
+}
+
+.cta-content h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    letter-spacing: -1.2px;
+    margin-bottom: 17px;
+}
+
+.cta-content p {
+    max-width: 650px;
+    color: rgba(255,255,255,.75);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.cta-actions {
+    flex-shrink: 0;
+}
+
+/* CONTACT FORM */
+
+.contact-section {
+    background: var(--soft);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.contact-info {
+    padding: 15px 0;
+}
+
+.contact-info h2 {
+    color: var(--navy);
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: -1.2px;
+    margin-bottom: 18px;
+}
+
+.contact-info h2 span {
+    color: var(--blue-mid);
+}
+
+.contact-info > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-detail:last-child {
+    border-bottom: 0;
+}
+
+.contact-detail-icon {
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+    display: grid;
+    place-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--blue-mid);
+    font-size: 18px;
+}
+
+.contact-detail strong {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.contact-detail a,
+.contact-detail span {
+    color: var(--muted);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail a:hover {
+    color: var(--blue-mid);
+}
+
+.contact-form-wrap {
+    padding: 37px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.form-heading {
+    margin-bottom: 27px;
+}
+
+.form-heading .eyebrow {
+    margin-bottom: 11px;
+}
+
+.form-heading h3 {
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.form-heading p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    background: #FCFDFE;
+    color: var(--text);
+    font-size: 12px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue-mid);
+    box-shadow: 0 0 0 3px rgba(8,125,181,.09);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #91A1AD;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 24px;
+    border: 0;
+}
+
+.form-note {
+    margin-top: 14px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+    color: rgba(255,255,255,.78);
+    background: #061A2A;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.15fr 1.2fr .9fr;
+    gap: 55px;
+    padding: 65px 0 45px;
+}
+
+.footer-brand img {
+    width: 155px;
+    max-height: 60px;
+    object-fit: contain;
+    margin-bottom: 22px;
+}
+
+.footer-brand p {
+    max-width: 320px;
+    color: rgba(255,255,255,.58);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-column h4 {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 14px;
+}
+
+.footer-links > a,
+.footer-dropdown > a {
+    color: rgba(255,255,255,.65);
+    font-size: 12px;
+    transition: color .2s ease;
+}
+
+.footer-links > a:hover,
+.footer-dropdown > a:hover {
+    color: var(--cyan);
+}
+
+.footer-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-dropdown > a:first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    transition: transform .25s ease;
+}
+
+.footer-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 14px);
+    width: 225px;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+    background: #0C2B40;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+    z-index: 20;
+}
+
+.footer-dropdown:hover .dropdown-menu,
+.footer-dropdown:focus-within .dropdown-menu,
+.footer-dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 11px 12px;
+    border-radius: 6px;
+    color: rgba(255,255,255,.75);
+    font-size: 12px;
+    transition: background .2s ease, color .2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(101,216,247,.1);
+    color: var(--cyan);
+}
+
+.footer-contact-list {
+    display: grid;
+    gap: 17px;
+}
+
+.footer-contact-list a,
+.footer-contact-list span {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: rgba(255,255,255,.65);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.footer-contact-list a:hover {
+    color: var(--cyan);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 19px 0;
+}
+
+.footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,.45);
+    font-size: 11px;
+}
+
+/* BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 900;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 8px;
+    background: var(--blue-mid);
+    color: var(--white);
+    box-shadow: 0 7px 20px rgba(7,28,48,.2);
+    cursor: pointer;
+    font-size: 19px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: .25s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--blue);
+}
+
+/* REVEAL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.delay-1 { transition-delay: .1s; }
+.delay-2 { transition-delay: .2s; }
+.delay-3 { transition-delay: .3s; }
+
+/* RESPONSIVE */
+
+@media (max-width: 1120px) {
+    .nav {
+        gap: 17px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .model-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .model-note {
+        min-height: 260px;
+    }
+
+    .why-grid {
+        gap: 40px;
+    }
+
+    .footer-main {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --header-height: 76px;
+    }
+
+    .container {
+        width: min(100% - 36px, var(--container));
+    }
+
+    .header-inner {
+        width: calc(100% - 36px);
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 22px 22px;
+        background: #083D5B;
+        border-top: 1px solid rgba(255,255,255,.12);
+        box-shadow: 0 18px 25px rgba(0,0,0,.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+
+    .nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav a {
+        padding: 14px 4px;
+        border-bottom: 1px solid rgba(255,255,255,.09);
+        font-size: 13px;
+    }
+
+    .nav a:not(.nav-cta)::after {
+        display: none;
+    }
+
+    .nav .nav-cta {
+        margin-top: 14px;
+        padding: 13px 17px;
+        border-bottom: 0;
+        align-self: flex-start;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 50px);
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content {
+        max-width: 750px;
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .data-visual {
+        max-width: 580px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlight-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .highlight-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-visual {
+        min-height: 370px;
+    }
+
+    .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info {
+        max-width: 680px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 70px 0;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .header-inner {
+        width: calc(100% - 32px);
+    }
+
+    .logo img {
+        width: 137px;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 38px);
+        padding-bottom: 48px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 10vw, 49px);
+        letter-spacing: -1.7px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        align-items: flex-start;
+        font-size: 11px;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .data-visual {
+        min-height: 340px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .visual-chart {
+        height: 160px;
+        margin: 27px 0 16px;
+        gap: 7px;
+    }
+
+    .visual-stat {
+        padding: 10px 7px;
+    }
+
+    .visual-stat strong {
+        font-size: 12px;
+    }
+
+    .visual-stat span {
+        font-size: 8px;
+    }
+
+    .float-tag {
+        padding: 9px 11px;
+        font-size: 9px;
+    }
+
+    .float-tag-one {
+        top: 15px;
+        left: -4px;
+    }
+
+    .float-tag-two {
+        bottom: 15px;
+        right: -4px;
+    }
+
+    .section-heading {
+        margin-bottom: 36px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+        letter-spacing: -.9px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .highlight-item {
+        min-height: 92px;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .highlight-symbol {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .highlight-item strong {
+        font-size: 11px;
+    }
+
+    .highlight-item span {
+        font-size: 9px;
+    }
+
+    .model-intro {
+        margin-top: -15px;
+        font-size: 13px;
+    }
+
+    .model-note {
+        padding: 27px 23px;
+    }
+
+    .model-note h3 {
+        font-size: 24px;
+    }
+
+    .model-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .model-card {
+        padding: 25px 22px;
+    }
+
+    .support-grid,
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-card {
+        min-height: auto;
+        padding: 27px 23px;
+    }
+
+    .course-card {
+        min-height: 250px;
+        padding: 26px 23px;
+    }
+
+    .why-visual {
+        min-height: 320px;
+    }
+
+    .why-visual::before {
+        width: 240px;
+        height: 240px;
+    }
+
+    .why-visual::after {
+        width: 175px;
+        height: 175px;
+    }
+
+    .orbit-label {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+
+    .orbit-label.one { top: 40px; left: 13px; }
+    .orbit-label.two { top: 83px; right: 10px; }
+    .orbit-label.three { bottom: 75px; left: 10px; }
+    .orbit-label.four { bottom: 33px; right: 14px; }
+
+    .cta-content h2 {
+        font-size: 32px;
+    }
+
+    .final-cta {
+        padding: 65px 0;
+    }
+
+    .contact-form-wrap {
+        padding: 25px 19px;
+        border-radius: 14px;
+    }
+
+    .form-heading h3 {
+        font-size: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 48px 0 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-links {
+        column-gap: 18px;
+    }
+
+    .footer-bottom-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .back-to-top {
+        right: 14px;
+        bottom: 14px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header" id="siteHeader">
+    <div class="header-inner">
+
+        <a href="#home" class="logo" aria-label="Keytal Consultancy Home">
+            <img src="images/Logo Footer.webp" alt="Keytal Consultancy">
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav" id="nav">
+            <!-- <a href="#home" class="active">Home</a>
+            <a href="#model">Franchise Model</a>
+            <a href="#support">Support</a>
+            <a href="#courses">Courses</a>
+            <a href="#why-keytal">Why Keytal</a> -->
+            <a href="#contact" class="nav-cta">Enquire Now <span>↗</span></a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div class="hero-content reveal-left">
+            <div class="hero-kicker">
+                <span></span>
+                DATA SCIENCE & TECHNOLOGY FRANCHISE
+            </div>
+
+            <h1>
+                Build a Future-Ready
+                <span>Technology Education Centre</span>
+            </h1>
+
+            <p class="hero-description">
+                Establish a technology-focused education centre offering career-oriented programmes in Data Science, Data Analytics, Artificial Intelligence, Cyber Security and Full Stack Web Development, with structured support for centre setup, training and marketing. </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Explore Franchise Opportunity <span>↗</span>
+                </a>
+
+                <a href="#courses" class="btn btn-outline" style="color:var(--blue);border-color:var(--border);">
+                    Explore Courses <span>↓</span>
+                </a>
+            </div>
+
+            
+        </div>
+
+        <div class="hero-visual reveal-right">
+            <div class="float-tag float-tag-one">DATA ANALYTICS</div>
+
+            <div class="data-visual">
+                <div class="visual-top">
+                    <span>TECHNOLOGY INSIGHTS</span>
+                    <span class="visual-status">DATA ACTIVE</span>
+                </div>
+
+                <div class="visual-chart" aria-label="Illustrative data analytics chart">
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                    <div class="chart-bar"></div>
+                </div>
+
+                <div class="visual-stats">
+                    <div class="visual-stat">
+                        <strong>DATA</strong>
+                        <span>Analysis & insights</span>
+                    </div>
+                    <div class="visual-stat">
+                        <strong>AI / ML</strong>
+                        <span>Intelligent systems</span>
+                    </div>
+                    <div class="visual-stat">
+                        <strong>TECH</strong>
+                        <span>Digital development</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="float-tag float-tag-two">AI · DATA · DEVELOPMENT</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlight-strip" aria-label="Franchise highlights">
+    <div class="container highlight-grid">
+
+        <div class="highlight-item">
+            <div class="highlight-symbol">⌘</div>
+            <div>
+                <strong>Technology Education</strong>
+                <span>Focused learning sectors</span>
+            </div>
+        </div>
+
+        <div class="highlight-item">
+            <div class="highlight-symbol">↗</div>
+            <div>
+                <strong>Business Guidance</strong>
+                <span>Support for centre development</span>
+            </div>
+        </div>
+
+        <div class="highlight-item">
+            <div class="highlight-symbol">◎</div>
+            <div>
+                <strong>Course Portfolio</strong>
+                <span>Multiple technology programmes</span>
+            </div>
+        </div>
+
+        <div class="highlight-item">
+            <div class="highlight-symbol">◇</div>
+            <div>
+                <strong>Ongoing Consultation</strong>
+                <span>Guidance as your centre grows</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FRANCHISE MODEL -->
+<section class="section model-section" id="model">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">A STRUCTURED APPROACH TO TECHNOLOGY EDUCATION</span>
+            <h2>What Does the <span>Brand Franchise Include?</span></h2>
+            <!-- <p>
+                Build your education business with a defined approach to centre management, course delivery and business development.
+            </p> -->
+        </div>
+
+        <p class="model-intro reveal">
+            A technology education centre requires a balance of business management, learner-focused delivery and consistent operational planning.
+        </p>
+
+        <div class="model-layout">
+
+            <div class="model-note reveal-left">
+                <div class="model-note-content">
+                    <!-- <div class="small-label">THE KEYTAL APPROACH</div> -->
+                    <h3>A Partnership Built Around Your Centre</h3>
+                    <p>
+                        Establish a strong foundation for your education centre with a structured approach to business planning, educational delivery and ongoing development.
+                    </p>
+                </div>
+
+                <!-- <div class="model-note-bottom">
+                    <span>Business Development</span>
+                    <strong>Education Partnership ↗</strong>
+                </div> -->
+            </div>
+
+            <div class="model-cards">
+
+                <article class="model-card reveal delay-1">
+                    <div class="model-card-number">01</div>
+                    <h3>What You Manage</h3>
+                    <p>
+                        Manage the day-to-day activities and local development of your technology education centre.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Centre operations and administration</li>
+                        <li>Student enquiries and admissions</li>
+                        <li>Classroom and infrastructure management</li>
+                        <li>Local outreach and student engagement</li>
+                    </ul>
+                </article>
+
+                <article class="model-card reveal delay-2">
+                    <div class="model-card-number">02</div>
+                    <h3>What the Brand Supports</h3>
+                    <p>
+                        Access guidance designed to help you plan, establish and develop your education business.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Brand and business guidance</li>
+                        <li>Course and programme guidance</li>
+                        <li>Marketing and promotional direction</li>
+                        <li>Ongoing consultation for centre growth</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="section section-light" id="support">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">SUPPORT FOR YOUR CENTRE</span>
+            <h2>A Structured Partnership for <span>Education Entrepreneurs</span></h2>
+            <p>
+                A technology education centre requires more than classrooms and computers. It needs a thoughtful approach to business development, course delivery and student engagement.
+            </p>
+        </div>
+
+        <div class="support-grid">
+
+            <article class="support-card reveal">
+                <div class="support-icon">⌘</div>
+                <h3>Business & Centre Development</h3>
+                <p>
+                    Guidance on planning and developing your centre, including operational considerations and business management.
+                </p>
+            </article>
+
+            <article class="support-card reveal delay-1">
+                <div class="support-icon">▤</div>
+                <h3>Course & Academic Guidance</h3>
+                <p>
+                    Support in understanding the technology programme portfolio and planning a suitable learning environment for students.
+                </p>
+            </article>
+
+            <article class="support-card reveal delay-2">
+                <div class="support-icon">↗</div>
+                <h3>Marketing & Ongoing Consultation</h3>
+                <p>
+                    Ongoing consultation to support centre development and growth, along with guidance on promotional and student outreach activities.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- COURSES -->
+<section class="section courses-section" id="courses">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">AREAS OF TECHNOLOGY LEARNING</span>
+            <h2>Explore Our <span>Technology Programmes</span></h2>
+            <p>
+                Discover learning areas that connect students with data, digital innovation and technology-focused skills.
+            </p>
+        </div>
+
+        <div class="courses-grid">
+
+            <article class="course-card reveal">
+                <div class="course-number">PROGRAMME 01</div>
+                <div class="course-icon">◫</div>
+                <h3>Data Science Course</h3>
+                <p>
+                    Explore data-driven methods, analytical thinking and techniques used to interpret information and support decision-making.
+                </p>
+                <a href="#contact" class="course-link">Enquire About This Programme <span>→</span></a>
+            </article>
+
+            <article class="course-card reveal delay-1">
+                <div class="course-number">PROGRAMME 02</div>
+                <div class="course-icon">▥</div>
+                <h3>Data Analytics Course</h3>
+                <p>
+                    Learn about working with data, identifying patterns and transforming information into meaningful insights.
+                </p>
+                <a href="#contact" class="course-link">Enquire About This Programme <span>→</span></a>
+            </article>
+
+            <article class="course-card reveal delay-2">
+                <div class="course-number">PROGRAMME 03</div>
+                <div class="course-icon">⌬</div>
+                <h3>B.Sc Data Science with AI</h3>
+                <p>
+                    Explore the intersection of data science and artificial intelligence through a technology-focused degree programme.
+                </p>
+                <a href="#contact" class="course-link">Enquire About This Programme <span>→</span></a>
+            </article>
+
+            <article class="course-card reveal">
+                <div class="course-number">PROGRAMME 04</div>
+                <div class="course-icon">◈</div>
+                <h3>Cyber Security Course</h3>
+                <p>
+                    Discover the principles of digital security, cyber risks and the protection of systems, networks and information.
+                </p>
+                <a href="#contact" class="course-link">Enquire About This Programme <span>→</span></a>
+            </article>
+
+            <article class="course-card reveal delay-1">
+                <div class="course-number">PROGRAMME 05</div>
+                <div class="course-icon">〈/〉</div>
+                <h3>Full Stack Web Development</h3>
+                <p>
+                    Explore front-end and back-end development concepts used to build interactive websites and web applications.
+                </p>
+                <a href="#contact" class="course-link">Enquire About This Programme <span>→</span></a>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- TECHNOLOGY TICKER -->
+<div class="ticker" aria-label="Technology learning areas">
+    <div class="ticker-track">
+        <div class="ticker-item">DATA SCIENCE</div>
+        <div class="ticker-item">DATA ANALYTICS</div>
+        <div class="ticker-item">ARTIFICIAL INTELLIGENCE</div>
+        <div class="ticker-item">CYBER SECURITY</div>
+        <div class="ticker-item">WEB DEVELOPMENT</div>
+        <div class="ticker-item">DIGITAL INNOVATION</div>
+        <div class="ticker-item">DATA SCIENCE</div>
+        <div class="ticker-item">DATA ANALYTICS</div>
+        <div class="ticker-item">ARTIFICIAL INTELLIGENCE</div>
+        <div class="ticker-item">CYBER SECURITY</div>
+        <div class="ticker-item">WEB DEVELOPMENT</div>
+        <div class="ticker-item">DIGITAL INNOVATION</div>
+    </div>
+</div>
+
+<!-- WHY KEYTAL -->
+<section class="section section-light" id="why-keytal">
+    <div class="container why-grid">
+
+        <div class="why-visual reveal-left">
+            <div class="orbit-label one">Business Guidance</div>
+            <div class="orbit-label two">Technology Courses</div>
+            <div class="orbit-label three">Centre Development</div>
+            <div class="orbit-label four">Ongoing Support</div>
+
+            <!-- <div class="why-center">
+                <strong>KEYTAL</strong>
+                <span>Consultancy</span>
+            </div> -->
+        </div>
+
+        <div class="why-content reveal-right">
+            <div class="section-heading">
+                <!-- <span class="eyebrow">WHY PARTNER WITH KEYTAL</span> -->
+                <h2>Build Your Education Business With <span>Structured Guidance</span></h2>
+                <p>
+                    Develop your centre with an approach that brings business planning, technology-focused education and ongoing consultation together.
+                </p>
+            </div>
+
+            <div class="why-points">
+
+                <div class="why-point">
+                    <div class="why-check">✓</div>
+                    <div>
+                        <h3>Defined Business Approach</h3>
+                        <p>Plan your centre with a clear understanding of operational and business development considerations.</p>
+                    </div>
+                </div>
+
+                <div class="why-point">
+                    <div class="why-check">✓</div>
+                    <div>
+                        <h3>Technology-Focused Course Portfolio</h3>
+                        <p>Explore programmes across data science, analytics, artificial intelligence, cyber security and web development.</p>
+                    </div>
+                </div>
+
+                <div class="why-point">
+                    <div class="why-check">✓</div>
+                    <div>
+                        <h3>Marketing Direction</h3>
+                        <p>Receive guidance on promotional planning and local outreach to introduce your centre to prospective students.</p>
+                    </div>
+                </div>
+
+                <div class="why-point">
+                    <div class="why-check">✓</div>
+                    <div>
+                        <h3>Ongoing Consultation</h3>
+                        <p>Access continued guidance as you work towards developing your education centre.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <div class="container cta-inner">
+
+        <div class="cta-content reveal-left">
+            <span class="eyebrow">START YOUR FRANCHISE JOURNEY</span>
+            <h2>Interested in a Data Science & Technology Franchise?</h2>
+            <p>
+                Connect with  our brand to discuss your business plans, preferred location and the next steps towards establishing a technology education centre.
+            </p>
+        </div>
+
+        <div class="cta-actions reveal-right">
+            <a href="#contact" class="btn btn-white">Discuss Your Opportunity <span>↗</span></a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT / ENQUIRY FORM -->
+<section class="section contact-section" id="contact">
+    <div class="container contact-layout">
+
+        <div class="contact-info reveal-left">
+            <span class="eyebrow">GET IN TOUCH</span>
+            <h2>Let's Discuss Your <span>Franchise Opportunity</span></h2>
+            <p>
+                Share a few details about yourself and your plans. Our brand will connect with you to discuss the technology education franchise opportunity.
+            </p>
+
+            <div class="contact-detail">
+                <div class="contact-detail-icon">☎</div>
+                <div>
+                    <strong>Call Us</strong>
+                    <a href="tel:+919594949999">+91 95949 49999</a>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <div class="contact-detail-icon">✉</div>
+                <div>
+                    <strong>Email Us</strong>
+                    <a href="mailto:cst@keytal.org">cst@keytal.org</a>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <div class="contact-detail-icon">⌖</div>
+                <div>
+                    <strong>Franchise Enquiries</strong>
+                    <span>Discuss your preferred city and business plans with our team.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+            <div class="form-heading">
+                <span class="eyebrow">FRANCHISE ENQUIRY</span>
+                <h3>Tell Us About Your Plans</h3>
+                <p>Complete the form below and our team can get in touch with you.</p>
+            </div>
+
+            <form action="https://formsubmit.co/cst@keytal.org" method="POST">
+
+                <input type="hidden" name="_subject" value="New Data Science & Technology Franchise Enquiry - Keytal Consultancy">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://keytal.org/thankyou.html">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="Email Address" placeholder="Enter your email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Contact Number *</label>
+                        <input type="tel" id="phone" name="Contact Number" placeholder="Enter 10-digit mobile number" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Preferred City *</label>
+                        <input type="text" id="city" name="Preferred City" placeholder="Enter your preferred city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Business Experience *</label>
+                        <select id="experience" name="Business Experience" required>
+                            <option value="">Select experience</option>
+                            <option value="0–1 Years">0–1 Years</option>
+                            <option value="1–3 Years">1–3 Years</option>
+                            <option value="3–5 Years">3–5 Years</option>
+                            <option value="5–10 Years">5–10 Years</option>
+                            <option value="10+ Years">10+ Years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="investment">Investment Capacity *</label>
+                        <select id="investment" name="Investment Capacity" required>
+                            <option value="">Select investment capacity</option>
+                            <option value="25–50 Lakhs">25 Lakhs – 50 Lakhs</option>
+                            <option value="51 Lakhs – 1 Crore">51 Lakhs – 1 Crore</option>
+                            <option value="1.5 Crores – 3 Crores">1.5 Crores – 3 Crores</option>
+                        </select>
+                    </div>
+
+               </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                    Submit Enquiry <span>↗</span>
+                </button>
+
+                <p class="form-note">
+                    By submitting this form, you agree to be contacted regarding your franchise enquiry.
+                </p>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+            <a href="#home" aria-label="Keytal Consultancy Home">
+                <img src="images/Logo Footer.webp" alt="Keytal Consultancy">
+            </a>
+
+            <p>
+                Keytal Consultancy supports education entrepreneurs in exploring franchise opportunities and developing education-focused businesses.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <!-- <a href="#model">Franchise Model</a>
+                <a href="#support">Support</a>
+                <a href="#courses">Courses</a>
+                <a href="#why-keytal">Why Keytal</a> -->
+
+                <div class="footer-dropdown" id="businessDropdown">
+                    <a href="#business-opportunities" id="businessDropdownToggle" aria-expanded="false">
+                        Business Opportunities
+                        <span class="dropdown-arrow">⌄</span>
+                    </a>
+
+                    <div class="dropdown-menu" id="businessDropdownMenu">
+                        <a href="frameboxx.html">Frameboxx</a>
+                        <a href="columbus.html">Columbus</a>
+                        <a href="develearn.html">Develearn</a>
+                    </div>
+                </div>
+
+                <!-- <a href="#contact">Contact Us</a> -->
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <div class="footer-contact-list">
+                <a href="tel:+919594949999">
+                    <span>☎</span>
+                    <span>+91 95949 49999</span>
+                </a>
+
+                <a href="mailto:cst@keytal.org">
+                    <span>✉</span>
+                    <span>cst@keytal.org</span>
+                </a>
+
+                <a href="#contact">
+                    <span>↗</span>
+                    <span>Franchise Enquiries</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+            <p>© <span id="currentYear"></span> Keytal Consultancy. All rights reserved.</p>
+            <p>Education • Business Development • Technology</p>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const header = document.getElementById("siteHeader");
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
+    const backToTop = document.getElementById("backToTop");
+    const dropdown = document.getElementById("businessDropdown");
+    const dropdownToggle = document.getElementById("businessDropdownToggle");
+    const dropdownMenu = document.getElementById("businessDropdownMenu");
+
+    /* HEADER SCROLL EFFECT */
+    function updateHeader() {
+        if (window.scrollY > 25) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+        if (window.scrollY > 450) {
+            backToTop.classList.add("visible");
+        } else {
+            backToTop.classList.remove("visible");
+        }
+    }
+
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
+
+    /* MOBILE NAVIGATION */
+    function closeMenu() {
+        nav.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open navigation menu");
+        menuBtn.textContent = "☰";
+    }
+
+    menuBtn.addEventListener("click", function () {
+        const isOpen = nav.classList.toggle("open");
+
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+        menuBtn.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+        menuBtn.textContent = isOpen ? "×" : "☰";
+    });
+
+    nav.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeMenu();
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            window.innerWidth <= 900 &&
+            !nav.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
+    });
+
+    /* REVEAL ON SCROLL */
+    const revealElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    );
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: "0px 0px -35px 0px"
+        });
+
+        revealElements.forEach(function (element) {
+            revealObserver.observe(element);
+        });
+    } else {
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
+    }
+
+    /* ACTIVE NAV LINK */
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = nav.querySelectorAll('a[href^="#"]');
+
+    if ("IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+
+                    navLinks.forEach(function (link) {
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute("href") === "#" + sectionId
+                        );
+                    });
+                }
+            });
+        }, {
+            rootMargin: "-30% 0px -60% 0px",
+            threshold: 0
+        });
+
+        sections.forEach(function (section) {
+            sectionObserver.observe(section);
+        });
+    }
+
+    /* FOOTER BUSINESS OPPORTUNITIES DROPDOWN */
+    dropdownToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const isOpen = dropdown.classList.toggle("open");
+        dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("open");
+            dropdownToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    dropdownMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            dropdown.classList.remove("open");
+            dropdownToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+
+    /* BACK TO TOP */
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    /* AUTOMATIC COPYRIGHT YEAR */
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    /* PHONE NUMBER VALIDATION */
+    const phoneInput = document.getElementById("phone");
+
+    phoneInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+
+});
+</script>
+
+</body>
+</html>

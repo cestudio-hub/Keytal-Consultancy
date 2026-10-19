@@ -1,0 +1,3287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Keytal Consultancy | Aviation, Hospitality & Event Management Franchise</title>
+
+<meta name="description" content="Explore franchise opportunities with Keytal Consultancy in aviation, hospitality, event management and travel education. Build an education business with structured guidance and support.">
+
+<meta name="theme-color" content="#0077AF">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #0077AF;
+    --blue-light: #1599D0;
+    --blue-bright: #39B5E8;
+    --navy: #06415F;
+    --navy-dark: #032B40;
+    --navy-deep: #021F30;
+    --pale: #DDF2FB;
+    --pale-2: #BFE7F7;
+    --white: #FFFFFF;
+    --text: #17384B;
+    --muted: #567384;
+    --border: rgba(0,119,175,.18);
+    --container: 1240px;
+    --shadow: 0 22px 60px rgba(2,43,64,.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #DDF2FB;
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.section-light {
+    background: #DDF2FB;
+}
+
+.section-blue {
+    color: var(--white);
+    background: linear-gradient(130deg, #0077AF 0%, #075477 65%, #06415F 100%);
+}
+
+.section-dark {
+    color: var(--white);
+    background: linear-gradient(125deg, #032B40, #06415F 70%, #0077AF);
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 2.6px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 17px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 27px;
+    height: 2px;
+    background: currentColor;
+}
+
+.eyebrow-light {
+    color: #9BE2FF;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 770px;
+    margin: 0 auto 52px;
+}
+
+.section-heading h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(32px, 4.2vw, 49px);
+    font-weight: 800;
+    letter-spacing: -1.7px;
+    line-height: 1.17;
+}
+
+.section-heading h2 span {
+    color: var(--blue);
+}
+
+.section-dark .section-heading h2 span,
+.section-blue .section-heading h2 span {
+    color: #91DFFF;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 18px auto 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.section-dark .section-heading p,
+.section-blue .section-heading p {
+    color: #D0E9F4;
+}
+
+.btn {
+    min-height: 51px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 22px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white);
+    box-shadow: 0 10px 28px rgba(0,119,175,.24);
+}
+
+.btn-primary:hover {
+    background: #005B88;
+    box-shadow: 0 15px 35px rgba(0,80,122,.28);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--blue);
+}
+
+.btn-light:hover {
+    background: var(--pale);
+}
+
+.btn-glass {
+    color: var(--white);
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.45);
+}
+
+.btn-glass:hover {
+    background: rgba(255,255,255,.18);
+}
+
+/* HEADER */
+
+.site-header {
+    height: 84px;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 auto;
+    background: rgba(3,43,64,.96);
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    backdrop-filter: blur(16px);
+    transition: height .3s ease, box-shadow .3s ease;
+}
+
+.site-header.scrolled {
+    height: 72px;
+    box-shadow: 0 8px 28px rgba(0,20,32,.22);
+}
+
+.nav-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 150px;
+    max-height: 62px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links > a {
+    color: #D8EDF6;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    position: relative;
+    transition: color .25s ease;
+}
+
+.nav-links > a:not(.nav-cta)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    width: 0;
+    height: 2px;
+    background: #67D2FF;
+    transition: width .3s ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a.active {
+    color: #8EDFFF;
+}
+
+.nav-links > a:hover::after,
+.nav-links > a.active::after {
+    width: 100%;
+}
+
+.nav-links .nav-cta {
+    background: var(--blue);
+    color: var(--white);
+    padding: 13px 17px;
+    border-radius: 3px;
+}
+
+.nav-links .nav-cta:hover {
+    background: #1599D0;
+}
+
+.menu-toggle {
+    display: none;
+    width: 43px;
+    height: 43px;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 4px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    padding: 145px 0 86px;
+    min-height: 780px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 80% 20%, rgba(40,184,239,.20), transparent 34%),
+        radial-gradient(circle at 12% 90%, rgba(0,119,175,.40), transparent 35%),
+        linear-gradient(120deg, #032B40 0%, #06415F 47%, #0077AF 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -220px;
+    right: -120px;
+    width: 650px;
+    height: 650px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    animation: rotate 28s linear infinite;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -20px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(145,223,255,.20);
+    border-radius: 50%;
+    animation: rotate 22s linear infinite reverse;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.04fr .96fr;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-copy {
+    animation: fadeUp .9s ease both;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 23px;
+    padding: 8px 12px;
+    border: 1px solid rgba(142,223,255,.35);
+    border-radius: 3px;
+    background: rgba(255,255,255,.05);
+    color: #A1E4FF;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-label span {
+    width: 7px;
+    height: 7px;
+    background: #69D7FF;
+    border-radius: 50%;
+    box-shadow: 0 0 13px #69D7FF;
+}
+
+.hero h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(41px, 5vw, 65px);
+    line-height: 1.08;
+    letter-spacing: -2.8px;
+    font-weight: 800;
+    max-width: 680px;
+}
+
+.hero h1 span {
+    color: #8EDFFF;
+    display: block;
+}
+
+.hero-copy > p {
+    max-width: 565px;
+    margin: 24px 0 28px;
+    color: #D1E8F3;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 31px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #E0F2F9;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.trust-check {
+    width: 21px;
+    height: 21px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(139,224,255,.16);
+    color: #8EDFFF;
+    border: 1px solid rgba(139,224,255,.30);
+}
+
+.hero-visual {
+    position: relative;
+    animation: fadeRight 1s ease both;
+}
+
+.hero-image-wrap {
+    height: 510px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 7px;
+    background: #075477;
+    box-shadow: 0 30px 75px rgba(0,15,25,.32);
+}
+
+.hero-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.hero-image-wrap:hover img {
+    transform: scale(1.06);
+}
+
+.hero-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3,43,64,.02) 35%, rgba(3,30,45,.88) 100%);
+}
+
+.hero-image-caption {
+    position: absolute;
+    z-index: 2;
+    left: 26px;
+    right: 26px;
+    bottom: 27px;
+}
+
+.hero-image-caption small {
+    display: block;
+    color: #8EDFFF;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.hero-image-caption strong {
+    display: block;
+    font-family: "Manrope", sans-serif;
+    font-size: 23px;
+    line-height: 1.35;
+}
+
+.hero-float-card {
+    position: absolute;
+    z-index: 4;
+    top: 34px;
+    left: -35px;
+    width: 205px;
+    padding: 19px;
+    color: var(--text);
+    background: #DDF2FB;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 5px;
+    box-shadow: 0 18px 40px rgba(0,20,32,.2);
+    animation: float 5s ease-in-out infinite;
+}
+
+.float-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.hero-float-card strong {
+    display: block;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.hero-float-card small {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.hero-side-tag {
+    position: absolute;
+    z-index: 5;
+    right: -22px;
+    bottom: 66px;
+    padding: 16px 19px;
+    background: var(--blue);
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 15px 40px rgba(0,30,45,.24);
+    border-radius: 4px;
+}
+
+.hero-side-tag small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #BEEBFF;
+    font-weight: 700;
+}
+
+.hero-side-tag strong {
+    font-family: "Manrope", sans-serif;
+    display: block;
+    font-size: 16px;
+}
+
+/* SECTOR BAR */
+
+.sector-strip {
+    background: #DDF2FB;
+    padding: 24px 0;
+    border-bottom: 1px solid #B7E1F2;
+}
+
+.sector-strip-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.sector-strip-label {
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sector-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 9px;
+}
+
+.sector-items span {
+    padding: 8px 13px;
+    color: var(--blue);
+    border: 1px solid rgba(0,119,175,.30);
+    background: rgba(255,255,255,.48);
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .95fr 1.05fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.about-visual {
+    min-height: 440px;
+    position: relative;
+}
+
+.about-visual img {
+    width: 88%;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 20px 50px rgba(0,60,90,.20);
+    position: relative;
+    z-index: 1;
+}
+
+.about-visual::before {
+    content: "";
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    top: -18px;
+    left: -18px;
+    background: var(--blue);
+    border-radius: 4px;
+}
+
+.about-visual::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    right: 0;
+    bottom: 5px;
+    background: #1599D0;
+    border-radius: 4px;
+}
+
+.about-badge {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 32%;
+    width: 205px;
+    padding: 22px;
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    border-bottom: 3px solid #61D1FF;
+}
+
+.about-badge strong {
+    font-family: "Manrope", sans-serif;
+    display: block;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.about-badge span {
+    display: block;
+    margin-top: 8px;
+    color: #C0E7F7;
+    font-size: 10px;
+}
+
+.about-copy h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(32px, 4vw, 47px);
+    letter-spacing: -1.7px;
+    line-height: 1.18;
+}
+
+.about-copy h2 span {
+    color: var(--blue);
+}
+
+.about-copy > p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 19px;
+}
+
+.check-list {
+    display: grid;
+    gap: 13px;
+    margin: 25px 0 28px;
+}
+
+.check-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #27495D;
+}
+
+.check-row span {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+    color: var(--white);
+    background: var(--blue);
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* SECTOR CARDS */
+
+.sector-section {
+    background: linear-gradient(135deg, #0077AF, #06415F 85%);
+    color: var(--white);
+}
+
+.sector-section .section-heading h2 span {
+    color: #8EDFFF;
+}
+
+.sector-section .section-heading p {
+    color: #D4EDF7;
+}
+
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.sector-card {
+    position: relative;
+    overflow: hidden;
+    height: 430px;
+    border-radius: 5px;
+    background: #075477;
+    border: 1px solid rgba(255,255,255,.19);
+    box-shadow: 0 18px 40px rgba(0,20,32,.17);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.sector-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 28px 50px rgba(0,20,32,.3);
+}
+
+.sector-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.sector-card:hover img {
+    transform: scale(1.09);
+}
+
+.sector-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3,43,64,.04) 15%, rgba(3,35,53,.38) 45%, rgba(2,26,39,.97) 100%);
+}
+
+.sector-card-top {
+    position: absolute;
+    z-index: 2;
+    top: 19px;
+    left: 19px;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: rgba(221,242,251,.96);
+    color: var(--blue);
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.sector-card-content {
+    position: absolute;
+    z-index: 2;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+}
+
+.sector-card-content small {
+    display: block;
+    color: #8EDFFF;
+    letter-spacing: 2px;
+    font-size: 9px;
+    font-weight: 800;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+
+.sector-card-content h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 25px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.sector-card-content p {
+    color: #D1E7F1;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.sector-card-content a {
+    display: inline-flex;
+    gap: 9px;
+    align-items: center;
+    margin-top: 17px;
+    color: #8EDFFF;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* FRANCHISE MODEL */
+
+.model-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+}
+
+.model-card {
+    position: relative;
+    padding: 28px 23px;
+    min-height: 250px;
+    border-radius: 5px;
+    color: var(--white);
+    background: linear-gradient(145deg, #0077AF, #06415F);
+    box-shadow: 0 12px 30px rgba(0,75,110,.12);
+    overflow: hidden;
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.model-card:nth-child(even) {
+    background: linear-gradient(145deg, #075477, #032B40);
+}
+
+.model-card::after {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    right: -55px;
+    top: -55px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    transition: transform .4s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 22px 40px rgba(0,55,85,.2);
+}
+
+.model-card:hover::after {
+    transform: scale(1.5);
+}
+
+.model-icon {
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    background: rgba(160,228,255,.15);
+    border: 1px solid rgba(160,228,255,.3);
+    color: #9BE4FF;
+    border-radius: 4px;
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+.model-card h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 1.45;
+}
+
+.model-card p {
+    color: #CBE5F0;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* SUPPORT */
+
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.support-copy h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(32px, 4vw, 46px);
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.support-copy h2 span {
+    color: #8EDFFF;
+}
+
+.support-copy > p {
+    margin: 19px 0 25px;
+    color: #CBE5F0;
+    font-size: 13px;
+}
+
+.support-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.support-feature {
+    padding: 17px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 4px;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.support-feature:hover {
+    background: rgba(255,255,255,.11);
+    transform: translateY(-4px);
+}
+
+.support-feature-icon {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    background: rgba(145,223,255,.14);
+    color: #91DFFF;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.support-feature h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 6px;
+}
+
+.support-feature p {
+    color: #CBE5F0;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.support-visual {
+    position: relative;
+    padding: 0 0 28px 28px;
+}
+
+.support-visual::before {
+    content: "";
+    position: absolute;
+    inset: -18px 18px 70px -18px;
+    border: 1px solid rgba(145,223,255,.42);
+}
+
+.support-visual img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 25px 55px rgba(0,20,32,.3);
+}
+
+.support-note {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    max-width: 275px;
+    padding: 19px 22px;
+    background: #DDF2FB;
+    color: var(--navy);
+    border-bottom: 3px solid #48BDEB;
+}
+
+.support-note strong {
+    display: block;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.support-note span {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+/* PROCESS */
+
+.process-section {
+    background: #BFE7F7;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    position: relative;
+}
+
+.process-card {
+    position: relative;
+    padding: 28px 22px;
+    background: rgba(255,255,255,.43);
+    border: 1px solid rgba(0,119,175,.19);
+    border-radius: 5px;
+    transition: transform .3s ease, background .3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-7px);
+    background: rgba(255,255,255,.78);
+}
+
+.process-number {
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    color: var(--white);
+    background: var(--blue);
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    margin-bottom: 22px;
+    box-shadow: 0 9px 22px rgba(0,119,175,.2);
+}
+
+.process-card h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.process-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.85;
+}
+
+/* ENQUIRY */
+
+.enquiry-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 90%, rgba(30,173,226,.24), transparent 30%),
+        linear-gradient(125deg, #032B40 0%, #06415F 48%, #0077AF 100%);
+    color: var(--white);
+}
+
+.enquiry-section::before {
+    content: "";
+    position: absolute;
+    right: -140px;
+    top: -200px;
+    width: 520px;
+    height: 520px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+}
+
+.enquiry-grid {
+    display: grid;
+    grid-template-columns: .88fr 1.12fr;
+    gap: 70px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.enquiry-copy {
+    padding-top: 18px;
+}
+
+.enquiry-copy h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(34px, 4vw, 48px);
+    letter-spacing: -1.8px;
+    line-height: 1.17;
+}
+
+.enquiry-copy h2 span {
+    color: #8EDFFF;
+}
+
+.enquiry-copy > p {
+    color: #CBE5F0;
+    font-size: 13px;
+    margin: 20px 0 30px;
+}
+
+.enquiry-points {
+    display: grid;
+    gap: 18px;
+}
+
+.enquiry-point {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.enquiry-point-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(145,223,255,.28);
+    background: rgba(255,255,255,.07);
+    border-radius: 4px;
+    color: #8EDFFF;
+    font-size: 18px;
+}
+
+.enquiry-point strong {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.enquiry-point span,
+.enquiry-point a {
+    display: block;
+    color: #CBE5F0;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.enquiry-point a:hover {
+    color: #8EDFFF;
+}
+
+.enquiry-form {
+    padding: 35px;
+    background: #DDF2FB;
+    color: var(--navy);
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 6px;
+    box-shadow: 0 25px 65px rgba(0,15,25,.27);
+}
+
+.form-heading {
+    padding-bottom: 21px;
+    border-bottom: 1px solid rgba(0,119,175,.19);
+    margin-bottom: 23px;
+}
+
+.form-heading .eyebrow {
+    margin-bottom: 8px;
+    font-size: 9px;
+}
+
+.form-heading h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+.form-heading p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #23485D;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #B7DCEB;
+    background: rgba(255,255,255,.72);
+    color: var(--navy);
+    border-radius: 3px;
+    outline: none;
+    padding: 12px;
+    font-size: 11px;
+    transition: border .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 46px;
+}
+
+.form-group textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(0,119,175,.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #819EAC;
+}
+
+.form-submit {
+    width: 100%;
+    border: none;
+    margin-top: 20px;
+}
+
+.form-submit:disabled {
+    opacity: .7;
+    cursor: wait;
+}
+
+.form-privacy {
+    color: #6D8999;
+    text-align: center;
+    font-size: 9px;
+    margin-top: 11px;
+}
+
+/* FINAL CTA */
+
+.final-cta {
+    position: relative;
+    overflow: hidden;
+    background: #BFE7F7;
+    padding: 68px 0;
+}
+
+.final-cta::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: -100px;
+    top: -180px;
+    border: 1px solid rgba(0,119,175,.2);
+    border-radius: 50%;
+}
+
+.final-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.final-cta h2 {
+    max-width: 760px;
+    color: var(--navy);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(29px, 4vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -1.4px;
+}
+
+.final-cta p {
+    color: #4C7084;
+    font-size: 12px;
+    margin-top: 11px;
+}
+
+.final-cta .btn {
+    flex-shrink: 0;
+}
+
+/* ==============================
+   HORIZONTAL FOOTER
+============================== */
+
+.site-footer {
+    background: #07182C;
+    color: #ffffff;
+    padding: 55px 0 0;
+    position: relative;
+    overflow: visible;
+}
+
+.site-footer .container {
+    width: min(1240px, 92%);
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.9fr;
+    gap: 55px;
+    align-items: start;
+    padding-bottom: 40px;
+}
+
+/* BRAND */
+
+.footer-brand {
+    max-width: 390px;
+}
+
+.footer-brand img {
+    width: 175px;
+    height: auto;
+    display: block;
+    margin-bottom: 22px;
+}
+
+.footer-brand p {
+    color: #bdcbd8;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* FOOTER HEADINGS */
+
+.footer-column h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 0 22px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 38px;
+    height: 3px;
+    border-radius: 5px;
+    background: #0077AF;
+}
+
+/* QUICK LINKS */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.footer-links a,
+.footer-dropdown-menu a {
+    color: #bdcbd8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links > a:hover,
+.footer-dropdown-menu a:hover {
+    color: #42b9f3;
+    transform: translateX(4px);
+}
+
+/* DROPDOWN */
+
+.footer-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.footer-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #bdcbd8;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-dropdown-trigger:hover,
+.footer-dropdown-trigger[aria-expanded="true"] {
+    color: #42b9f3;
+}
+
+.dropdown-arrow {
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+.footer-dropdown-trigger[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.footer-dropdown-menu {
+    display: none;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 14px;
+    padding-left: 12px;
+    border-left: 2px solid #0077AF;
+}
+
+.footer-dropdown.open .footer-dropdown-menu {
+    display: flex;
+}
+
+/* CONTACT DETAILS */
+
+.footer-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.footer-contact-item span {
+    color: #7fb8d5;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+.footer-contact-item a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+    color: #42b9f3;
+}
+
+/* BOTTOM BAR */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #9fb0bf;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #42b9f3;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 600px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding-top: 40px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand img {
+        width: 155px;
+        margin-bottom: 16px;
+    }
+
+    .footer-column h4 {
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    .footer-contact-item {
+        margin-bottom: 18px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+    z-index: 900;
+    right: 22px;
+    bottom: 22px;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 4px;
+    color: var(--white);
+    background: var(--blue);
+    box-shadow: 0 8px 24px rgba(0,35,53,.24);
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--navy);
+}
+
+/* SCROLL REVEAL */
+
+.reveal,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: opacity .75s ease, transform .75s ease;
+}
+
+.reveal {
+    transform: translateY(27px);
+}
+
+.reveal-left {
+    transform: translateX(-30px);
+}
+
+.reveal-right {
+    transform: translateX(30px);
+}
+
+.reveal.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links > a {
+        font-size: 10px;
+    }
+
+    .hero-grid {
+        gap: 38px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 5vw, 57px);
+    }
+
+    .hero-image-wrap {
+        height: 460px;
+    }
+
+    .model-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+/* MOBILE NAVIGATION + TABLET */
+
+@media (max-width: 850px) {
+    .container {
+        width: min(calc(100% - 36px), var(--container));
+    }
+
+    .section {
+        padding: 76px 0;
+    }
+
+    .site-header,
+    .site-header.scrolled {
+        height: 74px;
+    }
+
+    .brand img {
+        width: 140px;
+    }
+
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(360px, 88vw);
+        height: 100dvh;
+        padding: 100px 27px 35px;
+        background: #032B40;
+        border-left: 1px solid rgba(255,255,255,.13);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        overflow-y: auto;
+        transition: right .35s ease;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links > a {
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+        font-size: 12px;
+    }
+
+    .nav-links .nav-cta {
+        margin-top: 20px;
+        text-align: center;
+        border-bottom: 0;
+    }
+
+    .hero {
+        min-height: unset;
+        padding: 125px 0 68px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hero-copy {
+        max-width: 720px;
+    }
+
+    .hero h1 {
+        max-width: 690px;
+        font-size: clamp(44px, 7.5vw, 64px);
+    }
+
+    .hero-copy > p {
+        max-width: 630px;
+    }
+
+    .hero-visual {
+        width: min(100%, 600px);
+        margin: 0 auto;
+    }
+
+    .hero-image-wrap {
+        height: 465px;
+    }
+
+    .hero-float-card {
+        left: -10px;
+    }
+
+    .hero-side-tag {
+        right: -8px;
+    }
+
+    .sector-strip-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sector-items {
+        justify-content: flex-start;
+    }
+
+    .about-grid,
+    .support-grid,
+    .enquiry-grid {
+        grid-template-columns: 1fr;
+        gap: 43px;
+    }
+
+    .about-visual {
+        width: min(100%, 590px);
+        margin: 0 auto;
+    }
+
+    .about-copy {
+        max-width: 720px;
+    }
+
+    .sector-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sector-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 11px);
+    }
+
+    .support-visual {
+        width: min(100%, 590px);
+        margin: 0 auto;
+    }
+
+    .enquiry-copy {
+        max-width: 680px;
+    }
+
+    .final-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 560px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding: 62px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .hero {
+        padding: 110px 0 52px;
+    }
+
+    .hero-label {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+        margin-bottom: 17px;
+    }
+
+    .hero h1 {
+        font-size: clamp(37px, 10vw, 49px);
+        letter-spacing: -1.8px;
+    }
+
+    .hero-copy > p {
+        font-size: 12px;
+        margin: 19px 0 22px;
+    }
+
+    .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        gap: 12px 15px;
+        margin-top: 24px;
+    }
+
+    .trust-item {
+        font-size: 9px;
+    }
+
+    .hero-image-wrap {
+        height: 360px;
+    }
+
+    .hero-float-card {
+        top: 15px;
+        left: -4px;
+        width: 166px;
+        padding: 12px;
+    }
+
+    .float-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 17px;
+        margin-bottom: 7px;
+    }
+
+    .hero-float-card strong {
+        font-size: 10px;
+    }
+
+    .hero-float-card small {
+        font-size: 9px;
+    }
+
+    .hero-side-tag {
+        right: -4px;
+        bottom: 18px;
+        padding: 12px 14px;
+    }
+
+    .hero-side-tag strong {
+        font-size: 13px;
+    }
+
+    .hero-image-caption {
+        left: 17px;
+        right: 17px;
+        bottom: 20px;
+    }
+
+    .hero-image-caption strong {
+        font-size: 18px;
+    }
+
+    .sector-items {
+        gap: 7px;
+    }
+
+    .sector-items span {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    .about-grid,
+    .support-grid {
+        gap: 32px;
+    }
+
+    .about-visual {
+        min-height: 330px;
+    }
+
+    .about-visual img {
+        height: 310px;
+        width: 91%;
+    }
+
+    .about-visual::before {
+        width: 95px;
+        height: 95px;
+        top: -10px;
+        left: -8px;
+    }
+
+    .about-visual::after {
+        width: 90px;
+        height: 140px;
+    }
+
+    .about-badge {
+        left: 30%;
+        width: 185px;
+        padding: 15px;
+    }
+
+    .about-badge strong {
+        font-size: 14px;
+    }
+
+    .about-copy h2,
+    .support-copy h2,
+    .enquiry-copy h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .sector-card,
+    .sector-card:last-child {
+        grid-column: auto;
+        width: 100%;
+        height: 385px;
+    }
+
+    .sector-card-content h3 {
+        font-size: 23px;
+    }
+
+    .model-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .model-card {
+        min-height: unset;
+        padding: 23px;
+    }
+
+    .model-icon {
+        margin-bottom: 14px;
+    }
+
+    .support-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+    }
+
+    .support-feature {
+        padding: 13px;
+    }
+
+    .support-feature h3 {
+        font-size: 12px;
+    }
+
+    .support-feature p {
+        font-size: 10px;
+    }
+
+    .support-visual {
+        padding-left: 14px;
+        padding-bottom: 25px;
+    }
+
+    .support-visual::before {
+        inset: -10px 10px 65px -10px;
+    }
+
+    .support-visual img {
+        height: 340px;
+    }
+
+    .support-note {
+        max-width: 220px;
+        padding: 15px;
+    }
+
+    .support-note strong {
+        font-size: 14px;
+    }
+
+    .process-card {
+        padding: 22px;
+    }
+
+    .process-number {
+        margin-bottom: 15px;
+    }
+
+    .enquiry-grid {
+        gap: 30px;
+    }
+
+    .enquiry-form {
+        padding: 22px 16px;
+    }
+
+    .form-heading h3 {
+        font-size: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .final-cta {
+        padding: 53px 0;
+    }
+
+    .final-cta h2 {
+        font-size: 31px;
+        letter-spacing: -1px;
+    }
+
+    .final-cta .btn {
+        width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 31px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.7;
+    }
+
+    .back-to-top {
+        right: 13px;
+        bottom: 13px;
+        width: 39px;
+        height: 39px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* =========================================
+   KEYTAL FRANCHISE MODEL SECTION
+========================================= */
+
+.model-section {
+    position: relative;
+    padding: 100px 0 110px;
+    background: #f4f8fb;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.model-section::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -120px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(11, 70, 105, 0.08);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(11, 70, 105, 0.025),
+        0 0 0 90px rgba(11, 70, 105, 0.02);
+    z-index: -1;
+}
+
+.model-section .container {
+    width: min(1240px, 92%);
+    margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.model-section .section-head {
+    max-width: 760px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.model-section .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 19px;
+    color: #0b628e;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.model-section .eyebrow::before,
+.model-section .eyebrow::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: #c5a34a;
+}
+
+.model-section .section-head h2 {
+    margin: 0;
+    color: #102d43;
+    font-size: clamp(30px, 3.5vw, 46px);
+    line-height: 1.2;
+    font-weight: 750;
+    letter-spacing: -1.5px;
+}
+
+.model-section .section-head h2 span {
+    display: block;
+    margin-top: 5px;
+    color: #0b628e;
+}
+
+.model-section .section-head p {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: #637789;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* TWO-CARD LAYOUT */
+
+.model-section .model-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* INDIVIDUAL CARD */
+
+.model-section .model-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #e0eaf0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(13, 47, 69, 0.055);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.model-section .model-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #0b4669 0%,
+        #1688b8 65%,
+        #c5a34a 100%
+    );
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.model-section .model-card:hover {
+    transform: translateY(-8px);
+    border-color: #c8dce8;
+    box-shadow: 0 24px 55px rgba(13, 47, 69, 0.12);
+}
+
+.model-section .model-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* IMAGE PANEL */
+
+.model-section .model-image {
+    position: relative;
+    height: 275px;
+    overflow: hidden;
+    background: #dceaf2;
+}
+
+.model-section .model-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 33, 52, 0.02) 35%,
+        rgba(5, 33, 52, 0.42) 100%
+    );
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.model-section .model-card:hover .model-image::after {
+    opacity: 0.75;
+}
+
+.model-section .model-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.model-section .model-card:hover .model-image img {
+    transform: scale(1.055);
+}
+
+/* CARD CONTENT */
+
+.model-section .model-content {
+    position: relative;
+    flex: 1;
+    padding: 18px 32px 0px;
+}
+
+.model-section .model-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px;
+    color: #103650;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+}
+
+.model-section .model-content h3::before {
+    content: "";
+    flex: 0 0 4px;
+    width: 4px;
+    height: 27px;
+    border-radius: 4px;
+    background: #c5a34a;
+}
+
+.model-section .model-content ul {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.model-section .model-content li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 8px 0;
+    color: #526a7b;
+    font-size: 14px;
+    line-height: 1.7;
+    border-bottom: 1px solid #edf2f5;
+}
+
+.model-section .model-content li:first-child {
+    padding-top: 0;
+}
+
+.model-section .model-content li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.model-section .model-content li::before {
+    content: "✓";
+    display: flex;
+    flex: 0 0 23px;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    margin-top: 1px;
+    color: #0b628e;
+    background: #eaf5fa;
+    border: 1px solid #d8eaf3;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 800;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.model-section .model-card:hover .model-content li::before {
+    color: #ffffff;
+    background: #0b628e;
+    border-color: #0b628e;
+}
+
+/* REVEAL ANIMATION */
+
+.model-section .model-card.reveal {
+    transition:
+        opacity 0.6s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .model-section {
+        padding: 80px 0;
+    }
+
+    .model-section .model-grid {
+        gap: 20px;
+    }
+
+    .model-section .model-image {
+        height: 225px;
+    }
+
+    .model-section .model-content {
+        padding: 25px 23px 28px;
+    }
+
+    .model-section .model-content h3 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+    .model-section {
+        padding: 65px 0 70px;
+    }
+
+    .model-section .section-head {
+        margin-bottom: 35px;
+        text-align: left;
+    }
+
+    .model-section .eyebrow {
+        gap: 8px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .model-section .eyebrow::before,
+    .model-section .eyebrow::after {
+        width: 16px;
+    }
+
+    .model-section .section-head h2 {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+    }
+
+    .model-section .section-head h2 span {
+        display: inline;
+    }
+
+    .model-section .section-head p {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .model-section .model-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .model-section .model-card {
+        border-radius: 12px;
+    }
+
+    .model-section .model-image {
+        height: 230px;
+    }
+
+    .model-section .model-content {
+        padding: 25px 23px 28px;
+    }
+
+    .model-section .model-content h3 {
+        margin-bottom: 21px;
+        font-size: 13px;
+    }
+
+    .model-section .model-content li {
+        font-size: 13px;
+        padding: 14px 0;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .model-section .model-card,
+    .model-section .model-image img,
+    .model-section .model-card::before,
+    .model-section .model-content li::before {
+        transition: none;
+    }
+
+    .model-section .model-card:hover {
+        transform: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+
+        <a href="#home" class="brand" aria-label="Keytal Consultancy home">
+            <img src="images/Logo Footer.webp" alt="Keytal Consultancy">
+        </a>
+
+        <button class="menu-toggle" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="nav">
+            <!-- <a href="#home" class="active">Home</a> -->
+            
+            <a href="#contact" class="nav-cta">Enquire Now ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div class="hero-copy">
+            <div class="hero-label"><span></span> EDUCATION FRANCHISE OPPORTUNITY</div>
+
+            <h1>
+                Build an Aviation, Hospitality & Events 
+                <span>Education Centre in Your City.</span>
+            </h1>
+
+            <p>
+                Establish a professionally structured education centre offering career-oriented programmes across Aviation, Hospitality, Event Management and Travel & Tourism. Build your education business with a defined operating framework, industry-relevant programmes and structured support for centre setup, training, marketing and day-to-day operations.
+             </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Explore Franchise Opportunity <span>↗</span></a>
+                <a href="#opportunities" class="btn btn-glass">Discover Programmes <span>↓</span></a>
+            </div>
+
+            <div class="hero-trust">
+                <div class="trust-item"><span class="trust-check">✓</span> Business Guidance</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Centre Planning</div>
+                <div class="trust-item"><span class="trust-check">✓</span> Ongoing Consultation</div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-float-card">
+                <div class="float-icon">✦</div>
+                <strong>Turn Your Vision Into an Education Business</strong>
+                <small>Plan your next opportunity</small>
+            </div>
+
+            <div class="hero-image-wrap">
+                <img src="images/aviation.avif" alt="Aviation training and professional education" fetchpriority="high">
+                <div class="hero-image-caption">
+                    <small>Learn. Prepare. Progress.</small>
+                    <strong>Education for Industry-Focused Careers</strong>
+                </div>
+            </div>
+
+            <div class="hero-side-tag">
+                <small>YOUR NEXT OPPORTUNITY</small>
+                <strong>Start Your Journey</strong>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTOR BAR -->
+<div class="sector-strip">
+    <div class="container sector-strip-inner">
+        <div class="sector-strip-label">EXPLORE THE SECTORS</div>
+        <div class="sector-items">
+            <span>Aviation</span>
+            <span>Hospitality</span>
+            <span>Event Management</span>
+            <span>Travel & Tourism</span>
+        </div>
+    </div>
+</div>
+
+
+<section class="section model-section" id="model">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">A CLEAR & STRUCTURED BUSINESS MODEL</span>
+
+            <h2>
+                What Makes the
+                <span>Brand Different?</span>
+            </h2>
+
+            <p>
+                Build and manage your own  education
+                centre while offering students career-focused
+                programmes across travel, tourism and related
+                industries.
+            </p>
+        </div>
+
+        <div class="model-grid">
+            <article class="model-card reveal">
+                <div class="model-image">
+                    <img src="images/Travel.avif" alt="Travel and tourism education centre">
+                </div>
+
+                <div class="model-content">
+                    <h3>WHAT YOU DO</h3>
+                    <ul>
+                        <li>Manage your centre in your local market</li>
+                        <li>Connect with students and aspiring professionals</li>
+                        <!-- <li>Oversee day-to-day centre operations</li> -->
+                        <li>Build relationships with prospective students</li>
+                        <li>Promote courses and generate student enquiries</li>
+                        <li>Coordinate admissions and student communication</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="model-card reveal">
+                <div class="model-image">
+                    <img src="images/Hospitality.avif" alt="Keytal education centre support">
+                </div>
+
+                <div class="model-content">
+                    <h3>WHAT BRAND SUPPORTS YOU WITH</h3>
+                    <ul>
+                        <li>Industry-focused course framework</li>
+                        <li>Centre setup and launch guidance</li>
+                        <li>Staff training and operational support</li>
+                        <li>Branding and marketing guidance</li>
+                        <li>Academic planning and programme guidance</li>
+                        <!-- <li>Ongoing consultation for centre development</li> -->
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-light" id="about">
+    <div class="container about-grid">
+
+        <div class="about-visual reveal-left">
+            <img src="images/Travel.avif" alt="Professional education and career development" loading="lazy">
+            <div class="about-badge">
+                <strong>A Partnership Built Around Your Goals</strong>
+                <span>Guidance for education entrepreneurs</span>
+            </div>
+        </div>
+
+        <div class="about-copy reveal-right">
+            <div class="eyebrow">THE OPPORTUNITY</div>
+
+            <h2>Build an Education Business </h2>
+
+            <p>
+                The education sector offers opportunities for entrepreneurs who want to build a business around learning and career development. Our brand helps prospective partners explore franchise opportunities and understand the requirements involved in establishing an education centre.
+            </p>
+
+            <p>
+                From initial planning to centre development, the focus is on creating a structured foundation for your education business.
+            </p>
+
+            <div class="check-list">
+                <div class="check-row"><span>✓</span> Guidance in exploring the franchise opportunity</div>
+                <div class="check-row"><span>✓</span> Support through the centre planning process</div>
+                <div class="check-row"><span>✓</span> A focus on career-oriented education programmes</div>
+                <div class="check-row"><span>✓</span> Consultation for business development and growth</div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">Discuss Your Opportunity <span>↗</span></a>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECTORS -->
+
+<section class="section section-blue sector-section" id="opportunities">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow eyebrow-light">AREAS OF LEARNING</div>
+            <h2>Explore Our <span>Education Sectors</span></h2>
+            <p>
+                Discover learning areas that connect students with professional environments and industry-focused skill development.
+            </p>
+        </div>
+
+        <div class="sector-grid">
+
+            <article class="sector-card reveal">
+                <img src="images/aviation.jpeg" alt="Aviation education" loading="lazy">
+                <span class="sector-card-top">01</span>
+                <div class="sector-card-content">
+                    <!-- <small>CAREER-FOCUSED LEARNING</small> -->
+                    <h3>Aviation</h3>
+                    <p>Explore aviation-focused education, professional standards, service skills and the wider aviation environment.</p>
+                    <!-- <a href="#contact">Enquire About This Sector <span>↗</span></a> -->
+                </div>
+            </article>
+
+            <article class="sector-card reveal">
+                <img src="images/tourism.jpeg" alt="Tourism education" loading="lazy">
+                <span class="sector-card-top">02</span>
+                <div class="sector-card-content">
+                    <!-- <small>TRAVEL & DESTINATION STUDIES</small> -->
+                    <h3>Tourism</h3>
+                    <p>Explore tourism operations, destination knowledge, travel planning and professional skills for the tourism industry.</p>
+                    <!-- <a href="#contact">Enquire About This Sector <span>↗</span></a> -->
+                </div>
+            </article>
+
+            <article class="sector-card reveal">
+                <img src="images/Hospitality.jpeg" alt="Hospitality education" loading="lazy">
+                <span class="sector-card-top">03</span>
+                <div class="sector-card-content">
+                    <!-- <small>PROFESSIONAL DEVELOPMENT</small> -->
+                    <h3>Hospitality</h3>
+                    <p>Focus on service excellence, guest relations and professional skills for hospitality environments.</p>
+                    <!-- <a href="#contact">Enquire About This Sector <span>↗</span></a> -->
+                </div>
+            </article>
+
+            <article class="sector-card reveal">
+                <img src="images/event.jpeg" alt="Event management education" loading="lazy">
+                <span class="sector-card-top">04</span>
+                <div class="sector-card-content">
+                    <!-- <small>PLANNING & COORDINATION</small> -->
+                    <h3>Event Management</h3>
+                    <p>Explore event planning, coordination, communication and organisational skill development.</p>
+                    <!-- <a href="#contact">Enquire About This Sector <span>↗</span></a> -->
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FRANCHISE MODEL -->
+<section class="section section-light" id="model">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">YOUR BUSINESS FOUNDATION</div>
+            <h2>A Structured Approach to <span>Building Your Centre</span></h2>
+            <p>
+                Understand the key areas involved in exploring, planning and developing your education centre.
+            </p>
+        </div>
+
+        <div class="model-grid">
+
+            <article class="model-card reveal">
+                <div class="model-icon">⌂</div>
+                <h3>Centre Planning</h3>
+                <p>Explore location, infrastructure and the initial requirements involved in planning your education centre.</p>
+            </article>
+
+            <article class="model-card reveal">
+                <div class="model-icon">▤</div>
+                <h3>Programme Guidance</h3>
+                <p>Understand programme areas and their role in shaping your centre's educational offering.</p>
+            </article>
+
+            <article class="model-card reveal">
+                <div class="model-icon">↗</div>
+                <h3>Business Development</h3>
+                <p>Plan your approach to establishing the centre, reaching prospective learners and developing local awareness.</p>
+            </article>
+
+            <article class="model-card reveal">
+                <div class="model-icon">◎</div>
+                <h3>Ongoing Consultation</h3>
+                <p>Access consultation throughout centre development and as you work towards your business goals.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="section section-dark" id="support">
+    <div class="container support-grid">
+
+        <div class="support-copy reveal-left">
+            <div class="eyebrow eyebrow-light">SUPPORT FOR YOUR JOURNEY</div>
+
+            <h2>Move Forward With <span>Clarity & Guidance</span></h2>
+
+            <p>
+                Starting an education centre involves more than identifying a business opportunity. It requires careful planning, an understanding of the local market and a clear view of the steps needed to establish the centre.
+            </p>
+
+            <div class="support-features">
+
+                <div class="support-feature">
+                    <div class="support-feature-icon">⌖</div>
+                    <h3>Initial Consultation</h3>
+                    <p>Discuss your goals, expectations and potential franchise opportunity.</p>
+                </div>
+
+                <div class="support-feature">
+                    <div class="support-feature-icon">▦</div>
+                    <h3>Centre Planning</h3>
+                    <p>Understand the considerations involved in setting up an education centre.</p>
+                </div>
+
+                <div class="support-feature">
+                    <div class="support-feature-icon">◇</div>
+                    <h3>Business Guidance</h3>
+                    <p>Review key factors involved in building your business foundation.</p>
+                </div>
+
+                <div class="support-feature">
+                    <div class="support-feature-icon">↗</div>
+                    <h3>Growth Consultation</h3>
+                    <p>Discuss centre development and potential next steps for your business.</p>
+                </div>
+
+            </div>
+
+            <div style="margin-top:28px">
+                <a href="#contact" class="btn btn-light">Speak With Our Team <span>↗</span></a>
+            </div>
+        </div>
+
+        <div class="support-visual reveal-right">
+            <img src="images/Hospitality.avif" alt="Professional learning and training environment" loading="lazy">
+            <div class="support-note">
+                <strong>Your Vision. A Structured Plan.</strong>
+                <span>Take the first step towards your education business.</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process-section" id="process">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">HOW TO GET STARTED</div>
+            <h2>Your Franchise Journey, <span>Step by Step</span></h2>
+            <p>
+                Begin with a conversation and learn more about the opportunity before deciding on your next steps.
+            </p>
+        </div>
+
+        <div class="process-grid">
+
+            <article class="process-card reveal">
+                <div class="process-number">01</div>
+                <h3>Make an Enquiry</h3>
+                <p>Share your contact details and interest in the education franchise opportunity.</p>
+            </article>
+
+            <article class="process-card reveal">
+                <div class="process-number">02</div>
+                <h3>Discuss Your Goals</h3>
+                <p>Connect with the team to discuss your experience, plans and business objectives.</p>
+            </article>
+
+            <article class="process-card reveal">
+                <div class="process-number">03</div>
+                <h3>Explore the Model</h3>
+                <p>Review the opportunity, requirements and key considerations for your proposed centre.</p>
+            </article>
+
+            <article class="process-card reveal">
+                <div class="process-number">04</div>
+                <h3>Plan Your Next Steps</h3>
+                <p>Understand the next stages of the process and actions needed to move forward.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="section enquiry-section" id="contact">
+    <div class="container enquiry-grid">
+
+        <div class="enquiry-copy reveal-left">
+            <div class="eyebrow eyebrow-light">LET'S START A CONVERSATION</div>
+
+            <h2>Interested in an <span>Education Franchise?</span></h2>
+
+            <p>
+                Tell us a little about yourself and your plans. Our team can connect with you to discuss the franchise opportunity and help you understand the next steps.
+            </p>
+
+            <div class="enquiry-points">
+
+                <div class="enquiry-point">
+                    <div class="enquiry-point-icon">↗</div>
+                    <div>
+                        <strong>Discuss Your Business Goals</strong>
+                        <span>Share your plans and areas of interest.</span>
+                    </div>
+                </div>
+
+                <div class="enquiry-point">
+                    <div class="enquiry-point-icon">☎</div>
+                    <div>
+                        <strong>Call Our Team</strong>
+                        <span><a href="tel:+919594949999">+91 95949 49999</a></span>
+                    </div>
+                </div>
+
+                <div class="enquiry-point">
+                    <div class="enquiry-point-icon">✉</div>
+                    <div>
+                        <strong>Email Us</strong>
+                        <span><a href="mailto:cst@keytal.org">cst@keytal.org</a></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="enquiry-form reveal-right">
+
+            <div class="form-heading">
+                <div class="eyebrow">FRANCHISE ENQUIRY</div>
+                <h3>Let's Connect</h3>
+                <!-- <p>Complete the form and our team can get in touch with you.</p> -->
+            </div>
+
+            <form action="https://formsubmit.co/cst@keytal.org" method="POST" id="enquiryForm">
+
+                <input type="hidden" name="_subject" value="New Education Franchise Enquiry - Keytal Consultancy">
+                <input type="hidden" name="_next" value="https://keytal.org/thankyou.html">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="Email Address" placeholder="Enter your email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Contact Number *</label>
+                        <input type="tel" id="phone" name="Contact Number" placeholder="Enter your phone number" autocomplete="tel" inputmode="tel" pattern="[+]?[0-9 ()-]{10,18}" required>
+                    </div>
+
+                     <div class="form-group">
+                         <label for="email">Preferred City *</label>
+            <input type="text" name="Preferred City" placeholder="Preferred City" autocomplete="address-level2" required>
+          </div>
+
+                    <div class="form-group">
+                        <label for="experience">Business Experience *</label>
+                        <select id="experience" name="Business Experience" required>
+                            <option value="" disabled selected>Select experience</option>
+                            <option value="0–1 years">0–1 years</option>
+                            <option value="1–3 years">1–3 years</option>
+                            <option value="3–5 years">3–5 years</option>
+                            <option value="5–10 years">5–10 years</option>
+                            <option value="10+ years">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label for="investment">Investment Capacity *</label>
+                        <select id="investment" name="Investment Capacity" required>
+                            <option value="" disabled selected>Select your investment capacity</option>
+                            <option value="₹25–50 Lakhs">₹25–50 Lakhs</option>
+                            <option value="₹51 Lakhs–₹1 Crore">₹51 Lakhs–₹1 Crore</option>
+                            <option value="₹1.5–3 Crore">₹1.5–3 Crore</option>
+                            <!-- <option value="Discuss Investment Options">Prefer to discuss investment options</option> -->
+                        </select>
+                    </div>
+                    
+
+                    
+
+                    <!-- <div class="form-group full">
+                        <label for="message">Additional Information (Optional)</label>
+                        <textarea id="message" name="Additional Information" placeholder="Tell us about your plans, preferred location or questions"></textarea>
+                    </div> -->
+
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                    Submit Franchise Enquiry <span>↗</span>
+                </button>
+
+                <p class="form-privacy">Your information will be used to respond to your franchise enquiry.</p>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <div class="container final-cta-inner">
+        <div>
+            <h2>Take the First Step Towards Your Education Business.</h2>
+            <p>Connect with Keytal Consultancy to explore your franchise opportunity.</p>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">Start Your Enquiry <span>↗</span></a>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="#home" aria-label="Keytal Consultancy home">
+                    <img src="images/Logo Footer.webp" alt="Keytal Consultancy logo" loading="lazy">
+                </a>
+
+                <p>
+                    Keytal Consultancy supports aspiring education entrepreneurs in exploring franchise opportunities and planning their next steps towards building an education business.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    
+                    <div class="footer-dropdown" id="businessDropdown">
+                    <button type="button" class="footer-dropdown-trigger" id="businessDropdownBtn" aria-expanded="false" aria-controls="businessDropdownMenu">
+                        <span>Explore Our Brands</span>
+                        <span class="dropdown-arrow">⌄</span>
+                    </button>
+
+                    <div class="footer-dropdown-menu" id="businessDropdownMenu">
+                        <a href="frameboxx.html">Frameboxx </a>
+                        <a href="columbus.html">Columbus</a>
+                        <a href="develearn.html">Develearn </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- <div class="footer-column">
+                <h4>Business Opportunities</h4>
+
+                <div class="footer-dropdown" id="businessDropdown">
+                    <button type="button" class="footer-dropdown-trigger" id="businessDropdownBtn" aria-expanded="false" aria-controls="businessDropdownMenu">
+                        <span>Explore Our Brands</span>
+                        <span class="dropdown-arrow">⌄</span>
+                    </button>
+
+                    <div class="footer-dropdown-menu" id="businessDropdownMenu">
+                        <a href="frameboxx.html">Frameboxx — Animation</a>
+                        <a href="columbus.html">Aviation & Hospitality</a>
+                        <a href="develearn.html">Develearn — Technology</a>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="footer-column">
+                <h4>Get In Touch</h4>
+
+                <div class="footer-contact-item">
+                    <span>Call Us</span>
+                    <a href="tel:+919594949999">+91 95949 49999</a>
+                </div>
+
+                <div class="footer-contact-item">
+                    <span>Email Us</span>
+                    <a href="mailto:cst@keytal.org">cst@keytal.org</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> Keytal Consultancy. All rights reserved.</p>
+            <a href="#home">Back to Top ↑</a>
+        </div>
+
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const header = document.getElementById("siteHeader");
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
+    const backToTop = document.getElementById("backToTop");
+    const dropdown = document.getElementById("businessDropdown");
+    const dropdownBtn = document.getElementById("businessDropdownBtn");
+    const enquiryForm = document.getElementById("enquiryForm");
+
+    // Header scroll effect
+    function handleScroll() {
+        header.classList.toggle("scrolled", window.scrollY > 35);
+        backToTop.classList.toggle("visible", window.scrollY > 450);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    // Mobile navigation
+    function closeMenu() {
+        nav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open navigation");
+        menuBtn.textContent = "☰";
+    }
+
+    menuBtn.addEventListener("click", function () {
+        const isOpen = nav.classList.toggle("open");
+
+        document.body.classList.toggle("menu-open", isOpen);
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+        menuBtn.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+        menuBtn.textContent = isOpen ? "×" : "☰";
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
+
+    // Footer business dropdown
+    dropdownBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen = dropdown.classList.toggle("open");
+        dropdownBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("open");
+            dropdownBtn.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // Close menus with Escape
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMenu();
+            dropdown.classList.remove("open");
+            dropdownBtn.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // Animated reveal on scroll
+    const revealElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    );
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("revealed");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: "0px 0px -30px 0px"
+        });
+
+        revealElements.forEach(function (element) {
+            revealObserver.observe(element);
+        });
+    } else {
+        revealElements.forEach(function (element) {
+            element.classList.add("revealed");
+        });
+    }
+
+    // Active navigation based on visible section
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = nav.querySelectorAll('a[href^="#"]');
+
+    if ("IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function (link) {
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute("href") === "#" + entry.target.id
+                        );
+                    });
+                }
+            });
+        }, {
+            rootMargin: "-30% 0px -60% 0px"
+        });
+
+        sections.forEach(function (section) {
+            sectionObserver.observe(section);
+        });
+    }
+
+    // Back to top
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    // Footer year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Form submission
+    if (enquiryForm) {
+        enquiryForm.addEventListener("submit", function (event) {
+            if (!enquiryForm.checkValidity()) {
+                event.preventDefault();
+                enquiryForm.reportValidity();
+                return;
+            }
+
+            const submitButton = enquiryForm.querySelector('button[type="submit"]');
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Submitting Enquiry…";
+            }
+        });
+    }
+
+});
+</script>
+
+</body>
+</html>
